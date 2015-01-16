@@ -1,0 +1,151 @@
+$technogi-orange: #e16300;
+$banner-height: 340px;
+$banner-font-size: 5em;
+$white: white;
+$light-orange: #ffa509;
+$dark-orange: #783a00;
+$light-gray: #5e5e5e;
+$dark-gray: #333;
+
+$primary-color: $technogi-orange;
+
+$screen: "only screen";
+@function lower-bound($range) {
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range, 1);
+}
+
+$large-range: (64.063em, 90em);
+$topbar-media-query: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+@import "../../vendor/font-awsome/scss/font-awesome";
+@import "fa-counter-spin";
+@import "../../vendor/foundation/scss/normalize";
+@import "../../vendor/foundation/scss/foundation";
+
+body {
+  background: url("../img/business-franchise.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 100%;
+}
+
+.main_banner_container{
+  height: $banner-height;
+  padding: 30px;
+  h2{
+    color: #2062c3;
+  }
+  h3{
+    color: $white;
+    padding-left: 20px;
+  }
+  i{
+    color: #2062c3;
+  }
+}
+
+#main_banner {
+  height: $banner-height;
+  background-color: rgba(161, 211, 255, 0.90);
+  color: $technogi-orange;
+  font-size: $banner-font-size;
+  margin-bottom: 0px;
+  padding: 0px;
+  margin-top: 0px;
+
+ // font-family: 'Shojumaru', cursive;
+  li{
+  //  font-family: 'Shojumaru', cursive;
+    color: $dark-orange;;
+    font-size: 1.5em;
+  }
+  h1{
+    color: $white;
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+}
+
+#services {
+  background-color: #FFFFFF;
+  padding-bottom: 50px;
+  padding-top: 2px;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+}
+
+#about_us {
+  padding-top: 10px;
+  background-color: $light-orange;
+  color: $white;
+  h2 {
+    color: $white;
+  }
+  li {
+    margin-left: 30px;
+    color: $dark-orange;
+    font-size: .8em;
+  }
+}
+
+#why_us {
+  background-color: $dark-gray;
+}
+
+.top-bar {
+  height: 70px;
+  padding-top: 10px;
+}
+
+footer {
+  background-color: $dark-gray;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: $light-gray;
+  font-size: 1em;
+  font-weight: 700;
+  .links-area {
+    list-style: none;
+    display: table;
+    li a {
+      color: $white;
+    }
+  }
+}
+
+.t-panel {
+  text-align: center;
+  height: 400px;
+  p {
+    color: $light-gray;
+    font-size: .8em;
+    letter-spacing: 1px;
+    padding: 5px;
+  }
+}
+
+$circle_length: 100px;
+$circle_radius: 50px;
+
+.circle {
+  width: $circle_length;
+  height: $circle_length;
+  border-radius: $circle_radius;
+  font-size: 2em;
+  color: #fff;
+  line-height: $circle_length;
+  text-align: center;
+  background: $technogi-orange;
+  margin-bottom: 20px;
+  :hover {
+    font-size: 1.2em;
+  }
+}

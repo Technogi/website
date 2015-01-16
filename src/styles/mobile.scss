@@ -1,0 +1,151 @@
+@import "global";
+
+$mobile-transition-time: 0.5s;
+
+#header_img {
+  -webkit-transition: all $mobile-transition-time ease;
+  transition: all $mobile-transition-time ease;
+  height: 10px;
+  img {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+}
+
+#mobile-header {
+
+  text-align: center;
+
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  font-size: 2em;
+  border-bottom: 1px solid $technogi-orange;
+
+  #mobile_header_img {
+    -webkit-transition: all $mobile-transition-time ease;
+    transition: all $mobile-transition-time ease;
+    height: 40px;
+
+    border-bottom: 1px solid $technogi-orange;
+    margin: 0px 0px 8px;
+    img {
+      height: 100%;
+      margin: 0px;
+      padding-bottom: 4px;
+    }
+  }
+
+  #mobile_header_img.scrolled {
+    height: 0px;
+    margin: 0px;
+    border-bottom: 0px solid white;
+
+  }
+
+  a {
+    color: $technogi-orange;
+    font-size: .4em;
+    vertical-align: middle;
+  }
+  .mobile_menu_items {
+    margin: 0px;
+    padding: 0px;
+    font-size: .7em;
+    text-align: center;
+    color: $technogi-orange;
+    a{
+      margin: 2px;
+    }
+  }
+  .menu_item {
+    padding: 0px;
+    margin: 7px;
+
+  }
+}
+
+#mobile_main_content {
+
+  position: table;
+  width: 100%;
+  display: table;
+  margin: auto;
+  text-align: center;
+  padding: 100px 0px 0px 0px;
+  width: 100%;
+
+  ul{
+    display: inline-table;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  li{
+    float: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  background-color: $technogi-orange;
+
+  h1 {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 10px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 1em;
+    color: $black;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+  }
+
+
+  .mobile-btn {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 1px;
+    margin-right: 1px;
+    //margin: 4px 1px;
+    i {
+      margin-bottom: 12px;
+    }
+    display: inline-table;
+    width: 48vw;
+    color: $technogi-orange;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 150px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: white;
+  }
+
+  .big-mobile-btn {
+    i {
+      margin-bottom: 12px;
+    }
+    margin-top: 4px;
+    width: 96%;
+    color: $technogi-orange;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 88px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: white;
+  }
+
+}

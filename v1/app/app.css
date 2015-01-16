@@ -1,0 +1,32 @@
+.social-container{
+    float:right
+}
+.sub-footer .social-container i{
+    font-size:2.6em;
+    padding:10px 10px 10px 10px;
+    color:#DDD}
+.sub-footer .social-container i:hover{
+    color:#e16300;
+    cursor:pointer
+}
+footer{
+    background-color:#333;
+    padding-bottom:20px;
+    padding-top:20px;
+    color:#666;
+    font-size:.8em
+}
+
+footer .links-area{
+    list-style:none;
+    display:table
+}
+.footer .links-area li{
+    font-size:.8em;
+    display:table-cell;
+    padding:5px 5px 5px 5px;
+    color:#BBB
+}
+footer .links-area li a{
+    color:white
+}
