@@ -9,19 +9,48 @@ var logger = require('./logger');
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
+
+function hide_service_buttons(){
+  $(".service_btn").hide();
+}
+
+function show_service_buttons(){
+  $(".service_btn").show();
+}
+
+function reset(){
+  hide_service_buttons();
+}
+function show_service_description(){
+  $(".technogi_panel").mouseover(function(a){
+    if($("#main_content_footer").hasClass('scrolled')){
+      $(a.target).find("p.service_description").addClass('show_up').mouseleave(function(b){
+        $(b.target).removeClass('show_up');
+      });
+    }
+  });
+  $(".technogi_panel").mouseleave(function(a){
+    if($("#main_content_footer").hasClass('scrolled')){
+      $(a.target).find("p.show_up").removeClass('show_up');
+
+    }
+  });
+}
 function adjust() {
 
   if ($(this).scrollTop() > 1) {
     $('header').addClass("sticky");
     $("#main_content_footer").addClass("scrolled");
-    $("#mobile_header_img").addClass("scrolled");
+    $("#mobile-header").addClass("scrolled");
     $(".menu_item").addClass("menu_item_scrolled");
     $("#main_content_footer .row div.medium-3").addClass('medium-6').removeClass('medium-3');
+    show_service_buttons();
   }
   else {
+    reset();
     $('header').removeClass("sticky");
     $("#main_content_footer").removeClass("scrolled");
-    $("#mobile_header_img").removeClass("scrolled");
+    $("#mobile-header").removeClass("scrolled");
     $(".menu_item").removeClass("menu_item_scrolled");
     $("#main_content_footer .row div.medium-6").addClass('medium-3').removeClass('medium-6');
   }
@@ -46,5 +75,6 @@ function start_carousel() {
 $(window).load(function () {
   adjust();
   start_carousel();
+  show_service_description();
 });
 $(window).scroll(adjust);
