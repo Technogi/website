@@ -3583,16 +3583,33 @@ header.sticky {
     height: 60px; }
 
 #why_us_pane {
-  padding-top: 50px;
-  margin-top: 20px;
-  min-height: 280px;
-  background-color: #fff5dd; }
+  background: url('../img/meeting.jpg');
+  background-size: 100%;
+  color: white; }
+  #why_us_pane .content {
+    background-color: rgba(0, 82, 60, 0.88);
+    padding-top: 50px;
+    margin-top: 20px;
+    min-height: 280px;
+    border-bottom: 1px solid #2c2c2c;
+    border-top: 2px solid #606060; }
+  #why_us_pane .display {
+    width: 100%;
+    height: 300px;
+    padding-top: 50px; }
+  #why_us_pane .display-element {
+    margin: 30px;
+    width: 100%;
+    text-align: center;
+    display: none; }
   #why_us_pane h1 {
     font-size: 2em;
     text-align: right;
-    border-bottom: 1px solid #2c2c2c; }
+    border-bottom: 1px solid white;
+    color: white; }
   #why_us_pane h2 {
-    font-size: 1.6em; }
+    font-size: 1.6em;
+    color: white; }
   #why_us_pane i {
     margin-top: 20px; }
   #why_us_pane p {

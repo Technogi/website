@@ -205,19 +205,47 @@ header.sticky {
 }
 
 #why_us_pane{
-  padding-top: 50px;
-  margin-top: 20px;
-  min-height: 280px;
-  background-color: #fff5dd;
+  background: url('../img/meeting.jpg');
+  background-size: 100%;
+  .content{
+    background-color: rgba(0, 82, 60, 0.88);
+
+    padding-top: 50px;
+    margin-top: 20px;
+    min-height: 280px;
+    border-bottom: 1px solid $black;
+    border-top: 2px solid #606060;
+  }
+  color: white;
+
+
+
+
+
+  .display{
+    width:100%;
+    height: 300px;
+    padding-top: 50px;
+
+  }
+
+  .display-element{
+    margin: 30px;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
 
   h1{
     font-size: 2em;
     text-align: right;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid white;
+    color: white;
   }
 
   h2{
     font-size: 1.6em;
+    color: white;
   }
 
   i{
