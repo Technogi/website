@@ -17,24 +17,26 @@
   text-decoration: underline; }
 
 #page {
-  top: 10px;
-  width: 90vw;
-  left: 99vw;
+  padding-top: 40px;
+  top: 30px;
+  width: 100vw;
+  left: 100vw;
   height: 100vh;
   overflow: scroll;
   position: fixed;
-  background-color: #009900; }
-  #page :hover {
-    -ms-transform: translate(80vw, 0px);
-    -webkit-transform: translate(80vw, 0px);
-    transform: translate(80vw, 0px);
-    -webkit-transition: all 5s ease;
-    transition: all 5s ease; }
+  background-color: #ffffff; }
   #page h1 {
     color: #2c2c2c;
     border-bottom: 2px solid #eb6c1e; }
   #page h2 {
     color: #2c2c2c; }
+
+#page.show {
+  -ms-transform: translate(-100vw, 0px);
+  -webkit-transform: translate(-100vw, 0px);
+  transform: translate(-100vw, 0px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease; }
 
 
 /*# sourceMappingURL=page.css.map */

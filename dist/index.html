@@ -10,6 +10,7 @@
         content="Technogi's Website"/>
   <meta name="author" content="Technogi"/>
   <meta name="copyright" content="TECHNOGI, inc. Copyright (c) 2015"/>
+  <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
   <script src="js/modernizr.js"></script>
   <script src="msg/messages.js"></script>
 
@@ -26,19 +27,20 @@
     <img src="img/logo_ow_t.png" style="">
   </div>
   <div class="mobile_menu_items">
-    <a class="menu_item" href="#">WHAT WE DO</a> |
-    <a class="menu_item" href="#">HOW WE DO IT</a> |
-    <a class="menu_item" href="#">CONTACT US</a> |
-    <a class="menu_item" href="#"><i class="fa fa-plus"></i></a>
+
+    <a class="menu_item" href="#" scroll_to="mobile_main_content" msg="views.header.services"></a> |
+    <a class="menu_item" href="#" scroll_to="how_we_do" msg="views.header.methodology"></a> |
+    <a class="menu_item" href="#" scroll_to="contact_us" msg="views.header.contact"></a> |
+    <a class="menu_item" href="#" scroll_to="more"><i class="fa fa-plus"></i></a>
   </div>
 </div>
-<header class="hide-for-small">
-  <img src="img/logo_n_t.png">
+<header id="nav_header" class="hide-for-small">
+  <img  src="img/logo_n_t.png">
   <span id="menu_items" class="pull-right">
-    <a class="menu_item" href="#" msg="views.header.services">WHAT WE DO</a> |
-    <a class="menu_item" href="#" msg="views.header.methodology">HOW WE DO IT</a> |
-    <a class="menu_item" href="#" msg="views.header.contact">CONTACT US</a> |
-    <a class="menu_item" href="#" ><i class="fa fa-plus"></i></a>
+    <a scroll_to="main_content_footer" class="menu_item" href="#" msg="views.header.services"></a> |
+    <a scroll_to="how_we_do" class="menu_item" href="#" msg="views.header.methodology"></a> |
+    <a scroll_to="contact_us" class="menu_item" href="#" msg="views.header.contact"></a> |
+    <a scroll_to="more" class="menu_item" href="#" ><i class="fa fa-plus"></i></a>
   </span>
 
 </header>
@@ -64,7 +66,7 @@
     <div class="row">
       <div class="medium-3 large-3 columns">
         <div class="technogi_panel">
-          <a href="#">
+          <a show="consulting" href="#">
 
             <div class="icon">
               <i class="fa fa-3x fa-group"></i>
@@ -74,7 +76,7 @@
 
           <p class="service_description" msg="views.services.consulting.description">
           </p>
-          <button class="service_btn button small warning">learn more</button>
+          <button show="consulting" class="service_btn button small warning" msg="commons.learn_more"></button>
         </div>
 
       </div>
@@ -91,7 +93,7 @@
           <p class="service_description">
             Mel eros inimicus in, te ipsum virtute eam, vel ea hinc mazim. Percipit mandamus philosophia no est.
           </p>
-          <button class="service_btn button small warning">learn more</button>
+          <button class="service_btn button small warning" msg="commons.learn_more"></button>
         </div>
       </div>
       <div class="medium-3 large-3 columns">
@@ -106,7 +108,7 @@
           <p class="service_description">
             Cu ius noster nostro, ius at aliquip docendi. Has an adhuc legere equidem, ex noster consetetur has.
           </p>
-          <button class="service_btn button small warning">learn more</button>
+          <button class="service_btn button small warning" msg="commons.learn_more"></button>
 
         </div>
       </div>
@@ -125,7 +127,7 @@
             vis ad.
 
           </p>
-          <button class="service_btn button small warning">learn more</button>
+          <button class="service_btn button small warning" msg="commons.learn_more"></button>
         </div>
       </div>
     </div>
@@ -142,14 +144,14 @@
 
   <ul>
     <li>
-      <button class="mobile-btn">
+      <button show="consulting" class="mobile-btn">
         <i class="fa fa-3x fa-users"></i>
 
         <div>IT Consulting</div>
       </button>
     </li>
     <li>
-      <button class="mobile-btn">
+      <button show="development" class="mobile-btn">
         <i class="fa fa-3x fa-laptop"></i>
 
         <div>Software Development</div>
@@ -160,24 +162,22 @@
 
   <ul>
     <li>
-      <button class="mobile-btn">
+      <button show="cloud" class="mobile-btn">
         <i class="fa fa-3x fa-cloud"></i>
 
         <div>Cloud Consulting</div>
       </button>
     </li>
     <li>
-      <button class="mobile-btn">
+      <button show="poc" class="mobile-btn">
         <i class="fa fa-3x fa-paper-plane"></i>
 
         <div>Proof of Concept</div>
       </button>
     </li>
   </ul>
-  <button class="big-mobile-btn">
-    <i class="fa fa-2x fa-envelope"></i>
-
-    GET IN TOUCH
+  <button scroll_to="contact_us" class="big-mobile-btn">
+    <i class="fa fa-2x fa-envelope"></i> <span msg="views.header.contact"></span>
   </button>
 </div>
 
@@ -238,8 +238,7 @@
           problemas.
 
         </p>
-        <button class="p_button">
-          ver mas
+        <button class="p_button" msg="commons.learn_more">
         </button>
       </div>
     </div>
@@ -255,8 +254,7 @@
           fotos (por seguridad de nosotros).
 
         </p>
-        <button class="p_button">
-          ver mas
+        <button class="p_button" msg="commons.learn_more">
         </button>
       </div>
 
@@ -271,8 +269,7 @@
         <p class="description">
           Utilizamos las mejores prácticas del PMI y metodologías de desarrollo ágil.
         </p>
-        <button class="p_button">
-          ver mas
+        <button class="p_button" msg="commons.learn_more">
         </button>
       </div>
     </div>
@@ -330,11 +327,16 @@
       };
     </script>
 
-<footer>
+<footer id="more">
   <div class="sub-footer">
     <div class="row">
       <div class="medium-8 columns">
-        <p data-i18n>[html]about_us.summary</p>
+        <p data-i18n>
+          Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de experiencia
+          en la implementación de tecnologías de la información. Nuestra dedicación a la investigación e innovación nos
+          permite entregar a nuestros clientes soluciones simples con la tecnología adecuada, permitiéndoles enfocarse
+          en la productividad de su negocio.
+        </p>
       </div>
       <div class="medium-4  columns">
         <div class="social-container">
@@ -349,18 +351,15 @@
   </div>
 
   <div class="row">
-    <div class="large-12 columns">
-      <hr>
-      <div class="row">
-        <div class="large-12 columns text-center">
-          <p><img src="img/logo_tb_t.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
-            de R.L.
-            de C.V.</p>
-        </div>
 
-      </div>
+    <div class="large-12 columns text-center">
+      <p><img src="img/logo_tb_t.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
+        de R.L.
+        de C.V.</p>
     </div>
+
   </div>
+
 </footer>
 
 
@@ -369,37 +368,7 @@
   <h1>Titulo</h1>
 <h2>Subtitulo</h2>
 <p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p>
+<div style="background-color: #007095; width: 100%; position: absolute; bottom: 10px;">REGRESAR</div>
 </div>
 <script src="js/vendor.bundle.js"></script>
 <script src="js/app.js"></script>

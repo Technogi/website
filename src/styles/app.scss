@@ -77,11 +77,33 @@ header {
   font-size: 1.1em;
 
   a {
+
+
+    overflow:hidden;
     color: white;
     font-weight: 500;
-    &:hover, :hover {
+    :hover{
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      transition-property: transform;
+      -webkit-transform:rotate(200deg);
+      -moz-transform:rotate(200deg);
+      -o-transform:rotate(200deg);
+      color: white;
+
+    }
+    &:hover, :visited, &:visited {
       color: white;
       text-decoration: underline;
+    }
+    &:active,:active{
+      color: $technogi-orange;
     }
 
   }
@@ -454,10 +476,19 @@ $circle_length: 90px;
 $circle_radius: 50%;
 
 footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color: #333333;
+
+  background-color: #141414;
   color: rgba(225, 225, 225, 0.80);
+  padding-bottom: 20px;
+
+  .sub-footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #2f2f2f;
+    margin-bottom: 20px;
+    color: #a5a5a5;
+    line-height: 20px;
+  }
   .social-container{
     a{
       font-size: 2em;

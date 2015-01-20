@@ -1,5 +1,8 @@
 var messages = {
   "en": {
+    "commons":{
+      "learn_more":"learn more"
+    },
     "views": {
       "header":{
         "services":"WHAT WE DO",
