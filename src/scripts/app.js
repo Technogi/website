@@ -5,10 +5,12 @@
  * on 1/14/15
  */
 var logger = require('./logger');
+var lang = require('./msg');
 
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
+lang.set_lang('en',messages);
 
 function hide_service_buttons(){
   $(".service_btn").hide();

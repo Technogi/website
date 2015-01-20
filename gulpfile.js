@@ -90,6 +90,11 @@ gulp.task('html', function () {
     .pipe(gulp.dest(paths.dist.views));
 });
 
+gulp.task('msg',function(){
+  return gulp.src('./src/messages/**')
+    .pipe(gulp.dest('./dist/msg/'));
+});
+
 gulp.task('modernizr', function () {
   return gulp.src('./vendor/modernizr/modernizr.js')
     .pipe(uglify())
@@ -121,13 +126,14 @@ gulp.task('webserver', function () {
     }));
 });
 
-gulp.task('dist', ['vendor', 'scripts', 'styles', 'images', 'html']);
+gulp.task('dist', ['vendor', 'msg', 'scripts', 'styles', 'images', 'html']);
 
 gulp.task('watch', function () {
   gulp.watch(paths.src.scripts, ['scripts']);
   gulp.watch(paths.src.images, ['images']);
   gulp.watch(paths.src.styles, ['styles']);
   gulp.watch(paths.src.views, ['html']);
+  gulp.watch('./src/messages/**', ['msg']);
 
 });
 

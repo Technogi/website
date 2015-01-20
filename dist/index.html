@@ -11,13 +11,16 @@
   <meta name="author" content="Technogi"/>
   <meta name="copyright" content="TECHNOGI, inc. Copyright (c) 2015"/>
   <script src="js/modernizr.js"></script>
+  <script src="msg/messages.js"></script>
+
+  <link rel="script" href="msg/messages.js">
   <link rel="stylesheet" href="css/app.css">
   <!-- import Google font -->
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-
+<div id="main">
 <div id="mobile-header" class=" hide-for-medium-up">
   <div id="mobile_header_img">
     <img src="img/logo_ow_t.png" style="">
@@ -30,98 +33,107 @@
   </div>
 </div>
 <header class="hide-for-small">
-  <img src="img/logo_tb_t.png">
+  <img src="img/logo_n_t.png">
   <span id="menu_items" class="pull-right">
-    <a class="menu_item" href="#">WHAT WE DO</a> |
-    <a class="menu_item" href="#">HOW WE DO IT</a> |
-    <a class="menu_item" href="#">CONTACT US</a> |
-    <a class="menu_item" href="#"><i class="fa fa-plus"></i></a>
+    <a class="menu_item" href="#" msg="views.header.services">WHAT WE DO</a> |
+    <a class="menu_item" href="#" msg="views.header.methodology">HOW WE DO IT</a> |
+    <a class="menu_item" href="#" msg="views.header.contact">CONTACT US</a> |
+    <a class="menu_item" href="#" ><i class="fa fa-plus"></i></a>
   </span>
 
 </header>
 
-<div class="hide-for-small-down" id="main_content">
+<div class="hide-for-small-down" id="main_container">
 
-  <h1>Modern IT Consulting Services</h1>
+  <div class="hide-for-small-down" id="main_content">
 
-  <h2>keep IT simple</h2>
+    <h1 msg="views.main.h1"></h1>
 
-  <div class="super_icon">
-  </div>
-</div>
-<div id="main_content_footer" class="hidden-for-small-down">
-  <div class="row">
-    <div class="medium-12 columns">
-      <h1>
-        Our services
-      </h1>
+    <h2 msg="views.main.h2"></h2>
+
+    <div class="super_icon">
     </div>
   </div>
-  <div class="row">
-    <div class="medium-3 large-3 columns">
-      <div class="technogi_panel">
-        <a href="#">
-
-          <div class="icon">
-            <i class="fa fa-3x fa-group"></i>
-          </div>
-          <h3>IT Consulting</h3>
-        </a>
-
-        <p class="service_description">
-          Lorem ipsum dolor sit amet, id regione impedit definitiones usu, velit persius percipit no duo.
-        </p>
-        <button class="service_btn button small warning">learn more</button>
-      </div>
-
-    </div>
-    <div class="medium-3 large-3 columns">
-      <div class="technogi_panel">
-        <a href="#">
-
-          <div class="icon ">
-            <i class="fa fa-3x fa-laptop"></i>
-          </div>
-          <h3>Software Development</h3>
-        </a>
-
-        <p class="service_description">
-          Mel eros inimicus in, te ipsum virtute eam, vel ea hinc mazim. Percipit mandamus philosophia no est.
-        </p>
-        <button class="service_btn button small warning">learn more</button>
+  <div id="main_content_footer" class="hidden-for-small-down">
+    <div class="row">
+      <div class="medium-12 columns">
+        <h1 msg="views.services.h1">
+        </h1>
       </div>
     </div>
-    <div class="medium-3 large-3 columns">
-      <div class="technogi_panel">
-        <a href="#">
-          <div class="icon">
-            <i class="fa fa-3x fa-cloud"></i>
-          </div>
-          <h3>Cloud Consulting</h3>
-        </a>
+    <div class="row">
+      <div class="medium-3 large-3 columns">
+        <div class="technogi_panel">
+          <a href="#">
 
-        <p class="service_description">
-          Cu ius noster nostro, ius at aliquip docendi. Has an adhuc legere equidem, ex noster consetetur has.
-        </p>
-        <button class="service_btn button small warning">learn more</button>
+            <div class="icon">
+              <i class="fa fa-3x fa-group"></i>
+            </div>
+            <h3 msg="views.services.consulting.title"></h3>
+          </a>
+
+          <p class="service_description" msg="views.services.consulting.description">
+          </p>
+          <button class="service_btn button small warning">learn more</button>
+        </div>
 
       </div>
+      <div class="medium-3 large-3 columns">
+        <div class="technogi_panel">
+          <a href="#">
+
+            <div class="icon ">
+              <i class="fa fa-3x fa-laptop"></i>
+            </div>
+            <h3>Software Development</h3>
+          </a>
+
+          <p class="service_description">
+            Mel eros inimicus in, te ipsum virtute eam, vel ea hinc mazim. Percipit mandamus philosophia no est.
+          </p>
+          <button class="service_btn button small warning">learn more</button>
+        </div>
+      </div>
+      <div class="medium-3 large-3 columns">
+        <div class="technogi_panel">
+          <a href="#">
+            <div class="icon">
+              <i class="fa fa-3x fa-cloud"></i>
+            </div>
+            <h3>Cloud Consulting</h3>
+          </a>
+
+          <p class="service_description">
+            Cu ius noster nostro, ius at aliquip docendi. Has an adhuc legere equidem, ex noster consetetur has.
+          </p>
+          <button class="service_btn button small warning">learn more</button>
+
+        </div>
+      </div>
+      <div class="medium-3 large-3 columns">
+        <div class="technogi_panel">
+          <a href="#">
+            <div class="icon ">
+              <i class="fa fa-3x fa-paper-plane"></i>
+            </div>
+            <h3>Proof of Concepts</h3>
+          </a>
+
+          <p class="service_description">
+            Nam noluisse iracundia cu. An percipit dissentias sit, et vix accusata abhorreant, tollit scaevola
+            disputando
+            vis ad.
+
+          </p>
+          <button class="service_btn button small warning">learn more</button>
+        </div>
+      </div>
     </div>
-    <div class="medium-3 large-3 columns">
-      <div class="technogi_panel">
-        <a href="#">
-          <div class="icon ">
-            <i class="fa fa-3x fa-paper-plane"></i>
-          </div>
-          <h3>Proof of Concepts</h3>
-        </a>
-
-        <p class="service_description">
-          Nam noluisse iracundia cu. An percipit dissentias sit, et vix accusata abhorreant, tollit scaevola disputando
-          vis ad.
-
-        </p>
-        <button class="service_btn button small warning">learn more</button>
+    <div class="row">
+      <div class="medium-12 columns">
+        <h2>
+          Focus on what matters... Your Business
+        </h2>
       </div>
     </div>
   </div>
@@ -179,28 +191,29 @@
         <h1>This is why our clients love us</h1>
       </div>
     </div>
+    <div class="row">
+      <div class="small-12 columns display">
+        <div class="display-element ">
+          <h2>
+            Client's Satisfaction
+          </h2>
 
-    <div class="display">
-      <div class="display-element ">
-        <h2>
-          Client's Satisfaction
-        </h2>
+          <p>
+            100% de nuestros clientes han realizado un segundo proyecto con nosotros.
+          </p>
+        </div>
 
-        <p>
-          100% de nuestros clientes han realizado un segundo proyecto con nosotros.
-        </p>
+        <div class="display-element ">
+          <h2>
+            Compromise
+          </h2>
+
+          <p>
+            100% de nuestros clientes nos ven como un socio más de su proyecto.
+          </p>
+        </div>
+
       </div>
-
-      <div class="display-element ">
-        <h2>
-          Compromise
-        </h2>
-
-        <p>
-          100% de nuestros clientes nos ven como un socio más de su proyecto.
-        </p>
-      </div>
-
     </div>
   </div>
 </div>
@@ -212,75 +225,57 @@
     </div>
   </div>
   <div class="row philosophy_row">
-    <div class="medium-4 columns medium-text-right small-text-center">
-      <h3><i class="fa fa-graduation-cap"></i> our philosophy</h3>
-    </div>
-    <div class="medium-8 columns">
-      <div class="philosophy_desc">
+    <div class="medium-6 large-4 columns ">
+      <div class="philosophy_tile">
 
-        <p>
+
+        <h2><i class="fa fa-graduation-cap"></i></h2>
+
+        <h3>our philosophy</h3>
+
+        <p class="description">
           Nos caracterizamos por realizar investigación sobre nuevas tecnologías y formas de resolver los
           problemas.
-          Llevamos los resultados de la investigación a la práctica, creando productos propios que nos permitan entender
-          la tecnología que se está creando. Una vez que somos especialistas, implantamos las soluciones con nuestros
-          clientes.
+
         </p>
-
-        <p>Lo anterior nos permite proveer a nuestros clientes con un catálogo extenso de posibilidades para convertir
-          sus
-          ideas en soluciones.</p>
+        <button class="p_button">
+          ver mas
+        </button>
       </div>
     </div>
 
-  </div>
-  <div class="row philosophy_row">
+    <div class="medium-6 large-4 columns">
+      <div class="philosophy_tile">
+        <h2><i class="fa fa-users"></i></h2>
 
-    <div class="medium-4 columns medium-text-right small-text-center">
-      <h3><i class="fa fa-users"></i> the team</h3>
+        <h3>the team</h3>
+
+        <p class="description">
+          Todavía no sé si ponerlo a nivel genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
+          fotos (por seguridad de nosotros).
+
+        </p>
+        <button class="p_button">
+          ver mas
+        </button>
+      </div>
+
     </div>
-    <div class="medium-8 columns">
-      <div class="philosophy_desc">
+    <div class="show-for-medium-only medium-3 columns"></div>
+    <div class="medium-6 large-4 columns">
+      <div class="philosophy_tile">
+        <h2><i class="fa fa-book"></i></h2>
 
-        <p>Todavía no sé si ponerlo a nivel genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
-          fotos (por seguridad de nosotros). Por ejemplo algo así se puede hacer enTodavía no sé si ponerlo a nivel
-          genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
-          fotos (por seguridad de nosotros). Por ejemplo algo así se puede hacer enTodavía no sé si ponerlo a nivel
-          genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
-          fotos (por seguridad de nosotros). Por ejemplo algo así se puede hacer en </p>
+        <h3>the methodology</h3>
+
+        <p class="description">
+          Utilizamos las mejores prácticas del PMI y metodologías de desarrollo ágil.
+        </p>
+        <button class="p_button">
+          ver mas
+        </button>
       </div>
     </div>
-
-  </div>
-  <div class="row philosophy_row">
-
-    <div class="medium-4 columns medium-text-right small-text-center">
-      <h3><i class="fa fa-book"></i> methodology</h3>
-    </div>
-    <div class="medium-8 columns">
-      <div class="philosophy_desc">
-
-      <p>Utilizamos las mejores prácticas del PMI y metodologías de desarrollo ágil. Con esto logramos tener células de
-        desarrollo autosuficientes que logran:</p>
-      <ul>
-        <li>Conocer al cliente de manera muy cercana.</li>
-        <li>Mejora la comunicación.</li>
-        <li>Aumenta la productividad.</li>
-      </ul>
-
-      <p>Minimizamos el riesgo, haciendo un análisis preliminar de la solución requerida, tratando de anticipar
-        cualquier
-        complicación. Este riesgo se mitiga:</p>
-      <ul>
-        <li>Realizando validaciones de viabilidad técnica.</li>
-        <li>Levantamiento de requerimientos.</li>
-        <li>Revisión de Procesos de negocio.</li>
-        <li>Entrevistas con sponsors.</li>
-      </ul>
-      <p>Aun así sabemos que es difícil prever todas las complicaciones, por lo cual nos mantenemos flexibles al cambio.
-        Aquí es donde entra la parte ágil, donde respondemos a las nuevas necesidades del proyecto, en tiempo real.</p>
-
-    </div></div>
-
   </div>
 </div>
 
@@ -336,9 +331,92 @@
   </div>
 </div>
 
+<footer>
+  <div class="sub-footer">
+    <div class="row">
+      <div class="medium-8 columns">
+        <p data-i18n>[html]about_us.summary</p>
+      </div>
+      <div class="medium-4  columns">
+        <div class="social-container">
+          <a target="_blank" href="https://technogi.github.io/"><i class="fa fa-github"></i></a>
+          <a target="_blank" href="https://www.facebook.com/Technogi"><i class="fa fa-facebook"></i></a>
+          <a target="_blank" href="https://twitter.com/technogimx"><i class="fa fa-twitter"></i></a>
+          <a target="_blank" href="http://moggworkshop.blogspot.mx/"><i class="fa fa-wordpress"></i></a>
+          <a target="_blank" href="http://pinterest.com/technogi"><i class="fa fa-pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <hr>
+      <div class="row">
+        <div class="large-8 columns">
+          <p><img src="img/logo_b_t_300_g.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
+            de R.L.
+            de C.V.</p>
+        </div>
+        <div class="large-4 columns">
+          <ul class="inline-list right">
+            <li>
+              <a href="#">Link 1</a>
+            </li>
+            <li>
+              <a href="#">Link 2</a>
+            </li>
+            <li>
+              <a href="#">Link 3</a>
+            </li>
+            <li>
+              <a href="#">Link 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
-
+</div>
+<div id="page">
+  <h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p><h1>Titulo</h1>
+<h2>Subtitulo</h2>
+<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
+<p>kj kjf skjf kjhdfg kjdhfg kjdfgh kjgdf kjdfhdgfjkhgkfjdhfdg</p>
+</div>
 <script src="js/vendor.bundle.js"></script>
 <script src="js/app.js"></script>
 

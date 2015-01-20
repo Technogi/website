@@ -1,0 +1,22 @@
+#page {
+  top: 10px;
+  width: 90vw;
+  left: 99vw;
+  height: 100vh;
+  overflow: scroll;
+  position: fixed;
+  background-color: #009900; }
+  #page :hover {
+    -ms-transform: translate(80vw, 0px);
+    -webkit-transform: translate(80vw, 0px);
+    transform: translate(80vw, 0px);
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease; }
+  #page h1 {
+    color: #2c2c2c;
+    border-bottom: 2px solid #eb6c1e; }
+  #page h2 {
+    color: #2c2c2c; }
+
+
+/*# sourceMappingURL=page.css.map */

@@ -1,0 +1,32 @@
+@import "global";
+
+#page{
+  :hover{
+    -ms-transform:translate(80vw,0px);
+    -webkit-transform:translate(80vw,0px);
+    transform: translate(80vw,0px);
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
+
+  }
+
+
+
+  top:10px;
+  width: 90vw;
+  left: 99vw;
+  height: 100vh;
+  overflow: scroll;
+  position: fixed;
+  background-color: #009900;
+  h1{
+    color: $black;
+    border-bottom: 2px solid $technogi-orange;
+
+  }
+
+  h2{
+    color: $black;
+
+  }
+}

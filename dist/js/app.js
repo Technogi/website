@@ -6,10 +6,12 @@
  * on 1/14/15
  */
 var logger = require('./logger');
+var lang = require('./msg');
 
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
+lang.set_lang('en',messages);
 
 function hide_service_buttons(){
   $(".service_btn").hide();
@@ -79,7 +81,7 @@ $(window).load(function () {
   show_service_description();
 });
 $(window).scroll(adjust);
-},{"./logger":2}],2:[function(require,module,exports){
+},{"./logger":2,"./msg":3}],2:[function(require,module,exports){
 /**
  *
  * developed on Technogi Mexico
@@ -142,4 +144,44 @@ var simple_logger = {
 };
 
 exports.create = simple_logger.create;
+},{}],3:[function(require,module,exports){
+exports.set_lang=function(lang,msgs){
+  lang = lang || navigator.language;
+  if(lang.indexOf('en')===0){
+    lang = 'en';
+  }else if(lang.indexOf('es')===0){
+    lang = 'es';
+  }else{
+    lang = 'en';
+  }
+  var nodes = document.querySelectorAll('[msg]');
+  for(var i = 0; i < nodes.length; i++){
+    var node = nodes.item(i);
+    node.innerText = property(msgs,lang+"."+node.getAttribute("msg"));
+  }
+};
+
+function property(o,s){
+  if(typeof s === 'undefined'){
+    return '';
+  }
+  if(typeof o === 'undefined'){
+    return s;
+  }
+
+  s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+  s = s.replace(/^\./, '');           // strip a leading dot
+  var a = s.split('.');
+  while (a.length) {
+    var n = a.shift();
+    if (n in o) {
+      o = o[n];
+    } else {
+      return s;
+    }
+  }
+  return o;
+}
+
+
 },{}]},{},[1]);

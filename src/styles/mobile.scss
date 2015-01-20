@@ -30,7 +30,7 @@ $mobile-transition-time: 0.5s;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: white;
-  font-size: 2em;
+  font-size: 30px;
   border-bottom: 1px solid $technogi-orange;
   -webkit-transition: all $mobile-transition-time ease;
   transition: all $mobile-transition-time ease;
@@ -54,7 +54,7 @@ $mobile-transition-time: 0.5s;
 
   a {
     color: $technogi-orange;
-    font-size: .4em;
+    font-size: .6em;
     vertical-align: middle;
   }
   .mobile_menu_items {
