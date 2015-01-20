@@ -6,6 +6,7 @@
 @import "../../vendor/foundation/scss/foundation/components/type";
 @import "../../vendor/foundation/scss/foundation/components/visibility";
 @import "../../vendor/foundation/scss/foundation/components/buttons";
+@import "../../vendor/foundation/scss/foundation/components/forms";
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
@@ -409,6 +410,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 
 #contact_us {
   padding-top: 40px;
+  padding-bottom: 40px;
   background-color: rgba(48, 48, 48, 0.85);
   h1{
     background-color: $technogi-orange;
@@ -432,13 +434,41 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     font-weight: 600;
 
   }
+
+  form{
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  input[type=email],input[type=text],textarea{
+    background-color: lighten($technogi-orange,10%);
+    color: white;
+
+  }
+  input[type=submit]{
+    background-color: $technogi-orange;
+    color: white;
+  }
 }
 
 $circle_length: 90px;
 $circle_radius: 50%;
 
 footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: #333333;
+  color: rgba(225, 225, 225, 0.80);
+  .social-container{
+    a{
+      font-size: 2em;
+      color: white;
+      margin-left:10px;
+      :hover{
+        color: rgba(161, 161, 161, 0.80);
+      }
+    }
+  }
+
 }
 
 .circle {

@@ -5,3 +5,28 @@ $black: #2c2c2c;
 $gray: #5f5f5f;
 $gray-light: #e3dfdc;
 $transition-time: 0.5s;
+
+$padding_color:rgba(255, 255, 255, 0.60);
+
+::-webkit-input-placeholder {
+  color: $padding_color;
+  text-decoration: underline;
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $padding_color;
+  text-decoration: underline;
+
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $padding_color;
+  text-decoration: underline;
+
+}
+
+:-ms-input-placeholder {
+  color: $padding_color;
+  text-decoration: underline;
+}
