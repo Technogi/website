@@ -29,7 +29,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1;
-  background: url("../img/code.jpg") fixed center;
+  background: url("../img/paisaje.jpg") fixed center;
   background-size: 100%;
   overflow: scroll;
 
@@ -117,11 +117,16 @@ header.sticky {
   width: 100vw;
 }
 
+$technogi-orange-bg: rgba(235, 104, 17, 0.90);
+
+
 #main_container {
-  background: $technogi-orange;
+  background: url('../img/cubes_@2X.png') repeat;
+  //background: url('../img/white_sand.png') repeat;
 }
 
 #main_content {
+  background: $technogi-orange-bg;
 
   height: 70vh;
 
@@ -154,7 +159,7 @@ header.sticky {
 }
 
 #main_content_footer {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: $technogi-orange-bg;
   text-align: center;
   color: white;
   font-size: 1em;
@@ -403,7 +408,30 @@ header.sticky {
 }
 
 #contact_us {
-  background-color: rgba(4, 4, 4, 0.48);
+  padding-top: 40px;
+  background-color: rgba(48, 48, 48, 0.85);
+  h1{
+    background-color: $technogi-orange;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+
+    margin-top: 20px;
+    padding: 8px;
+  }
+  h2{
+    font-size: 1.7em;
+    color: white;
+    text-align: center;
+  }
+  h3{
+    font-size: 1em;
+    color: lighten($technogi-orange,5%);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+
+  }
 }
 
 $circle_length: 90px;
@@ -419,6 +447,11 @@ footer {
   height: $circle_length;
   background: $technogi-orange;
   padding-top: 20px;
+}
+
+#map-canvas {
+  width: 100%;
+  height: 400px;
 }
 
 @import "page";
