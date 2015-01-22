@@ -282,50 +282,58 @@
   <div class="row">
     <div class="medium-6 columns text-center">
       <h2><i class="fa fa-envelope"></i> Get in touch</h2>
+
       <h3>Fill in the form below, and we'll get back to you within 24 hours.</h3>
-      <form id="myForm" method="post" data-abide>
+
+      <form id="contact_form" method="post" data-abide>
 
         <small class="error">Your full name is required.</small>
-        <input type="text" placeholder="Your full name" required>
+        <input id="contact_form_name" class="radius" type="text" placeholder="Your full name" required>
 
         <small class="error">An email address is required.</small>
 
-        <input type="email" placeholder="Your email " required>
+        <input id="contact_form_email" class="radius" type="email" placeholder="Your email " required>
 
-        <textarea placeholder="Enter your message here" ></textarea>
+        <textarea id="contact_form_msg" class="radius" placeholder="Enter your message here"></textarea>
 
-        <input type="submit" class="nice blue radius button" value="Send Message"></button></a>
+
+        <button id="send_btn" type="submit" class="radius button">
+          <i class="fa fa-paper-plane"> </i> <span> SEND</span>
+        </button>
+
       </form>
     </div>
 
-    <div class="medium-6 columns">
+    <div class="medium-6 columns text-center">
       <h2><i class="fa fa-building-o"></i> Our office</h2>
+
       <h3>Visit us at our office</h3>
+
       <div id="map-canvas"></div>
     </div>
   </div>
 </div>
 
-    <script>
+<script>
 
-      window.onload =function(){
-        var technogi_lat = new google.maps.LatLng(19.333086,-99.199736);
+  window.onload = function () {
+    var technogi_lat = new google.maps.LatLng(19.333086, -99.199736);
 
-        var mapCanvas = document.getElementById('map-canvas');
-        var mapOptions = {
-          center: technogi_lat,
-          zoom: 15,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions);
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+      center: technogi_lat,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
 
-        var marker = new google.maps.Marker({
-          position: technogi_lat,
-          map: map,
-          title:"Technogi"
-        });
-      };
-    </script>
+    var marker = new google.maps.Marker({
+      position: technogi_lat,
+      map: map,
+      title: "Technogi"
+    });
+  };
+</script>
 
 <footer id="more">
   <div class="sub-footer">
@@ -352,10 +360,13 @@
 
   <div class="row">
 
-    <div class="large-12 columns text-center">
-      <p><img src="img/logo_tb_t.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
+    <div class="medium-8 columns">
+      <p><img src="img/logo_footer.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
         de R.L.
         de C.V.</p>
+    </div>
+    <div class="medium-4 columns text-right">
+      <a>AVISO DE PRIVACIDAD</a>
     </div>
 
   </div>

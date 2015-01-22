@@ -11,6 +11,7 @@ exports.set_lang=function(lang,msgs){
   for(var i = 0; i < nodes.length; i++){
     var node = nodes.item(i);
     node.innerText = property(msgs,lang+"."+node.getAttribute("msg"));
+    node.textContent = node.innerText;
   }
 };
 

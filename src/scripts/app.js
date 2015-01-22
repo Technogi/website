@@ -45,7 +45,7 @@ function show_service_description() {
   });
 }
 
-function scroll(){
+function scroll() {
   $('header').addClass("sticky");
   $("#main_content_footer").addClass("scrolled");
   $("#mobile-header").addClass("scrolled");
@@ -96,6 +96,64 @@ function binds() {
       return false;
     });
   });
+
+  $("#send_btn").click(function () {
+    console.log("CLICK");
+    $.ajax
+    ({
+      type: "POST",
+      url: "https://api.mailgun.net/v2/mailgun.technogi.com.mx/messages",
+      dataType: 'json',
+      async: false,
+      headers: {
+        "Authorization": "Basic api:key-f2e9ad587f5f1df3bc3820a81b4d8c8d"
+      },
+      data: {
+        from: 'inforequest@technogi.com.mx',
+        to: 'carlos@technogi.com.mx',
+        subject: 'Information Request',
+        text: 'este es el mensaje'
+      },
+      success: function () {
+        alert('Thanks for your comment!');
+      }
+    });
+  });
+
+
+}
+
+function startup_slider() {
+  var el = document.getElementById("submit_btn_i");
+  el.onmousedown=function(e){
+    var original_position = e.x;
+    document.onmousemove=function(e){
+      console.log(e.x-original_position);
+      el.style['margin-left'] = (e.x-original_position)+"px";
+      console.log( el.style.left );
+    };
+    document.onmouseup =function(e){
+      console.log("mouseup");
+      el.parentNode.onmousemove=function(){};
+      document.onmousemove=function(){};
+    };
+  };
+  el.addEventListener("touchstart",function(e){
+    var original_position = e.x;
+    document.addEventListener("touchmove",function(e){
+      el.style['margin-left'] = (e.x-original_position)+"px";
+    });
+    document.addEventListener("touchleave",function(){
+    });
+  });
+  /*
+  var el = document.getElementsByTagName("canvas")[0];
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchleave", handleEnd, false);
+  el.addEventListener("touchmove", handleMove, false);
+  log("initialized.");*/
 }
 
 $(window).load(function () {

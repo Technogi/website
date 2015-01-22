@@ -78,11 +78,10 @@ header {
 
   a {
 
-
-    overflow:hidden;
+    overflow: hidden;
     color: white;
     font-weight: 500;
-    :hover{
+    :hover {
       -webkit-transition-duration: 0.5s;
       -moz-transition-duration: 0.5s;
       -o-transition-duration: 0.5s;
@@ -92,9 +91,9 @@ header {
       -moz-transition-property: -moz-transform;
       -o-transition-property: -o-transform;
       transition-property: transform;
-      -webkit-transform:rotate(200deg);
-      -moz-transform:rotate(200deg);
-      -o-transform:rotate(200deg);
+      -webkit-transform: rotate(200deg);
+      -moz-transform: rotate(200deg);
+      -o-transform: rotate(200deg);
       color: white;
 
     }
@@ -102,7 +101,7 @@ header {
       color: white;
       text-decoration: underline;
     }
-    &:active,:active{
+    &:active, :active {
       color: $technogi-orange;
     }
 
@@ -141,7 +140,6 @@ header.sticky {
 }
 
 $technogi-orange-bg: rgba(235, 104, 17, 0.90);
-
 
 #main_container {
   background: url('../img/cubes_@2X.png') repeat;
@@ -331,7 +329,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 
 .philosophy_tile {
   padding: 20px;
-  background-color: #413936;
+  background-color: #444444;
   text-align: center;
   height: 280px;
   margin-bottom: 20px;
@@ -358,14 +356,14 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 #how_we_do {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: rgba(55, 46, 42, 0.99);
-  color: #d2d2d2;
+  background-color: $bg-gray;
+  color: $text-gray;
   h1 {
     font-size: 2em;
     text-align: left;
     padding-bottom: 10px;
     border-bottom: 2px solid $technogi-orange;
-    color: #dedede;
+    color: lighten($text-gray, 5%);
     margin-bottom: 10px;
 
   }
@@ -373,7 +371,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   h2 {
 
     font-size: 2em;
-    color: #eeeeee;
+    color: lighten($text-gray, 15%);;
     :hover {
       -webkit-transition-duration: 0.8s;
       -moz-transition-duration: 0.8s;
@@ -401,12 +399,12 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   h3 {
     margin: 20px;
     font-size: 1.2em;
-    color: #eeeeee;
+    color: lighten($text-gray, 10%);;
 
   }
 
   p {
-    color: #b6b6b6;
+    color: $text-gray;
     font-size: .8em;
     line-height: 1.5em;
   }
@@ -434,41 +432,64 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: rgba(48, 48, 48, 0.85);
-  h1{
+  h1 {
     background-color: $technogi-orange;
-    color: white;
+    color: $text-gray;
     font-size: 2em;
     margin-bottom: 20px;
 
     margin-top: 20px;
     padding: 8px;
   }
-  h2{
+  h2 {
     font-size: 1.7em;
-    color: white;
+    color: lighten($text-gray, 18%);
     text-align: center;
   }
-  h3{
+  h3 {
     font-size: 1em;
-    color: lighten($technogi-orange,5%);
+    color: lighten($technogi-orange, 5%);
     margin-bottom: 40px;
     text-align: center;
     font-weight: 600;
 
   }
 
-  form{
-    margin-top: 100px;
-    margin-bottom: 60px;
-  }
-  input[type=email],input[type=text],textarea{
-    background-color: lighten($technogi-orange,10%);
-    color: white;
+  #contact_form_captcha_checkbox {
+
+    background: $technogi-orange;
+
+
 
   }
-  input[type=submit]{
+  #contact_form_captcha {
+    width: 100%;
+    label {
+      color: $technogi-orange;
+      font-weight: 600;
+    }
+  }
+
+  form {
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+  }
+  input[type=email], input[type=text], textarea {
+    background-color: lighten($technogi-orange, 10%);
+    color: white;
+    border: 2px solid $gray;
+  }
+  textarea {
+    height: 100px;
+  }
+  button {
     background-color: $technogi-orange;
     color: white;
+    font-weight: 600;
+    &:hover {
+      background-color: darken($technogi-orange, 8%);
+    }
   }
 }
 
@@ -480,22 +501,33 @@ footer {
   background-color: #141414;
   color: rgba(225, 225, 225, 0.80);
   padding-bottom: 20px;
-
-  .sub-footer{
+  font-weight: 600;
+  font-size: .8em;
+  a {
+    color: $technogi-orange;
+    &:hover {
+      color: $technogi-orange;
+      text-decoration: underline;
+    }
+  }
+  .sub-footer {
+    font-size: 1.2em;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #2f2f2f;
+    background-color: $bg-gray;
     margin-bottom: 20px;
-    color: #a5a5a5;
+    color: $text-gray;
     line-height: 20px;
+    font-weight: 400;
+
   }
-  .social-container{
-    a{
+  .social-container {
+    a {
       font-size: 2em;
-      color: white;
-      margin-left:10px;
-      :hover{
-        color: rgba(161, 161, 161, 0.80);
+      color: $text-gray;
+      margin-left: 10px;
+      :hover {
+        color: $technogi-orange;
       }
     }
   }

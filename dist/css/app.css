@@ -44,7 +44,6 @@
     padding: 0px; }
 
 #mobile-header.scrolled {
-  border-bottom: 0px solid white;
   transform: translate(0px, -50px);
   -webkit-transform: translate(0px, -50px); }
 
@@ -4041,7 +4040,7 @@ header.sticky {
 
 .philosophy_tile {
   padding: 20px;
-  background-color: #413936;
+  background-color: #444444;
   text-align: center;
   height: 280px;
   margin-bottom: 20px; }
@@ -4090,18 +4089,18 @@ header.sticky {
 #how_we_do {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: rgba(55, 46, 42, 0.99);
-  color: #d2d2d2; }
+  background-color: #363636;
+  color: #cacaca; }
   #how_we_do h1 {
     font-size: 2em;
     text-align: left;
     padding-bottom: 10px;
     border-bottom: 2px solid #eb6c1e;
-    color: #dedede;
+    color: #d7d7d7;
     margin-bottom: 10px; }
   #how_we_do h2 {
     font-size: 2em;
-    color: #eeeeee; }
+    color: #f0f0f0; }
     #how_we_do h2 :hover {
       -webkit-transition-duration: 0.8s;
       -moz-transition-duration: 0.8s;
@@ -4125,9 +4124,9 @@ header.sticky {
   #how_we_do h3 {
     margin: 20px;
     font-size: 1.2em;
-    color: #eeeeee; }
+    color: #e4e4e4; }
   #how_we_do p {
-    color: #b6b6b6;
+    color: #cacaca;
     font-size: .8em;
     line-height: 1.5em; }
   #how_we_do hr {
@@ -4151,14 +4150,14 @@ header.sticky {
   background-color: rgba(48, 48, 48, 0.85); }
   #contact_us h1 {
     background-color: #eb6c1e;
-    color: white;
+    color: #cacaca;
     font-size: 2em;
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 8px; }
   #contact_us h2 {
     font-size: 1.7em;
-    color: white;
+    color: #f8f8f8;
     text-align: center; }
   #contact_us h3 {
     font-size: 1em;
@@ -4166,33 +4165,55 @@ header.sticky {
     margin-bottom: 40px;
     text-align: center;
     font-weight: 600; }
+  #contact_us #contact_form_captcha_checkbox {
+    background: #eb6c1e; }
+  #contact_us #contact_form_captcha {
+    width: 100%; }
+    #contact_us #contact_form_captcha label {
+      color: #eb6c1e;
+      font-weight: 600; }
   #contact_us form {
-    margin-top: 100px;
+    margin-top: 80px;
     margin-bottom: 60px; }
   #contact_us input[type=email], #contact_us input[type=text], #contact_us textarea {
     background-color: #ef8b4d;
-    color: white; }
-  #contact_us input[type=submit] {
+    color: white;
+    border: 2px solid #5f5f5f; }
+  #contact_us textarea {
+    height: 100px; }
+  #contact_us button {
     background-color: #eb6c1e;
-    color: white; }
+    color: white;
+    font-weight: 600; }
+    #contact_us button:hover {
+      background-color: #ce5a12; }
 
 footer {
   background-color: #141414;
   color: rgba(225, 225, 225, 0.8);
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: .8em; }
+  footer a {
+    color: #eb6c1e; }
+    footer a:hover {
+      color: #eb6c1e;
+      text-decoration: underline; }
   footer .sub-footer {
+    font-size: 1.2em;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: #2f2f2f;
+    background-color: #363636;
     margin-bottom: 20px;
-    color: #a5a5a5;
-    line-height: 20px; }
+    color: #cacaca;
+    line-height: 20px;
+    font-weight: 400; }
   footer .social-container a {
     font-size: 2em;
-    color: white;
+    color: #cacaca;
     margin-left: 10px; }
     footer .social-container a :hover {
-      color: rgba(161, 161, 161, 0.8); }
+      color: #eb6c1e; }
 
 .circle {
   border-radius: 50%;
