@@ -7,10 +7,24 @@
 var logger = require('./logger');
 var lang = require('./msg');
 
+
+var templates = require('./templates');
+
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
 lang.set_lang('en', messages);
+
+
+function findFirstByAttr(array, attr, value) {
+  var result = [];
+  for(var i = 0; i < array.length; i += 1) {
+      if(array[i][attr] == value) {
+          return array[i];
+      }
+  }
+  return undefined;
+}
 
 function hide_service_buttons() {
   $(".service_btn").hide();
@@ -64,6 +78,21 @@ function adjust() {
   }
 }
 
+function buildTemplate(template,callback){
+  console.log(template.layout);
+  $("#page .layout").hide();
+  $("#page #layout_"+template.layout).show();
+  $("#page #layout_"+template.layout+" #title").html(template.title);
+  $("#page #layout_"+template.layout+" #subtitle").html(template.subtitle);
+  $("#page #layout_"+template.layout+" #description").html(template.description);
+  if(template.layout=="text-image"){
+    $("#page #layout_"+template.layout+" #image").attr("src",template.image.src);
+  }
+  if(callback){
+    callback();
+  }
+}
+
 
 function display_carousel_element(index, elements) {
   $(elements[index]).slideDown(1000, function () {
@@ -74,6 +103,10 @@ function display_carousel_element(index, elements) {
       });
     }, 5000);
   });
+}
+
+function backToMain(){
+  $(".show").removeClass("show");
 }
 
 function start_carousel() {
@@ -91,8 +124,14 @@ function binds() {
 
   $("[show]").each(function (i, e) {
     $(e).click(function () {
-      scroll();
-      $("#page").addClass("show");
+      var show_template = $(e).attr("show");
+      console.log(show_template);
+      var template = findFirstByAttr(templates,"name",show_template);
+      buildTemplate(template,function(){
+        scroll();
+        $("#page").addClass("show");
+        $("#page").focus();
+      });
       return false;
     });
   });
@@ -118,6 +157,11 @@ function binds() {
         alert('Thanks for your comment!');
       }
     });
+  });
+
+
+  $("#back_btn").click(function(){
+    $(".show").removeClass("show");
   });
 
 
@@ -155,6 +199,8 @@ function startup_slider() {
   el.addEventListener("touchmove", handleMove, false);
   log("initialized.");*/
 }
+
+
 
 $(window).load(function () {
   adjust();

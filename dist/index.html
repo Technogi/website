@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/app.css">
   <!-- import Google font -->
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -82,7 +83,7 @@
       </div>
       <div class="medium-3 large-3 columns">
         <div class="technogi_panel">
-          <a href="#">
+          <a show="software_development" href="#">
 
             <div class="icon ">
               <i class="fa fa-3x fa-laptop"></i>
@@ -93,7 +94,7 @@
           <p class="service_description">
             Mel eros inimicus in, te ipsum virtute eam, vel ea hinc mazim. Percipit mandamus philosophia no est.
           </p>
-          <button class="service_btn button small warning" msg="commons.learn_more"></button>
+          <button show="software_development" class="service_btn button small warning" msg="commons.learn_more"></button>
         </div>
       </div>
       <div class="medium-3 large-3 columns">
@@ -229,7 +230,7 @@
       <div class="philosophy_tile">
 
 
-        <h2><i class="fa fa-graduation-cap"></i></h2>
+        <h2><i class="fa fa-institution"></i></h2>
 
         <h3>our philosophy</h3>
 
@@ -308,7 +309,7 @@
       <h2><i class="fa fa-building-o"></i> Our office</h2>
 
       <h3>Visit us at our office</h3>
-
+      <div class="overlay" onClick="style.pointerEvents='none'"></div>
       <div id="map-canvas"></div>
     </div>
   </div>
@@ -338,7 +339,7 @@
 <footer id="more">
   <div class="sub-footer">
     <div class="row">
-      <div class="medium-8 columns">
+      <div class="medium-6 columns">
         <p data-i18n>
           Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de experiencia
           en la implementación de tecnologías de la información. Nuestra dedicación a la investigación e innovación nos
@@ -346,6 +347,7 @@
           en la productividad de su negocio.
         </p>
       </div>
+      <div class="medium-2 columns"></div>
       <div class="medium-4  columns">
         <div class="social-container">
           <a target="_blank" href="https://technogi.github.io/"><i class="fa fa-github"></i></a>
@@ -361,7 +363,7 @@
   <div class="row">
 
     <div class="medium-8 columns">
-      <p><img src="img/logo_footer.png" width="100"> © 2014 by Technogi Desarrollo y Consultoría de Software S.
+      <p><img src="img/logo_footer.png" width="100"> &nbsp;&nbsp;© 2014 by Technogi Desarrollo y Consultoría de Software S.
         de R.L.
         de C.V.</p>
     </div>
@@ -376,10 +378,52 @@
 
 </div>
 <div id="page">
-  <h1>Titulo</h1>
-<h2>Subtitulo</h2>
-<p>lk lkj lkj lkj lkj lkj lkfdj lkdfj klgdfj lkdfgj dlkfj ldkfj gdflkj dflkj dfglkj dflkj dfg</p>
-<div style="background-color: #007095; width: 100%; position: absolute; bottom: 10px;">REGRESAR</div>
+  <div id="back_btn" class="back"><i class="fa fa-arrow-left"></i>&nbsp;REGRESAR</div>
+
+<br/><br/><br/>
+<div id="layout_text" class="row layout">
+	<div class="medium-12 columns">
+		<div class="row">
+			<div class="medium-12 columns">
+				<div class="title-box">
+					<h1 id="title"></h1>
+				</div>
+				<h2 id="subtitle"></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-12 columns">
+				<div id="description"></div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div id="layout_text-image" class="row layout">
+	<div class="medium-12 columns">
+		<div class="row">
+			<div class="medium-12 columns">
+				<div class="title-box">
+					<h1 id="title"></h1>
+				</div>
+				<h2 id="subtitle"></h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="medium-9 columns">
+				<div id="description"></div>
+			</div>
+			<div class="medium-3 columns">
+				<img id="image"/>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
 </div>
 <script src="js/vendor.bundle.js"></script>
 <script src="js/app.js"></script>

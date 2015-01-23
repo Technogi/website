@@ -8,10 +8,24 @@
 var logger = require('./logger');
 var lang = require('./msg');
 
+
+var templates = require('./templates');
+
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
 lang.set_lang('en', messages);
+
+
+function findFirstByAttr(array, attr, value) {
+  var result = [];
+  for(var i = 0; i < array.length; i += 1) {
+      if(array[i][attr] == value) {
+          return array[i];
+      }
+  }
+  return undefined;
+}
 
 function hide_service_buttons() {
   $(".service_btn").hide();
@@ -65,6 +79,21 @@ function adjust() {
   }
 }
 
+function buildTemplate(template,callback){
+  console.log(template.layout);
+  $("#page .layout").hide();
+  $("#page #layout_"+template.layout).show();
+  $("#page #layout_"+template.layout+" #title").html(template.title);
+  $("#page #layout_"+template.layout+" #subtitle").html(template.subtitle);
+  $("#page #layout_"+template.layout+" #description").html(template.description);
+  if(template.layout=="text-image"){
+    $("#page #layout_"+template.layout+" #image").attr("src",template.image.src);
+  }
+  if(callback){
+    callback();
+  }
+}
+
 
 function display_carousel_element(index, elements) {
   $(elements[index]).slideDown(1000, function () {
@@ -75,6 +104,10 @@ function display_carousel_element(index, elements) {
       });
     }, 5000);
   });
+}
+
+function backToMain(){
+  $(".show").removeClass("show");
 }
 
 function start_carousel() {
@@ -92,8 +125,14 @@ function binds() {
 
   $("[show]").each(function (i, e) {
     $(e).click(function () {
-      scroll();
-      $("#page").addClass("show");
+      var show_template = $(e).attr("show");
+      console.log(show_template);
+      var template = findFirstByAttr(templates,"name",show_template);
+      buildTemplate(template,function(){
+        scroll();
+        $("#page").addClass("show");
+        $("#page").focus();
+      });
       return false;
     });
   });
@@ -119,6 +158,11 @@ function binds() {
         alert('Thanks for your comment!');
       }
     });
+  });
+
+
+  $("#back_btn").click(function(){
+    $(".show").removeClass("show");
   });
 
 
@@ -157,6 +201,8 @@ function startup_slider() {
   log("initialized.");*/
 }
 
+
+
 $(window).load(function () {
   adjust();
   binds();
@@ -164,7 +210,7 @@ $(window).load(function () {
   show_service_description();
 });
 $(window).scroll(adjust);
-},{"./logger":2,"./msg":3}],2:[function(require,module,exports){
+},{"./logger":2,"./msg":3,"./templates":4}],2:[function(require,module,exports){
 /**
  *
  * developed on Technogi Mexico
@@ -268,4 +314,29 @@ function property(o,s){
 }
 
 
+},{}],4:[function(require,module,exports){
+module.exports = [{
+	"name":"consulting",
+	"title":"IT Consulting",
+	"subtitle":"We do IT Consulting",
+	"description":"<p>Bacon ipsum dolor amet turducken brisket filet mignon meatloaf, chuck pancetta flank ham sausage strip steak chicken. Alcatra turducken chicken, beef ribs pancetta hamburger pork. Sirloin chicken chuck capicola. Landjaeger salami brisket, venison ribeye pork strip steak kielbasa pork loin rump pig andouille. Brisket ribeye corned beef salami jerky ground round sausage porchetta beef shoulder capicola biltong.</p>"+
+									"<p>Kielbasa t-bone cupim, jowl sausage shankle fatback prosciutto andouille pig bacon. Bacon t-bone cow spare ribs cupim venison. Ground round cow shankle, frankfurter sausage pork filet mignon capicola jowl. Cupim pork belly ham hock turkey. Prosciutto flank picanha pork jowl alcatra kielbasa filet mignon pork belly. Chuck sirloin drumstick ham hock corned beef beef ribs kielbasa capicola jowl. Jerky fatback strip steak, beef bresaola ribeye venison turducken rump shank sausage brisket shoulder boudin.</p>"+
+									"<p>Short ribs bresaola hamburger capicola pancetta tail alcatra pork belly. Boudin short loin bresaola kevin, salami pastrami leberkas venison filet mignon cow jowl meatloaf shoulder kielbasa. Capicola pork chop ground round tail cupim kevin turkey boudin bresaola. Spare ribs doner pig frankfurter. Picanha pancetta meatball tongue rump, drumstick cupim.</p>"+
+									"<p>Bresaola landjaeger rump pancetta, bacon kevin pig shank pork chop sausage meatball jowl tenderloin ham. Shoulder turkey frankfurter ribeye cupim, beef ribs ham hock shank brisket sausage swine tail ground round landjaeger strip steak. Porchetta bacon chicken t-bone brisket shankle. Pancetta leberkas short ribs jowl capicola turkey alcatra doner porchetta. Salami tri-tip bacon spare ribs prosciutto cupim hamburger chicken pork belly turducken pancetta short ribs sirloin andouille sausage. Kevin venison sirloin kielbasa strip steak shoulder biltong pork chop jerky prosciutto shankle ham hock.</p>"+
+									"<p>Bacon filet mignon shank, cupim turkey shankle ball tip fatback short loin shoulder. Short ribs turducken chicken picanha, kielbasa shoulder drumstick t-bone tail corned beef beef ribs pork chop ham andouille brisket. Rump kielbasa shankle chuck shoulder pork loin. Spare ribs chicken ball tip ribeye, ham cupim andouille jowl beef pork belly leberkas. Meatball jerky shoulder sausage t-bone porchetta corned beef picanha chuck jowl shank ground round tri-tip.</p>",
+	"layout":"text"
+},
+{
+	"name":"software_development",
+	"title":"Software Development",
+	"subtitle":"We do Software Development",
+	"description":"<p>Bacon ipsum dolor amet turducken brisket filet mignon meatloaf, chuck pancetta flank ham sausage strip steak chicken. Alcatra turducken chicken, beef ribs pancetta hamburger pork. Sirloin chicken chuck capicola. Landjaeger salami brisket, venison ribeye pork strip steak kielbasa pork loin rump pig andouille. Brisket ribeye corned beef salami jerky ground round sausage porchetta beef shoulder capicola biltong.</p>"+
+									"<p>Kielbasa t-bone cupim, jowl sausage shankle fatback prosciutto andouille pig bacon. Bacon t-bone cow spare ribs cupim venison. Ground round cow shankle, frankfurter sausage pork filet mignon capicola jowl. Cupim pork belly ham hock turkey. Prosciutto flank picanha pork jowl alcatra kielbasa filet mignon pork belly. Chuck sirloin drumstick ham hock corned beef beef ribs kielbasa capicola jowl. Jerky fatback strip steak, beef bresaola ribeye venison turducken rump shank sausage brisket shoulder boudin.</p>"+
+									"<p>Short ribs bresaola hamburger capicola pancetta tail alcatra pork belly. Boudin short loin bresaola kevin, salami pastrami leberkas venison filet mignon cow jowl meatloaf shoulder kielbasa. Capicola pork chop ground round tail cupim kevin turkey boudin bresaola. Spare ribs doner pig frankfurter. Picanha pancetta meatball tongue rump, drumstick cupim.</p>"+
+									"<p>Bresaola landjaeger rump pancetta, bacon kevin pig shank pork chop sausage meatball jowl tenderloin ham. Shoulder turkey frankfurter ribeye cupim, beef ribs ham hock shank brisket sausage swine tail ground round landjaeger strip steak. Porchetta bacon chicken t-bone brisket shankle. Pancetta leberkas short ribs jowl capicola turkey alcatra doner porchetta. Salami tri-tip bacon spare ribs prosciutto cupim hamburger chicken pork belly turducken pancetta short ribs sirloin andouille sausage. Kevin venison sirloin kielbasa strip steak shoulder biltong pork chop jerky prosciutto shankle ham hock.</p>"+
+									"<p>Bacon filet mignon shank, cupim turkey shankle ball tip fatback short loin shoulder. Short ribs turducken chicken picanha, kielbasa shoulder drumstick t-bone tail corned beef beef ribs pork chop ham andouille brisket. Rump kielbasa shankle chuck shoulder pork loin. Spare ribs chicken ball tip ribeye, ham cupim andouille jowl beef pork belly leberkas. Meatball jerky shoulder sausage t-bone porchetta corned beef picanha chuck jowl shank ground round tri-tip.</p>",
+	"image":{"src":"http://placehold.it/350x350"},
+	"layout":"text-image"
+}
+];
 },{}]},{},[1]);
