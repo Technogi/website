@@ -75,7 +75,25 @@ header {
   background: $black;
   color: #808080;
   font-size: 1.1em;
-
+  .language_selector{
+    -moz-appearance: none;
+    position:absolute;
+    width:200px;
+    right:0;
+    top:0;
+    color:white;
+    background-color:$black;
+    text-align: right;
+    font-weight: lighter;
+    font-size: .7em;
+    border:none;
+    letter-spacing: 2px;
+    height:35px;
+    line-height: .6em;
+    option{
+      font-weight:normal;
+    }
+  }
   a {
 
     overflow: hidden;
@@ -210,11 +228,12 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 
       overflow: hidden;
       padding: 12px;
-      padding-top:5px;
-      line-height: 1.1em;
+      padding-top:10px;
+      line-height: 1.13em;
       position: absolute;
       //text-align: justify;
-      font-size:.9em;
+      font-size:.85em;
+      font-weight: 210;
       height: 210px;
       top: -210px;
       left: 0px;
@@ -288,7 +307,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     background-color: $technogi-orange;
     p.service_description {
       color: white;
-      background-color: rgba(30,30,30,0.6);
+      background-color: rgba(30,30,30,0.8);
 
     }
   }

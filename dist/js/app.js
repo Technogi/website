@@ -14,7 +14,9 @@ var templates = require('./templates');
 var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
-lang.set_lang('en', messages);
+var userLang = navigator.language || navigator.userLanguage;
+userLang = userLang.substr(0,userLang.indexOf('-'));
+lang.set_lang(userLang, messages);
 
 
 function findFirstByAttr(array, attr, value) {
@@ -73,8 +75,10 @@ function adjust() {
 
   if ($(this).scrollTop() > 1) {
     scroll();
+    $(".language_selector").hide();
   }
   else {
+    $(".language_selector").show();
     reset();
   }
 }
@@ -118,7 +122,7 @@ function binds() {
   $("[scroll_to]").each(function (i, e) {
     $(e).click(function () {
       backToMain();
-      $('html, body').animate({ scrollTop: $('#' + $(e).attr('scroll_to')).offset().top }, 'slow');
+      $('html, body').animate({ scrollTop: $('#' + $(e).attr('scroll_to')).offset().top-30 }, 'slow');
       return false;
     });
   });
@@ -164,6 +168,10 @@ function binds() {
 
   $("#back_btn").click(function(){
     backToMain();
+  });
+
+  $(".language_selector").change(function(){
+    lang.set_lang($(".language_selector").val(), messages);
   });
 
 
