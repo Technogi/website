@@ -6,6 +6,7 @@
  */
 var logger = require('./logger');
 var lang = require('./msg');
+var sendmail = require('./sendmail');
 
 
 var templates = require('./templates');
@@ -141,30 +142,6 @@ function binds() {
     });
   });
 
-  $("#send_btn").click(function () {
-    console.log("CLICK");
-    $.ajax
-    ({
-      type: "POST",
-      url: "https://api.mailgun.net/v2/mailgun.technogi.com.mx/messages",
-      dataType: 'json',
-      async: false,
-      headers: {
-        "Authorization": "Basic api:key-f2e9ad587f5f1df3bc3820a81b4d8c8d"
-      },
-      data: {
-        from: 'inforequest@technogi.com.mx',
-        to: 'carlos@technogi.com.mx',
-        subject: 'Information Request',
-        text: 'este es el mensaje'
-      },
-      success: function () {
-        alert('Thanks for your comment!');
-      }
-    });
-  });
-
-
   $("#back_btn").click(function(){
     backToMain();
   });
@@ -216,5 +193,6 @@ $(window).load(function () {
   binds();
   start_carousel();
   show_service_description();
+  sendmail.bind();
 });
 $(window).scroll(adjust);

@@ -282,17 +282,25 @@
 
 
   <div class="row">
-    <div class="medium-6 columns text-center">
+    <div class="mail_contact medium-6 columns text-center">
+
+
       <h2><i class="fa fa-envelope"></i> Get in touch</h2>
 
+      <div class="sending_email">
+        <h3>sending...</h3>
+        <i class="fa fa-2x fa-spin fa-circle-o-notch"></i>
+      </div>
+      <div class="email_sent">
+        <h3>Thank you</h3>
+        <div><i class="fa fa-check"></i> We'll get back to you within 24 hours. Hold on tight!</div>
+      </div>
       <h3>Fill in the form below, and we'll get back to you within 24 hours.</h3>
 
-      <form id="contact_form" method="post" data-abide>
+      <div id="contact_form" method="post">
 
-        <small class="error">Your full name is required.</small>
         <input id="contact_form_name" class="radius" type="text" placeholder="Your full name" required>
 
-        <small class="error">An email address is required.</small>
 
         <input id="contact_form_email" class="radius" type="email" placeholder="Your email " required>
 
@@ -303,7 +311,7 @@
           <i class="fa fa-share"> </i> <span> SEND</span>
         </button>
 
-      </form>
+      </div>
     </div>
 
     <div class="medium-6 columns text-center">

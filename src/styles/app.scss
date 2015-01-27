@@ -75,23 +75,23 @@ header {
   background: $black;
   color: #808080;
   font-size: 1.1em;
-  .language_selector{
+  .language_selector {
     -moz-appearance: none;
-    position:absolute;
-    width:200px;
-    right:0;
-    top:0;
-    color:white;
-    background-color:$black;
+    position: absolute;
+    width: 200px;
+    right: 0;
+    top: 0;
+    color: white;
+    background-color: $black;
     text-align: right;
     font-weight: lighter;
     font-size: .7em;
-    border:none;
+    border: none;
     letter-spacing: 2px;
-    height:35px;
+    height: 35px;
     line-height: .6em;
-    option{
-      font-weight:normal;
+    option {
+      font-weight: normal;
     }
   }
   a {
@@ -131,8 +131,8 @@ header {
     transition: all $transition-time ease;
   }
 
-  .logo{
-    cursor:pointer;
+  .logo {
+    cursor: pointer;
   }
 
   // set animation
@@ -198,7 +198,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 }
 
 .service_btn {
-  margin-top:20px;
+  margin-top: 20px;
   display: none;
 }
 
@@ -215,10 +215,10 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     background-color: rgba(255, 255, 255, 0);
     text-align: center;
     padding: 20px;
-    padding-bottom:0px;
+    padding-bottom: 0px;
     position: relative;
     overflow: hidden;
-    border-radius:3px;
+    border-radius: 3px;
 
     p.service_description {
       -webkit-transition: all $transition-time ease;
@@ -228,16 +228,16 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 
       overflow: hidden;
       padding: 12px;
-      padding-top:10px;
+      padding-top: 10px;
       line-height: 1.13em;
       position: absolute;
       //text-align: justify;
-      font-size:.85em;
+      font-size: .85em;
       font-weight: 210;
       height: 210px;
       top: -210px;
       left: 0px;
-      border-radius:3px;
+      border-radius: 3px;
     }
 
   }
@@ -271,15 +271,15 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
       text-decoration: underline;
     }
   }
-  button{
-    color:#eb6c1e;
-    background-color:#f8f8f8;
-    border:solid thin white;
-    border-radius:4px;
+  button {
+    color: #eb6c1e;
+    background-color: #f8f8f8;
+    border: solid thin white;
+    border-radius: 4px;
   }
-  button:hover{
-    background-color: rgba(30,30,30,0);
-    color:white;
+  button:hover {
+    background-color: rgba(30, 30, 30, 0);
+    color: white;
   }
   -webkit-transition: all $transition-time ease-in-out;
   transition: all $transition-time ease-in-out;
@@ -307,7 +307,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     background-color: $technogi-orange;
     p.service_description {
       color: white;
-      background-color: rgba(30,30,30,0.8);
+      background-color: rgba(30, 30, 30, 0.8);
 
     }
   }
@@ -472,6 +472,47 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: rgba(48, 48, 48, 0.85);
+
+  .mail_contact{
+    min-height: 450px;
+  }
+  #contact_form{
+  }
+
+  .email_sent{
+    div{
+      background-color: #e6e6e6;
+      margin: 20px;
+      padding: 10px;
+      color: #363636;
+      font-size: .6em;
+      border: 1px solid $gray;
+      border-radius: 10px;
+
+    }
+    display: none;
+    font-size: 2em;
+    color: $technogi-orange;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 48, 48, 0.0);
+    padding-top: 30%;
+    z-index: 100;
+  }
+
+  .sending_email {
+    display: none;
+    font-size: 2em;
+    color: $technogi-orange;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(48, 48, 48, 0.0);
+    padding-top: 30%;
+    z-index: 100;
+  }
+
   h1 {
     background-color: $technogi-orange;
     color: $text-gray;
@@ -498,8 +539,6 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   #contact_form_captcha_checkbox {
 
     background: $technogi-orange;
-
-
 
   }
   #contact_form_captcha {
@@ -559,7 +598,7 @@ footer {
     color: $text-gray;
     font-weight: 100;
     line-height: 30px;
-    min-height:280px;
+    min-height: 280px;
     text-align: justify;
 
   }
@@ -590,13 +629,13 @@ footer {
 }
 
 .overlay {
-   background:transparent; 
-   position:relative; 
-   width:100%;
-   z-index:10;
-   height:400px; /* your iframe height */
-   top:400px;  /* your iframe height */
-   margin-top:-400px;  /* your iframe height */
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  height: 400px; /* your iframe height */
+  top: 400px; /* your iframe height */
+  margin-top: -400px; /* your iframe height */
 }
 
 @import "page";
