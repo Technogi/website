@@ -6,3 +6,4 @@ rackspace.json
 dist/*
 vendor/*
 v1
+.DS_Store
