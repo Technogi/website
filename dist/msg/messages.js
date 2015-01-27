@@ -19,6 +19,14 @@ var messages = {
           "description":
             "Lorem ipsum dolor sit amet, id regione impedit " +
             "definitiones usu, velit persius percipit no duo."
+        },
+        "project_landing":{
+          "title":"Project Landing",
+          "description":
+            "Servicio especializado en convertir ideas innovadoras "+
+            "y proyectos de alta complejidad en realidad. Utilizamos "+
+            "un proceso guiado que se adapta al estado actual de sus "+
+            "necesidades y garantiza el éxito de la implementación."
         }
       }
     }},

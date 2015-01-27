@@ -113,6 +113,10 @@ header {
     transition: all $transition-time ease;
   }
 
+  .logo{
+    cursor:pointer;
+  }
+
   // set animation
   -webkit-transition: all $transition-time ease;
   transition: all $transition-time ease;
@@ -172,7 +176,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
 .show_up {
   -ms-transform: translate(0px, 140px);
   -webkit-transform: translate(0px, 140px);
-  transform: translate(0px, 140px);
+  transform: translate(0px, 210px);
 }
 
 .service_btn {
@@ -205,13 +209,16 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
       color: rgba(255, 255, 255, 0);
 
       overflow: hidden;
-      padding: 30px;
+      padding: 12px;
+      padding-top:5px;
+      line-height: 1.1em;
       position: absolute;
-      height: 140px;
-      top: -140px;
+      //text-align: justify;
+      font-size:.9em;
+      height: 210px;
+      top: -210px;
       left: 0px;
       border-radius:3px;
-      overflow: scroll;
     }
 
   }
@@ -245,6 +252,16 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
       text-decoration: underline;
     }
   }
+  button{
+    color:#eb6c1e;
+    background-color:#f8f8f8;
+    border:solid thin white;
+    border-radius:4px;
+  }
+  button:hover{
+    background-color: rgba(30,30,30,0);
+    color:white;
+  }
   -webkit-transition: all $transition-time ease-in-out;
   transition: all $transition-time ease-in-out;
 }
@@ -271,7 +288,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     background-color: $technogi-orange;
     p.service_description {
       color: white;
-      background-color: rgba(35,35,35, 0.68);
+      background-color: rgba(30,30,30,0.6);
 
     }
   }

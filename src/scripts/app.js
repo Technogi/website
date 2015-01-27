@@ -79,7 +79,6 @@ function adjust() {
 }
 
 function buildTemplate(template,callback){
-  console.log(template.layout);
   $("#page .layout").hide();
   $("#page #layout_"+template.layout).show();
   $("#page #layout_"+template.layout+" #title").html(template.title);
@@ -106,7 +105,8 @@ function display_carousel_element(index, elements) {
 }
 
 function backToMain(){
-  $(".show").removeClass("show");
+  $("#page").removeClass("show");
+  $("body").css("overflow","auto");
 }
 
 function start_carousel() {
@@ -116,7 +116,7 @@ function start_carousel() {
 function binds() {
   $("[scroll_to]").each(function (i, e) {
     $(e).click(function () {
-      $("#page").removeClass("show");
+      backToMain();
       $('html, body').animate({ scrollTop: $('#' + $(e).attr('scroll_to')).offset().top }, 'slow');
       return false;
     });
@@ -130,6 +130,7 @@ function binds() {
       buildTemplate(template,function(){
         scroll();
         $("#page").addClass("show");
+        $("body").css("overflow","hidden");
         $("#page").focus();
       });
       return false;
@@ -161,7 +162,7 @@ function binds() {
 
 
   $("#back_btn").click(function(){
-    $(".show").removeClass("show");
+    backToMain();
   });
 
 

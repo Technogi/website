@@ -6,6 +6,7 @@
   width: 100vw;
   left: 100vw;
   height: 100vh;
+  margin-bottom:100px;
   overflow: scroll;
   position: fixed;
   background-color: #ffffff;
@@ -15,13 +16,14 @@
   .back{
     background-color: $technogi-orange; 
     width: 100%;
-    height:45px;
+    height:53px;
     position:absolute;
-    top:18px;
-    line-height:40px;
+    top:10px;
+    line-height:58px;
     padding-left:20px;
     color:white;
     cursor:pointer;
+    font-size:.9em;
   }
   .title-box{
     margin-top:15px;
@@ -44,20 +46,116 @@
     color:$gray;
   }
 
-  #description{
-    padding:20px;
-    text-align: justify;
-    line-height:1.5em;
-    p{
-      margin-top:25px;
-      margin-bottom:35px;
-    }
-  }
-  #description p:first-of-type:first-letter {
-    font-size: 3em;
-    color: $technogi-orange;
+  h3{
+    font-size:2em;
+    margin-top:15px;
+    color:$technogi-orange;
+    padding-left:0;
   }
 
+
+  #description{
+    //background-color:#fbfbfb;
+    //border:solid thin #efefef;
+    text-align: justify;
+    line-height:1.5em;
+    padding:20px;
+    margin-top:10px;
+    p{
+      margin-top:15px;
+      margin-bottom:20px;
+      padding:20px;
+    }
+    //p
+    p:first-of-type:first-letter {
+      font-size: 2em;
+      color: $technogi-orange;
+    }
+
+    h4{
+      color:$gray;
+      font-size: 1.5em;
+      margin-top:20px;
+
+    }
+  }
+
+  ul.numbered{
+    counter-reset: li;
+    li:before{
+      content: counter(li);
+      counter-increment: li;
+    }
+  }
+  ul{
+    list-style: none;
+    *list-style: decimal;
+    padding-left: 10px;
+    margin-bottom: 4em;
+    li{
+      position: relative;
+      display: block;
+      padding: .2em .2em .2em .4em;
+      margin: .5em 0 .5em 2.5em;
+      color: #444;
+      text-decoration: none;
+      transition: all .3s ease-out;   
+    } 
+    li:hover{
+      background-color:#f1f1f1;
+      margin-left:2em;
+    }
+    li:before{
+      left: -.5em;
+      border-left-color: #f25d49;
+    }
+    li:after{
+      position: absolute; 
+      content: '';
+      border: .3em solid transparent;
+      left: -1em;
+      top: 50%;
+      margin-top: -.5em;
+      transition: all .3s ease-out;  
+    }
+    li:hover:after{
+      left: -.5em;
+      border-left-color: #f25d49;
+    }
+  
+  }  
+
+
+   ul.table{
+    list-style: none;
+    *list-style: decimal;
+    padding-left: 10px;
+    margin-bottom: 4em;
+    display:table;
+    li{
+      position: relative;
+      display: inline-table;  
+      padding:10px;
+      border:solid thin #fafafa;
+      color:white;
+      border-radius:5px;
+      margin:10px;
+      width:30%;
+      height:1.5em;
+      line-height:1em;
+      //margin: .5em 0 .5em 2.5em;
+      //color: #444;
+      text-decoration: none;
+      transition: all .3s ease-out; 
+      background-color:transparentize($technogi-orange,.2);  
+    } 
+    li:hover{
+      background-color:#f1f1f1;
+      margin-left:2em;
+    }
+    
+  
+  } 
 
   
 }

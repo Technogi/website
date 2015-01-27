@@ -12,7 +12,7 @@ var htmlreplace = require('gulp-html-replace');
 var webserver = require('gulp-webserver');
 var concat = require('gulp-concat');
 var fileinclude = require('gulp-file-include');
-var fs = require('fs')
+var fs = require('fs');
 var cloudfiles = require("gulp-cloudfiles");
 
 var paths = {
@@ -33,9 +33,9 @@ var paths = {
     styles: './src/styles/*.scss',
     images: './src/images/**',
     views: ['./src/index.html', './src/views/*.html'],
-    main_views: './src/index.html'
+    main_views: ['./src/index.html', './src/aviso_privacidad.html']
   }
-}
+};
 
 gulp.task('fonts', function () {
   return gulp.src([
