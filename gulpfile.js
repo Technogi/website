@@ -104,12 +104,6 @@ gulp.task('vendor', ['modernizr'], function () {
 
   return gulp.src([
     './vendor/jquery/dist/jquery.js'
-    //'./vendor/foundation/js/foundation/foundation.js',
-    //'./vendor/foundation/js/foundation/foundation.topbar.js',
-    //'./vendor/foundation/js/foundation/foundation.orbit.js',
-
-    //'./vendor/i18next/i18next.js'
-    //'./vendor/d3/d3.js'
   ])
     .pipe(uglify())
     .pipe(concat('vendor.bundle.js'))
