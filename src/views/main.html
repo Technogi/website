@@ -18,73 +18,33 @@
     </div>
     <div class="row">
       <div class="medium-3 large-3 columns">
-        <div class="technogi_panel">
-          <a show="consulting" href="#">
-
-            <div class="icon">
-              <i class="fa fa-3x fa-group"></i>
-            </div>
-            <h3 msg="views.services.consulting.title"></h3>
-          </a>
-
-          <p class="service_description" msg="views.services.consulting.description">
-          </p>
-          <button show="consulting" class="service_btn button small warning" msg="commons.learn_more"></button>
-        </div>
-
+        @@include('technogi_panel.html',{
+          "section":"consulting",
+          "icon":"group"
+        })
       </div>
       <div class="medium-3 large-3 columns">
-        <div class="technogi_panel">
-          <a show="software_development" href="#">
-
-            <div class="icon ">
-              <i class="fa fa-3x fa-laptop"></i>
-            </div>
-            <h3>Software Development</h3>
-          </a>
-
-          <p class="service_description">
-            Mel eros inimicus in, te ipsum virtute eam, vel ea hinc mazim. Percipit mandamus philosophia no est.
-          </p>
-          <button show="software_development" class="service_btn button small warning" msg="commons.learn_more"></button>
-        </div>
+        @@include('technogi_panel.html',{
+        "section":"software_development",
+        "icon":"laptop"
+        })
       </div>
       <div class="medium-3 large-3 columns">
-        <div class="technogi_panel">
-          <a href="#">
-            <div class="icon">
-              <i class="fa fa-3x fa-cloud"></i>
-            </div>
-            <h3>Cloud Consulting</h3>
-          </a>
-
-          <p class="service_description">
-            Cu ius noster nostro, ius at aliquip docendi. Has an adhuc legere equidem, ex noster consetetur has.
-          </p>
-          <button class="service_btn button small warning" msg="commons.learn_more"></button>
-
-        </div>
+        @@include('technogi_panel.html',{
+        "section":"cloud",
+        "icon":"cloud"
+        })
       </div>
       <div class="medium-3 large-3 columns">
-        <div class="technogi_panel">
-          <a show="project_landing" href="#">
-
-            <div class="icon">
-              <i class="fa fa-3x fa-paper-plane"></i>
-            </div>
-            <h3 msg="views.services.project_landing.title"></h3>
-          </a>
-
-          <p class="service_description" msg="views.services.project_landing.description">
-          </p>
-          <button show="project_landing" class="service_btn button small" msg="commons.learn_more"></button>
-        </div>
+        @@include('technogi_panel.html',{
+        "section":"project_landing",
+        "icon":"paper-plane"
+        })
       </div>
     </div>
     <div class="row">
       <div class="medium-12 columns">
-        <h2>
-          Focus on what matters... Your Business
+        <h2 msg="views.main.msg">
         </h2>
       </div>
     </div>

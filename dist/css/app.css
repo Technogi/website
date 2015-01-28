@@ -3855,14 +3855,15 @@ header {
   padding-top: 20px;
   padding-left: 30px;
   background: #2c2c2c;
-  color: #808080;
+  color: rgba(222, 222, 222, 0.41);
   font-size: 1.1em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   header .language_selector {
+    text-align: right;
     -moz-appearance: none;
     position: absolute;
-    width: 200px;
+    width: 150px;
     right: 0;
     top: 0;
     color: white;
@@ -3873,7 +3874,8 @@ header {
     border: none;
     letter-spacing: 2px;
     height: 35px;
-    line-height: .6em; }
+    line-height: 1em;
+    padding: 0px; }
     header .language_selector option {
       font-weight: normal; }
   header a {
