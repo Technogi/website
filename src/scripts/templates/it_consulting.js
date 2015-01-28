@@ -3,7 +3,7 @@ module.exports = [{
   "title":"IT Consulting",
   "subtitle":"Hacemos consultoría IT",
   "description":"<h3>¿Qué ofrecemos?</h3>"+
-                  "<ul><li>Reuniones de Definición y Planificación.</li>"+
+                  "<ul class='list'><li>Reuniones de Definición y Planificación.</li>"+
                   "<li>Talleres para toma de requerimientos.</li>"+
                   "<li>Mejora de Procesos.</li>"+
                   "<li>Seguimiento y Control del Avance del Proyecto.</li>"+
