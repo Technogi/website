@@ -87,11 +87,12 @@
       counter-increment: li;
     }
   }
-  ul{
+  ul.list{
     list-style: none;
     *list-style: decimal;
     padding-left: 10px;
     margin-bottom: 4em;
+    margin-top:15px;
     li{
       position: relative;
       display: block;
@@ -99,6 +100,7 @@
       margin: .5em 0 .5em 2.5em;
       color: #444;
       text-decoration: none;
+      background-color: #efefef;
       transition: all .3s ease-out;   
     } 
     li:hover{
@@ -106,8 +108,16 @@
       margin-left:2em;
     }
     li:before{
-      left: -.5em;
-      border-left-color: #f25d49;
+      content:' ';
+      position: absolute; 
+      left: -2em;
+      top: 50%;
+      margin-top: -.8em;
+      background: #f25d49;
+      height: 1em;
+      width: 1em;
+      line-height: 1em;
+      border-radius:3px;
     }
     li:after{
       position: absolute; 
@@ -119,7 +129,7 @@
       transition: all .3s ease-out;  
     }
     li:hover:after{
-      left: -.5em;
+      left: -1em;
       border-left-color: #f25d49;
     }
   
@@ -132,6 +142,7 @@
     padding-left: 10px;
     margin-bottom: 4em;
     display:table;
+    width:100%;
     li{
       position: relative;
       display: inline-table;  
