@@ -21,8 +21,11 @@ lang.set_lang(userLang, messages);
 
 function findFirstByAttr(array, attr, value) {
   var result = [];
+  console.log(array);
   for(var i = 0; i < array.length; i += 1) {
       if(array[i][attr] == value) {
+        console.log(i);
+        console.log(array);
           return array[i];
       }
   }

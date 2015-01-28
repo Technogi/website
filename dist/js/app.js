@@ -22,8 +22,11 @@ lang.set_lang(userLang, messages);
 
 function findFirstByAttr(array, attr, value) {
   var result = [];
+  console.log(array);
   for(var i = 0; i < array.length; i += 1) {
       if(array[i][attr] == value) {
+        console.log(i);
+        console.log(array);
           return array[i];
       }
   }
@@ -334,14 +337,19 @@ module.exports = [require('./templates/it_consulting.js')[0],
                   require('./templates/project_landing.js')[0],
                   require('./templates/software_development.js')[0],
                   require('./templates/cloud.js')[0],
-                  require('./templates/methodology.js')[0]
+                  require('./templates/team.js')[0],
+                  require('./templates/methodology.js')[0],
+                  require('./templates/philosophy.js')[0]
+
 
 ];
-},{"./templates/cloud.js":6,"./templates/it_consulting.js":7,"./templates/methodology.js":8,"./templates/project_landing.js":9,"./templates/software_development.js":10}],6:[function(require,module,exports){
+
+
+},{"./templates/cloud.js":6,"./templates/it_consulting.js":7,"./templates/methodology.js":8,"./templates/philosophy.js":9,"./templates/project_landing.js":10,"./templates/software_development.js":11,"./templates/team.js":12}],6:[function(require,module,exports){
 module.exports = [{
-  "name":"consulting",
-  "title":"IT Consulting",
-  "subtitle":"Hacemos consultoría IT",
+  "name":"cloud",
+  "title":"Cloud",
+  "subtitle":"Facilitamos tu migración y uso de la nube.",
   "description":"<p>Brindamos un servicio integral para empresas que desean "+
                 "implementar su infraestructura de aplicaciones en la nube. "+
                 "Nos especializamos en lo siguiente:</p>"+
@@ -395,8 +403,38 @@ module.exports = [{
   "layout":"text"
 }];
 },{}],8:[function(require,module,exports){
-
+module.exports = [{
+  "name":"methodology",
+  "title":"Metodología",
+  "subtitle":"Métodos simples y efectivos.",
+  "description":"<p>Utilizamos las mejores prácticas del PMI y metodologías de desarrollo "+
+                "ágil. Con esto logramos tener células de desarrollo autosuficientes que logran:"+
+                "<ul class='list'><li>Conocer al cliente de manera muy cercana.</li>"+
+                "<li>Mejora la comunicación.</li>"+
+                "<li>Aumenta la productividad.</li></ul>"+
+                "<p>Minimizamos el riesgo, haciendo un análisis preliminar de la "+
+                "solución requerida, tratando de anticipar cualquier complicación. "+
+                "Este riesgo se mitiga:</p>"+
+                "<ul class='list'><li>Realizando validaciones de viabilidad técnica.</li>"+
+                  "<li>Levantamiento de requerimientos.</li>"+
+                  "<li>Revisión de Procesos de negocio.</li>"+
+                  "<li>Entrevistas con sponsors.</li></li>"+
+                  "<p>Aun así sabemos que es difícil prever todas las complicaciones, "+
+                  "por lo cual nos mantenemos flexibles al cambio. Aquí es donde entra "+
+                  "la parte ágil, donde respondemos a las nuevas necesidades del proyecto, "+
+                  "en tiempo real.</p>",
+  "layout":"text"
+}];
 },{}],9:[function(require,module,exports){
+module.exports = [{
+  "name":"philosophy",
+  "title":"Filosofía",
+  "subtitle":"en construcción",
+  "description":"",
+  "layout":"text"
+}];
+
+},{}],10:[function(require,module,exports){
 module.exports = [{
   "name":"project_landing",
   "title":"Project Landing",
@@ -472,7 +510,7 @@ module.exports = [{
       "<li>Definición de la plataforma de Lectura Rápida.</li></ul>",
   "layout":"text"
 }];
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports = [{
   "name":"software_development",
   "title":"Software Development",
@@ -537,4 +575,12 @@ module.exports = [{
   "layout":"text"
 }];
 
+},{}],12:[function(require,module,exports){
+module.exports = [{
+  "name":"team",
+  "title":"Nuestro equipo",
+  "subtitle":"en construcción",
+  "description":"",
+  "layout":"text"
+}];
 },{}]},{},[1]);

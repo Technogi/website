@@ -1,13 +1,13 @@
 module.exports = [{
   "name":"methodology",
-  "title":"IT Consulting",
-  "subtitle":"Hacemos consultoría IT",
+  "title":"Metodología",
+  "subtitle":"Métodos simples y efectivos.",
   "description":"<p>Utilizamos las mejores prácticas del PMI y metodologías de desarrollo "+
                 "ágil. Con esto logramos tener células de desarrollo autosuficientes que logran:"+
-                "<ul class='list'><li>Conocer al cliente de manera muy cercana.</li>
-                <li>Mejora la comunicación.</li>
-                <li>Aumenta la productividad.</li></ul>
-                <p>Minimizamos el riesgo, haciendo un análisis preliminar de la "+
+                "<ul class='list'><li>Conocer al cliente de manera muy cercana.</li>"+
+                "<li>Mejora la comunicación.</li>"+
+                "<li>Aumenta la productividad.</li></ul>"+
+                "<p>Minimizamos el riesgo, haciendo un análisis preliminar de la "+
                 "solución requerida, tratando de anticipar cualquier complicación. "+
                 "Este riesgo se mitiga:</p>"+
                 "<ul class='list'><li>Realizando validaciones de viabilidad técnica.</li>"+

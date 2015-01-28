@@ -1,7 +1,7 @@
 module.exports = [{
-  "name":"consulting",
-  "title":"IT Consulting",
-  "subtitle":"Hacemos consultoría IT",
+  "name":"cloud",
+  "title":"Cloud",
+  "subtitle":"Facilitamos tu migración y uso de la nube.",
   "description":"<p>Brindamos un servicio integral para empresas que desean "+
                 "implementar su infraestructura de aplicaciones en la nube. "+
                 "Nos especializamos en lo siguiente:</p>"+
