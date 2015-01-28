@@ -34,6 +34,11 @@
     <a class="menu_item" href="#" scroll_to="contact_us" msg="views.header.contact"></a> |
     <a class="menu_item" href="#" scroll_to="more"><i class="fa fa-plus"></i></a>
   </div>
+  <!--select class="language_selector">
+    <option msg="lang.select">language</option>
+    <option msg="lang.spanish" value="es">Español</option>
+    <option msg="lang.english" value="en">English</option>
+  </select-->
 </div>
 <header id="nav_header" class="hide-for-small">
   <img class="logo" scroll_to="main_container"  src="img/logo_n_t.png">
@@ -44,9 +49,9 @@
     <a scroll_to="more" class="menu_item" href="#" ><i class="fa fa-plus"></i></a>
   </span>
   <select class="language_selector">
-  	<option>Select you language</option>
-  	<option value="es">Español</option>
-  	<option value="en">English</option>
+  	<option msg="lang.select">language</option>
+  	<option msg="lang.spanish" value="es">Español</option>
+  	<option msg="lang.english" value="en">English</option>
   </select>
 </header>
 
@@ -142,37 +147,31 @@
 
   <ul>
     <li>
-      <button show="consulting" class="mobile-btn">
-        <i class="fa fa-3x fa-users"></i>
-
-        <div>IT Consulting</div>
-      </button>
-    </li>
+  <button show="consulting" class="mobile-btn">
+    <i class="fa fa-3x fa-users"></i>
+    <div msg="views.services.consulting.title"></div>
+  </button>
+</li>
     <li>
-      <button show="development" class="mobile-btn">
-        <i class="fa fa-3x fa-laptop"></i>
-
-        <div>Software Development</div>
-      </button>
-    </li>
+  <button show="software_development" class="mobile-btn">
+    <i class="fa fa-3x fa-laptop"></i>
+    <div msg="views.services.software_development.title"></div>
+  </button>
+</li>
   </ul>
-
-
   <ul>
     <li>
-      <button show="cloud" class="mobile-btn">
-        <i class="fa fa-3x fa-cloud"></i>
-
-        <div>Cloud Consulting</div>
-      </button>
-    </li>
+  <button show="cloud" class="mobile-btn">
+    <i class="fa fa-3x fa-cloud"></i>
+    <div msg="views.services.cloud.title"></div>
+  </button>
+</li>
     <li>
-      <button show="poc" class="mobile-btn">
-        <i class="fa fa-3x fa-paper-plane"></i>
-
-        <div>Proof of Concept</div>
-      </button>
-    </li>
+  <button show="project_landing" class="mobile-btn">
+    <i class="fa fa-3x fa-paper-plane"></i>
+    <div msg="views.services.project_landing.title"></div>
+  </button>
+</li>
   </ul>
   <button scroll_to="contact_us" class="big-mobile-btn">
     <i class="fa fa-2x fa-envelope"></i> <span msg="views.header.contact"></span>
@@ -186,31 +185,35 @@
   <div class="content">
     <div class="row">
       <div class="small-12 columns">
-        <h1>This is why our clients love us</h1>
+        <h1 msg="views.love_us.h1"></h1>
       </div>
     </div>
     <div class="row">
       <div class="small-12 columns display">
         <div class="display-element ">
-          <h2>
-            Client's Satisfaction
-          </h2>
-
-          <p>
-            100% de nuestros clientes han realizado un segundo proyecto con nosotros.
-          </p>
-        </div>
-
+  <h2 msg="views.love_us.1.title"></h2>
+  <p msg="views.love_us.1.desc"></p>
+</div>
         <div class="display-element ">
-          <h2>
-            Compromise
-          </h2>
-
-          <p>
-            100% de nuestros clientes nos ven como un socio más de su proyecto.
-          </p>
-        </div>
-
+  <h2 msg="views.love_us.2.title"></h2>
+  <p msg="views.love_us.2.desc"></p>
+</div>
+        <div class="display-element ">
+  <h2 msg="views.love_us.3.title"></h2>
+  <p msg="views.love_us.3.desc"></p>
+</div>
+        <div class="display-element ">
+  <h2 msg="views.love_us.4.title"></h2>
+  <p msg="views.love_us.4.desc"></p>
+</div>
+        <div class="display-element ">
+  <h2 msg="views.love_us.5.title"></h2>
+  <p msg="views.love_us.5.desc"></p>
+</div>
+        <div class="display-element ">
+  <h2 msg="views.love_us.6.title"></h2>
+  <p msg="views.love_us.6.desc"></p>
+</div>
       </div>
     </div>
   </div>
@@ -219,57 +222,38 @@
 <div id="how_we_do">
   <div class="row">
     <div class="medium-12 columns text-center">
-      <h1 data-i18n><span>How we do</span> <span style="display: inline-block">what we do</span></h1>
+      <h1 msg="views.our_way.h1"><span></span> <span style="display: inline-block">what we do</span></h1>
     </div>
   </div>
   <div class="row philosophy_row">
     <div class="medium-6 large-4 columns ">
       <div class="philosophy_tile">
-
-
-        <h2><i class="fa fa-institution"></i></h2>
-
-        <h3>our philosophy</h3>
-
-        <p class="description">
-          Nos caracterizamos por realizar investigación sobre nuevas tecnologías y formas de resolver los
-          problemas.
-
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
+  <h2><i class="fa fa-institution"></i></h2>
+  <h3 msg="views.our_way.philosophy.title"></h3>
+  <p class="description" msg="views.our_way.philosophy.desc"></p>
+  <button show="philosophy" class="p_button" msg="commons.learn_more">
+  </button>
+</div>
     </div>
 
     <div class="medium-6 large-4 columns">
       <div class="philosophy_tile">
-        <h2><i class="fa fa-users"></i></h2>
-
-        <h3>the team</h3>
-
-        <p class="description">
-          Todavía no sé si ponerlo a nivel genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
-          fotos (por seguridad de nosotros).
-
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
-
+  <h2><i class="fa fa-user"></i></h2>
+  <h3 msg="views.our_way.team.title"></h3>
+  <p class="description" msg="views.our_way.team.desc"></p>
+  <button show="team" class="p_button" msg="commons.learn_more">
+  </button>
+</div>
     </div>
 
     <div class="medium-6 large-4 columns">
       <div class="philosophy_tile">
-        <h2><i class="fa fa-book"></i></h2>
-
-        <h3>the methodology</h3>
-
-        <p class="description">
-          Utilizamos las mejores prácticas del PMI y metodologías de desarrollo ágil.
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
+  <h2><i class="fa fa-book"></i></h2>
+  <h3 msg="views.our_way.methodology.title"></h3>
+  <p class="description" msg="views.our_way.methodology.desc"></p>
+  <button show="methodology" class="p_button" msg="commons.learn_more">
+  </button>
+</div>
     </div>
   </div>
 </div>
@@ -304,7 +288,7 @@
 
 
         <button id="send_btn" type="submit" class="radius button">
-          <i class="fa fa-share"> </i> <span> SEND</span>
+          <i class="fa fa-share"> </i> <span msg="commons.send"> </span>
         </button>
 
       </div>
@@ -313,7 +297,7 @@
     <div class="medium-6 columns text-center">
       <h2><i class="fa fa-building-o"></i> <span msg="views.contact_us.our_office"></span></h2>
 
-      <h3>Visit us at our office</h3>
+      <h3 msg="views.contact_us.visit_us"></h3>
       <div class="overlay" onClick="style.pointerEvents='none'"></div>
       <div id="map-canvas"></div>
     </div>

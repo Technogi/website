@@ -2,31 +2,17 @@
   <div class="content">
     <div class="row">
       <div class="small-12 columns">
-        <h1>This is why our clients love us</h1>
+        <h1 msg="views.love_us.h1"></h1>
       </div>
     </div>
     <div class="row">
       <div class="small-12 columns display">
-        <div class="display-element ">
-          <h2>
-            Client's Satisfaction
-          </h2>
-
-          <p>
-            100% de nuestros clientes han realizado un segundo proyecto con nosotros.
-          </p>
-        </div>
-
-        <div class="display-element ">
-          <h2>
-            Compromise
-          </h2>
-
-          <p>
-            100% de nuestros clientes nos ven como un socio más de su proyecto.
-          </p>
-        </div>
-
+        @@include('love_display.html',{"index":"1"})
+        @@include('love_display.html',{"index":"2"})
+        @@include('love_display.html',{"index":"3"})
+        @@include('love_display.html',{"index":"4"})
+        @@include('love_display.html',{"index":"5"})
+        @@include('love_display.html',{"index":"6"})
       </div>
     </div>
   </div>

@@ -1,57 +1,20 @@
 <div id="how_we_do">
   <div class="row">
     <div class="medium-12 columns text-center">
-      <h1 data-i18n><span>How we do</span> <span style="display: inline-block">what we do</span></h1>
+      <h1 msg="views.our_way.h1"><span></span> <span style="display: inline-block">what we do</span></h1>
     </div>
   </div>
   <div class="row philosophy_row">
     <div class="medium-6 large-4 columns ">
-      <div class="philosophy_tile">
-
-
-        <h2><i class="fa fa-institution"></i></h2>
-
-        <h3>our philosophy</h3>
-
-        <p class="description">
-          Nos caracterizamos por realizar investigación sobre nuevas tecnologías y formas de resolver los
-          problemas.
-
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
+      @@include('philosophy_tile.html',{"title":"philosophy","icon":"institution"})
     </div>
 
     <div class="medium-6 large-4 columns">
-      <div class="philosophy_tile">
-        <h2><i class="fa fa-users"></i></h2>
-
-        <h3>the team</h3>
-
-        <p class="description">
-          Todavía no sé si ponerlo a nivel genérico o ya ponerle nombre y apellido. Podríamos poner Avatars en lugar de
-          fotos (por seguridad de nosotros).
-
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
-
+      @@include('philosophy_tile.html',{"title":"team","icon":"user"})
     </div>
 
     <div class="medium-6 large-4 columns">
-      <div class="philosophy_tile">
-        <h2><i class="fa fa-book"></i></h2>
-
-        <h3>the methodology</h3>
-
-        <p class="description">
-          Utilizamos las mejores prácticas del PMI y metodologías de desarrollo ágil.
-        </p>
-        <button class="p_button" msg="commons.learn_more">
-        </button>
-      </div>
+      @@include('philosophy_tile.html',{"title":"methodology","icon":"book"})
     </div>
   </div>
 </div>
