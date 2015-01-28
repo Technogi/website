@@ -207,25 +207,15 @@ var messages = {
         "h1":"¿Cómo lo Hacemos?",
         "philosophy":{
           "title":"Filosofía",
-          "desc":"Nos caracterizamos por realizar investigación sobre nuevas tecnologías y formas de resolver los " +
-            "problemas. Llevamos los resultados de la investigación a la práctica, creando productos propios que nos " +
-            "permitan entender la tecnología que se está creando. Una vez que somos especialistas, implantamos las " +
-            "soluciones con nuestros clientes. Lo anterior nos permite proveer a nuestros clientes con un catálogo " +
-            "extenso de posibilidades para convertir sus ideas en soluciones."
+          "desc":"Nos mantenemos en constante evolución. Convertimos tus ideas en soluciones"
         },
         "team":{
           "title":"El equipo",
-          "desc":"Nuestro equipo está conformado por especialistas y profesionales con alto potencial que se han " +
-            "desempeñado en diversos ámbitos del desarrollo de soluciones de TI. Su compromiso, dedicación y constante " +
-            "deseo por innovar, hacen de nuestro equipo un elemento vital para producir las soluciones competitivas " +
-            "que nuestros clientes necesitan."
+          "desc":"Comprometidos contigo, apasionados por la tecnología."
         },
         "methodology":{
           "title":"La Metodología",
-          "desc":"Con las mejores prácticas del PMI y de las metodologías ágiles, hemos creado una forma de trabajo que " +
-            "estimula la productividad de nuestro equipo e incrementa la comunicación con el cliente, dándonos la " +
-            "combinación ideal de control, visibilidad y flexibilidad que todo proceso de desarrollo requiere. El " +
-            "resultado, 100% de clientes satisfechos y 100% de proyectos entregados en tiempo."
+          "desc":"Comunicación, flexibilidad y desempeño.   Las claves de nuestro exito"
         }
       },
       "contact_us":{
