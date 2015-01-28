@@ -22,8 +22,11 @@ lang.set_lang(userLang, messages);
 
 function findFirstByAttr(array, attr, value) {
   var result = [];
+  console.log(array);
   for(var i = 0; i < array.length; i += 1) {
       if(array[i][attr] == value) {
+        console.log(i);
+        console.log(array);
           return array[i];
       }
   }
@@ -330,103 +333,254 @@ exports.bind=function(){
 
 
 },{}],5:[function(require,module,exports){
-module.exports = [{
-	"name":"consulting",
-	"title":"IT Consulting",
-	"subtitle":"We do IT Consulting",
-	"description":"<p>Bacon ipsum dolor amet turducken brisket filet mignon meatloaf, chuck pancetta flank ham sausage strip steak chicken. Alcatra turducken chicken, beef ribs pancetta hamburger pork. Sirloin chicken chuck capicola. Landjaeger salami brisket, venison ribeye pork strip steak kielbasa pork loin rump pig andouille. Brisket ribeye corned beef salami jerky ground round sausage porchetta beef shoulder capicola biltong.</p>"+
-									"<p>Kielbasa t-bone cupim, jowl sausage shankle fatback prosciutto andouille pig bacon. Bacon t-bone cow spare ribs cupim venison. Ground round cow shankle, frankfurter sausage pork filet mignon capicola jowl. Cupim pork belly ham hock turkey. Prosciutto flank picanha pork jowl alcatra kielbasa filet mignon pork belly. Chuck sirloin drumstick ham hock corned beef beef ribs kielbasa capicola jowl. Jerky fatback strip steak, beef bresaola ribeye venison turducken rump shank sausage brisket shoulder boudin.</p>"+
-									"<p>Short ribs bresaola hamburger capicola pancetta tail alcatra pork belly. Boudin short loin bresaola kevin, salami pastrami leberkas venison filet mignon cow jowl meatloaf shoulder kielbasa. Capicola pork chop ground round tail cupim kevin turkey boudin bresaola. Spare ribs doner pig frankfurter. Picanha pancetta meatball tongue rump, drumstick cupim.</p>"+
-									"<p>Bresaola landjaeger rump pancetta, bacon kevin pig shank pork chop sausage meatball jowl tenderloin ham. Shoulder turkey frankfurter ribeye cupim, beef ribs ham hock shank brisket sausage swine tail ground round landjaeger strip steak. Porchetta bacon chicken t-bone brisket shankle. Pancetta leberkas short ribs jowl capicola turkey alcatra doner porchetta. Salami tri-tip bacon spare ribs prosciutto cupim hamburger chicken pork belly turducken pancetta short ribs sirloin andouille sausage. Kevin venison sirloin kielbasa strip steak shoulder biltong pork chop jerky prosciutto shankle ham hock.</p>"+
-									"<p>Bacon filet mignon shank, cupim turkey shankle ball tip fatback short loin shoulder. Short ribs turducken chicken picanha, kielbasa shoulder drumstick t-bone tail corned beef beef ribs pork chop ham andouille brisket. Rump kielbasa shankle chuck shoulder pork loin. Spare ribs chicken ball tip ribeye, ham cupim andouille jowl beef pork belly leberkas. Meatball jerky shoulder sausage t-bone porchetta corned beef picanha chuck jowl shank ground round tri-tip.</p>",
-	"layout":"text"
-},
-{
-	"name":"software_development",
-	"title":"Software Development",
-	"subtitle":"We do Software Development",
-	"description":"<p>Bacon ipsum dolor amet turducken brisket filet mignon meatloaf, chuck pancetta flank ham sausage strip steak chicken. Alcatra turducken chicken, beef ribs pancetta hamburger pork. Sirloin chicken chuck capicola. Landjaeger salami brisket, venison ribeye pork strip steak kielbasa pork loin rump pig andouille. Brisket ribeye corned beef salami jerky ground round sausage porchetta beef shoulder capicola biltong.</p>"+
-									"<p>Kielbasa t-bone cupim, jowl sausage shankle fatback prosciutto andouille pig bacon. Bacon t-bone cow spare ribs cupim venison. Ground round cow shankle, frankfurter sausage pork filet mignon capicola jowl. Cupim pork belly ham hock turkey. Prosciutto flank picanha pork jowl alcatra kielbasa filet mignon pork belly. Chuck sirloin drumstick ham hock corned beef beef ribs kielbasa capicola jowl. Jerky fatback strip steak, beef bresaola ribeye venison turducken rump shank sausage brisket shoulder boudin.</p>"+
-									"<p>Short ribs bresaola hamburger capicola pancetta tail alcatra pork belly. Boudin short loin bresaola kevin, salami pastrami leberkas venison filet mignon cow jowl meatloaf shoulder kielbasa. Capicola pork chop ground round tail cupim kevin turkey boudin bresaola. Spare ribs doner pig frankfurter. Picanha pancetta meatball tongue rump, drumstick cupim.</p>"+
-									"<p>Bresaola landjaeger rump pancetta, bacon kevin pig shank pork chop sausage meatball jowl tenderloin ham. Shoulder turkey frankfurter ribeye cupim, beef ribs ham hock shank brisket sausage swine tail ground round landjaeger strip steak. Porchetta bacon chicken t-bone brisket shankle. Pancetta leberkas short ribs jowl capicola turkey alcatra doner porchetta. Salami tri-tip bacon spare ribs prosciutto cupim hamburger chicken pork belly turducken pancetta short ribs sirloin andouille sausage. Kevin venison sirloin kielbasa strip steak shoulder biltong pork chop jerky prosciutto shankle ham hock.</p>"+
-									"<p>Bacon filet mignon shank, cupim turkey shankle ball tip fatback short loin shoulder. Short ribs turducken chicken picanha, kielbasa shoulder drumstick t-bone tail corned beef beef ribs pork chop ham andouille brisket. Rump kielbasa shankle chuck shoulder pork loin. Spare ribs chicken ball tip ribeye, ham cupim andouille jowl beef pork belly leberkas. Meatball jerky shoulder sausage t-bone porchetta corned beef picanha chuck jowl shank ground round tri-tip.</p>",
-	"image":{"src":"http://placehold.it/350x350"},
-	"layout":"text-image"
-},
-{
-	"name":"project_landing",
-	"title":"Project Landing",
-	"subtitle":"Te ayudamos a aterrizar la solución que necesitas.",
-	"description":
-		"<p>El iniciar un proyecto  de software no es una tarea fácil,"+
-		" sobre todo cuando surgen las siguientes preguntas:</p>"+
-			"<ul><li>¿Cuánto cuesta?</li><li>¿En cuánto tiempo estará listo?</li>"+
-			"<li> ¿Cuáles son los riesgos?</li><li>¿Lo puedo hacer yo o tengo que contratar a alguien más?</li>"+
-			"<li>Mi Proyecto es muy ambicioso, ¿Lo debo hacer?</li><li>¿Por dónde empiezo?</li></ul>"+
+module.exports = [require('./templates/it_consulting.js')[0],
+                  require('./templates/project_landing.js')[0],
+                  require('./templates/software_development.js')[0],
+                  require('./templates/cloud.js')[0],
+                  require('./templates/team.js')[0],
+                  require('./templates/methodology.js')[0],
+                  require('./templates/philosophy.js')[0]
 
-		"<h3>¿Qué es?</h3>"+
-			"<p>El Project Landing es un servicio que lleva paso a paso  a cada cliente,"+
-			" a entender cómo implementar su idea desde cero, o cómo mitigar los riesgos"+
-			" inherentes a proyectos complejos de software.</p>"+
 
-		"<h3>¿Cómo funciona?</h3>"+
-			"<p>Realizamos un proceso cuidadoso donde hacemos lo siguiente:</p>"+
-			"<h4>1.-Diagnóstico del Estado Actual.</h4>"+
-				"<p>Definimos dónde estás y que nivel de madurez tiene tu proyecto."+ 
-			"Con esto simplemente sacamos la radiografía.</p>"+
-			"<h4>2.-Levantamiento de Requerimientos. </h4>"+
-				"<p>Una vez que entendemos tu realidad, nos enfocamos a dónde quieres estar. "+
-			"Documentamos todas las ideas que tienes en torno a tu proyecto y cómo has "+
-			"visualizado que quieres concretarlo.</p>"+
-			"<h4>3.-Análisis de la información.</h4>"+
-				"<p>Nuestro grupo de expertos analistas, se sientan a analizar tu proyecto y "+
-				"definen una serie de pasos que permitan darle forma a la idea. Entre las "+
-				"actividades que ejecutamos aquí se encuentran:</p>"+
-					"<ul class='list'><li>Creación de prototipos funcionales. <b>(Necesitas validar tu "+
-						"idea con clientes potenciales? Te hacemos una versión para prueba de tu "+
-						"sistema.</li>"+
-						"<li>Validación de Viabilidad Técnica. Tu idea es innovadora y requiere "+
-						"validar primero si el estado actual de la tecnología te permite alcanzarlo</li>"+
-						"<li>Elección de Tecnología. Identificamos qué tecnología nos permite satisfacer "+
-						 "la demanda de tu proyecto. Buscamos en nuestro portafolio de soluciones y herramientas."+
-						 " Si es necesario investigar alguna tecnología nueva, para hacer posible tu proyecto."+
-						 " Lo hacemos en esta fase."+
-					"</li></ul>"+
-				"<h4>4.-Diseño del Proyecto y Mapa de ruta.</h4>"+
-				"<p>Una vez que contamos con toda la información y validamos que tu idea es "+
-				"posible. Realizamos una cuidadosa planeación para llevarla a cabo. "+
-				"Desde la etapa inicial hasta la puesta en producción y mantenimiento de la "+
-				"solución.</p>"+
-			"</div>"+
-			"<p>Listo al final del Project Landing, tendrás toda la información necesaria "+
-			"para que decidas si el proyecto es viable para ti, desde un aspecto financiero "+
-			"y te damos todas las herramientas para que entiendas a qué te vas a enfrentar.</p>"+
-			"<p>Opcionalmente, nosotros te podemos proveer el servicio de desarrollo del sistema. "+
-			"Pero tú tendrás la libertad de buscar nuevos proveedores, pues tendrás todo lo que "+
-			"necesitas para poner en marcha tu proyecto.</p>"+
-		"<h3>Beneficios</h3>"+
-			"<ul><li>Validar si el proyecto es viable desde una etapa temprana.</li>"+
-			"<li> Mitigar los riesgos inherentes a todo proyecto de software.</li>"+
-			"<li>Saber cuánto te va a costar poner en marcha tu proyecto.</li>"+
-			"<li>Conocer diversas alternativas para la implementación.</li>"+
-			"<li>Darte las herramientas para que puedas concretar tu idea.</li>"+
-			"<li>Total libertad para decidir con quién realizarás el desarrollo.</li></ul>"+
-		"<h3>Enfocado a:</h3>"+
-			"<ul><li>Proyectos con alta complejidad técnica.</li>"+
-			"<li>Proyectos estratégicos.</li><li>Ideas Innovadoras.</li></ul>"+
-		"<h3>¿Qué tipo de clientes contratan el Project Landing?</h3>"+
-			"<ul><li>Proyectos complejos y ambiciosos.</li>"+
-			"<li>Innovadores en Tecnología basada en software.</li>"+
-			"<li>Innovadores en Modelos de Negocio que requieran una solución de software.</li></ul>"+
-		"<h3>Experiencia</h3>"+
-			"<ul><li>Creación del Plan de migración para la INTRANET de una Cámara "+
-			"de Comercio en MX.</li>"+
-			"<li>Creación de una plataforma de telecomunicaciones para VoIP.</li>"+
-			"<li>  Renovación del sistema de evaluación en línea del Centro de Evaluaciones "+
-			"más importante de México.</li>"+
-			"<li>Creación del Plan de implementación para un portal de recursos humanos.</li>"+
-			"<li>Definición de la plataforma de Lectura Rápida.</li></ul>",
-	"layout":"text"
-}
 ];
+
+
+},{"./templates/cloud.js":6,"./templates/it_consulting.js":7,"./templates/methodology.js":8,"./templates/philosophy.js":9,"./templates/project_landing.js":10,"./templates/software_development.js":11,"./templates/team.js":12}],6:[function(require,module,exports){
+module.exports = [{
+  "name":"cloud",
+  "title":"Cloud",
+  "subtitle":"Facilitamos tu migración y uso de la nube.",
+  "description":"<p>Brindamos un servicio integral para empresas que desean "+
+                "implementar su infraestructura de aplicaciones en la nube. "+
+                "Nos especializamos en lo siguiente:</p>"+
+                "<ul class='list'><li>Elección de la mejor nube, basada en precio, requerimientos y soporte.</li>"+
+                "<li>Diagnóstico de aplicaciones (Validamos si las aplicaciones están "+
+                  "preparadas para utilizar todo el potencial que ofrece la nube).</li>"+
+                "<li>Adaptación y modificación de aplicaciones para hacerlas compatibles con la nube.</li>"+
+                "<li>Acompañamiento en el proceso de migración.</li>"+
+                "<li>Soporte Post Instalación.</li></ul>"+
+                "<h3>El Proceso</h3>"+
+                  "Dependiendo de la necesidad de cada cliente, podemos iniciar desde el "+
+                  "paso 1 o integrarnos a su estrategia actual en implantación de "+
+                  "infraestructura en la nube."+
+                  "<h4>1. Diagnóstico inicial</h4>"+
+                    "<ul class='list'><li>¿Tienes aplicaciones actualmente que quisieras subir a la nube?</li>"+
+                    "<li>¿Quieres virtualizar aplicaciones existentes?</li>"+
+                    "<li>¿Quieres centralizar tu operación?</li>"+
+                    "<li>¿Quieres monitorear tus aplicaciones e infraestructura??</li></ul>"+
+                  "<h4>2. Análisis de Madurez de aplicaciones existentes.</h4>"+
+                    "<ul class='list'><li>¿Tienes aplicaciones actualmente que quisieras subir a la nube?</li>"+
+                    "<li>¿Qué elementos tienes hoy en día?</li>"+
+                    "<li>¿o Tus aplicaciones tienen la arquitectura idónea para ser desplegadas en la nube?</li></ul>"+
+                  "<h4>3. Elección de proveedor ideal.</h4>"+
+                    "<ul class='list'><li>¿Cuál es tu presupuesto?</li>"+
+                    "<li>¿Qué tipo de servicio necesitas?</li>"+
+                    "<li>¿Quieres hacer outsourcing del área de soporte?</li></ul>"+
+                  "<h4>4. Migración de Aplicaciones.</h4>"+
+                    "<ul class='list'><li>Preparamos tus aplicaciones para usar el potencial de la nube.</li>"+
+                    "<li>Creamos un plan de migración para que tu operación no se interrumpa.</li></ul>"+
+                "<h3>¿Quiénes son nuestros proveedores?</h3>"+
+                "<ul class='table'><li>Rackspave</li><li>AWS</li><li>Heroku</li><li>Azure</li></ul>",
+  "layout":"text"
+}];
+},{}],7:[function(require,module,exports){
+module.exports = [{
+  "name":"consulting",
+  "title":"IT Consulting",
+  "subtitle":"Hacemos consultoría IT",
+  "description":"<h3>¿Qué ofrecemos?</h3>"+
+                  "<ul><li>Reuniones de Definición y Planificación.</li>"+
+                  "<li>Talleres para toma de requerimientos.</li>"+
+                  "<li>Mejora de Procesos.</li>"+
+                  "<li>Seguimiento y Control del Avance del Proyecto.</li>"+
+                  "<li>Presupuestos para el Desarrollo.</li>"+
+                  "<li>Desarrollo de componentes de una solución o solución completa.</li>"+
+                  "<li>Documentación.</li>"+
+                  "<li>Calendarización de releases.</li>"+
+                  "<li>Instalación en Producción.</li>"+
+                  "<li>Soporte Post Productivo.</li>"+
+                  "<li>Capacitación sobre tecnologías y metodologías.</li></ul>",
+  "layout":"text"
+}];
+},{}],8:[function(require,module,exports){
+module.exports = [{
+  "name":"methodology",
+  "title":"Metodología",
+  "subtitle":"Métodos simples y efectivos.",
+  "description":"<p>Utilizamos las mejores prácticas del PMI y metodologías de desarrollo "+
+                "ágil. Con esto logramos tener células de desarrollo autosuficientes que logran:"+
+                "<ul class='list'><li>Conocer al cliente de manera muy cercana.</li>"+
+                "<li>Mejora la comunicación.</li>"+
+                "<li>Aumenta la productividad.</li></ul>"+
+                "<p>Minimizamos el riesgo, haciendo un análisis preliminar de la "+
+                "solución requerida, tratando de anticipar cualquier complicación. "+
+                "Este riesgo se mitiga:</p>"+
+                "<ul class='list'><li>Realizando validaciones de viabilidad técnica.</li>"+
+                  "<li>Levantamiento de requerimientos.</li>"+
+                  "<li>Revisión de Procesos de negocio.</li>"+
+                  "<li>Entrevistas con sponsors.</li></li>"+
+                  "<p>Aun así sabemos que es difícil prever todas las complicaciones, "+
+                  "por lo cual nos mantenemos flexibles al cambio. Aquí es donde entra "+
+                  "la parte ágil, donde respondemos a las nuevas necesidades del proyecto, "+
+                  "en tiempo real.</p>",
+  "layout":"text"
+}];
+},{}],9:[function(require,module,exports){
+module.exports = [{
+  "name":"philosophy",
+  "title":"Filosofía",
+  "subtitle":"en construcción",
+  "description":"",
+  "layout":"text"
+}];
+
+},{}],10:[function(require,module,exports){
+module.exports = [{
+  "name":"project_landing",
+  "title":"Project Landing",
+  "subtitle":"Te ayudamos a aterrizar la solución que necesitas.",
+  "description":
+    "<p>El iniciar un proyecto  de software no es una tarea fácil,"+
+    " sobre todo cuando surgen las siguientes preguntas:</p>"+
+      "<ul class='list'><li>¿Cuánto cuesta?</li><li>¿En cuánto tiempo estará listo?</li>"+
+      "<li> ¿Cuáles son los riesgos?</li><li>¿Lo puedo hacer yo o tengo que contratar a alguien más?</li>"+
+      "<li>Mi Proyecto es muy ambicioso, ¿Lo debo hacer?</li><li>¿Por dónde empiezo?</li></ul>"+
+
+    "<h3>¿Qué es?</h3>"+
+      "<p>El Project Landing es un servicio que lleva paso a paso  a cada cliente,"+
+      " a entender cómo implementar su idea desde cero, o cómo mitigar los riesgos"+
+      " inherentes a proyectos complejos de software.</p>"+
+
+    "<h3>¿Cómo funciona?</h3>"+
+      "<p>Realizamos un proceso cuidadoso donde hacemos lo siguiente:</p>"+
+      "<h4>1.-Diagnóstico del Estado Actual.</h4>"+
+        "<p>Definimos dónde estás y que nivel de madurez tiene tu proyecto."+ 
+      "Con esto simplemente sacamos la radiografía.</p>"+
+      "<h4>2.-Levantamiento de Requerimientos. </h4>"+
+        "<p>Una vez que entendemos tu realidad, nos enfocamos a dónde quieres estar. "+
+      "Documentamos todas las ideas que tienes en torno a tu proyecto y cómo has "+
+      "visualizado que quieres concretarlo.</p>"+
+      "<h4>3.-Análisis de la información.</h4>"+
+        "<p>Nuestro grupo de expertos analistas, se sientan a analizar tu proyecto y "+
+        "definen una serie de pasos que permitan darle forma a la idea. Entre las "+
+        "actividades que ejecutamos aquí se encuentran:</p>"+
+          "<ul class='list'><li>Creación de prototipos funcionales. <b>(Necesitas validar tu "+
+            "idea con clientes potenciales? Te hacemos una versión para prueba de tu "+
+            "sistema.</li>"+
+            "<li>Validación de Viabilidad Técnica. Tu idea es innovadora y requiere "+
+            "validar primero si el estado actual de la tecnología te permite alcanzarlo</li>"+
+            "<li>Elección de Tecnología. Identificamos qué tecnología nos permite satisfacer "+
+             "la demanda de tu proyecto. Buscamos en nuestro portafolio de soluciones y herramientas."+
+             " Si es necesario investigar alguna tecnología nueva, para hacer posible tu proyecto."+
+             " Lo hacemos en esta fase."+
+          "</li></ul>"+
+        "<h4>4.-Diseño del Proyecto y Mapa de ruta.</h4>"+
+        "<p>Una vez que contamos con toda la información y validamos que tu idea es "+
+        "posible. Realizamos una cuidadosa planeación para llevarla a cabo. "+
+        "Desde la etapa inicial hasta la puesta en producción y mantenimiento de la "+
+        "solución.</p>"+
+      "</div>"+
+      "<p>Listo al final del Project Landing, tendrás toda la información necesaria "+
+      "para que decidas si el proyecto es viable para ti, desde un aspecto financiero "+
+      "y te damos todas las herramientas para que entiendas a qué te vas a enfrentar.</p>"+
+      "<p>Opcionalmente, nosotros te podemos proveer el servicio de desarrollo del sistema. "+
+      "Pero tú tendrás la libertad de buscar nuevos proveedores, pues tendrás todo lo que "+
+      "necesitas para poner en marcha tu proyecto.</p>"+
+    "<h3>Beneficios</h3>"+
+      "<ul class='list'><li>Validar si el proyecto es viable desde una etapa temprana.</li>"+
+      "<li> Mitigar los riesgos inherentes a todo proyecto de software.</li>"+
+      "<li>Saber cuánto te va a costar poner en marcha tu proyecto.</li>"+
+      "<li>Conocer diversas alternativas para la implementación.</li>"+
+      "<li>Darte las herramientas para que puedas concretar tu idea.</li>"+
+      "<li>Total libertad para decidir con quién realizarás el desarrollo.</li></ul>"+
+    "<h3>Enfocado a:</h3>"+
+      "<ul class='list'><li>Proyectos con alta complejidad técnica.</li>"+
+      "<li>Proyectos estratégicos.</li><li>Ideas Innovadoras.</li></ul>"+
+    "<h3>¿Qué tipo de clientes contratan el Project Landing?</h3>"+
+      "<ul class='list'><li>Proyectos complejos y ambiciosos.</li>"+
+      "<li>Innovadores en Tecnología basada en software.</li>"+
+      "<li>Innovadores en Modelos de Negocio que requieran una solución de software.</li></ul>"+
+    "<h3>Experiencia</h3>"+
+      "<ul class='list'><li>Creación del Plan de migración para la INTRANET de una Cámara "+
+      "de Comercio en MX.</li>"+
+      "<li>Creación de una plataforma de telecomunicaciones para VoIP.</li>"+
+      "<li>  Renovación del sistema de evaluación en línea del Centro de Evaluaciones "+
+      "más importante de México.</li>"+
+      "<li>Creación del Plan de implementación para un portal de recursos humanos.</li>"+
+      "<li>Definición de la plataforma de Lectura Rápida.</li></ul>",
+  "layout":"text"
+}];
+},{}],11:[function(require,module,exports){
+module.exports = [{
+  "name":"software_development",
+  "title":"Software Development",
+  "subtitle":"We do Software Development",
+  "description":"<h3>¿Qué desarrollamos?</h3>"+
+                    "<ul class='list'><li>Aplicaciones Web y Empresariales.</li>"+
+                    "<li>Aplicaciones Móviles.</li>"+
+                    "<li>Integración de Sistemas.</li>"+
+                    "<li>Componentes de Negocio.</li>"+
+                    "<li>Prototipos para demostraciones y validación de ideas.</li></ul>"+
+                  "<h3>¿Cómo?</h3>"+
+                    "<p>El desarrollo de software presenta muchos desafíos en la "+
+                    "actualidad. Se requieren soluciones flexibles, que maximicen la "+
+                    "inversión en tecnología y que cumplan con la demanda constante de "+
+                    "calidad y rapidez en los tiempos de entrega.</p>"+
+                    "<p>En Technogi nos especializamos en cubrir todas estas necesidades.</p>"+
+                    "<ul class='list'><li><b>Amplio portafolio de opciones.</b> Nuestra filosofía nos "+
+                      "permite conocer las tecnologías más modernas e innovadoras y "+
+                      "hacernos especialistas en cada una de ellas.</li>"+
+                      "<li><b>Procesos de Calidad automatizados.</b> Con un desarrollo "+
+                      "orientado a pruebas, y la utilización de sistemas de integración "+
+                      "continua. Conocemos el estado de nuestro desarrollo en todo momento, "+
+                      "lo cual nos permite tomar decisiones al momento.</li>"+
+                      "<li><b>Visibilidad Total para el cliente. </b>En todo momento el cliente "+
+                      "conoce el estado actual de su desarrollo, utilizando reportes y "+
+                      "pizarrones de control.</li>"+
+                      "<li><b>Productos Palpables.</b> Con ciclos de desarrollo cortos y en "+
+                      "comunicación constante. Creamos software funcional que el cliente puede "+
+                      "ver y validar desde etapas muy temprana del proyecto, lo cual evita desvíos "+
+                      "con respecto a la idea original.</li>"+
+                      "<li><b>Supervisión de Expertos.</b> Nuestro equipo de arquitectos "+
+                      "establece los lineamientos para cada proyecto y sienta las bases para "+
+                      "que el equipo produzca de manera ágil y sin contratiempos. Al final de "+
+                      "cada entrega, se realizan validaciones nuevamente para garantizar que se "+
+                      "están siguiendo todos los lineamientos establecidos.</li></ul>"+
+                    "<p>Además cada uno de nuestros integrantes del equipo tiene un "+
+                    "perfil responsable y comprometido, lo cual nos ayuda a tener células "+
+                    "de desarrollo auto administradas, que impulsan la productividad y "+
+                    "permiten tener un uso eficiente de los recursos que manejan los proyectos.</p>"+
+                    "<p>Mantenemos informado al cliente en todo momento sobre el avance del "+
+                    "desarrollo y estimulamos la comunicación.</p>"+
+                  "<h3>Tecnologías</h3>"+
+                    "<ul class='table'><li>Angular JS</li><li>Java /Play Framework</li>"+
+                    "<li>Groovy / Grails</li><li>Ruby /Rails</li><li>Scala /Play Framework</li>"+
+                    "<li>Javascript</li><li>HTML5</li><li>CSS3</li><li>Foundation</li>"+
+                    "<li>Bootstrap</li></ul>"+
+                  "<h3>Bases de Datos</h3>"+
+                    "<ul class='table'><li>&nbsp;Redis</li><li>MongoDB</li>"+
+                    "<li>PostgreSQL</li><li>MySQL</li><li>Oracle</li>"+
+                    "<li>MSSQLServer</li></ul>"+
+                  "<h3>Herramientas</h3>"+
+                    "<ul class='table'><li>Jenkins</li><li>Sonar</li>"+
+                    "<li>Github</li><li>Bitbucket</li><li>Greenhopper</li>"+
+                    "<li>Confluence</li><li>JIRA</li><li>Jetbrains</li><li>Eclipse</li>"+
+                    "<li>Netbeans</li><li>Cordova / Phonegap</li></ul>"+
+                  "<h3>Algunos de nuestros proyectos</h3>"+
+                    "<ul class='table'><li>Angular JS</li><li>Java /Play Framework</li>"+
+                    "<li>Groovy / Grails</li><li>Ruby /Rails</li><li>Scala /Play Framework</li>"+
+                    "<li>Javascript</li><li>HTML5</li><li>CSS3</li><li>Foundation</li>"+
+                    "<li>Bootstrap</li></ul>",
+  "image":{"src":"http://placehold.it/350x350"},
+  "layout":"text"
+}];
+
+},{}],12:[function(require,module,exports){
+module.exports = [{
+  "name":"team",
+  "title":"Nuestro equipo",
+  "subtitle":"en construcción",
+  "description":"",
+  "layout":"text"
+}];
 },{}]},{},[1]);
