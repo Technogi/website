@@ -134,14 +134,14 @@ function binds() {
   $("[show]").each(function (i, e) {
     $(e).click(function () {
       var show_template = $(e).attr("show");
-      console.log(show_template);
       var template = findFirstByAttr(templates,"name",show_template);
-      buildTemplate(template,function(){
+      $("#page").addClass("show");
+      /*buildTemplate(template,function(){
         scroll();
         $("#page").addClass("show");
         $("body").css("overflow","hidden");
         $("#page").focus();
-      });
+      });*/
       return false;
     });
   });

@@ -5,7 +5,7 @@
   top:30px;
   width: 100vw;
   left: 100vw;
-  height: 100vh;
+  height: 98vh;
   margin-bottom:100px;
   overflow: scroll;
   position: fixed;
@@ -17,158 +17,15 @@
     background-color: $technogi-orange; 
     width: 100%;
     height:53px;
-    position:absolute;
+    position:fixed;
     top:10px;
     line-height:58px;
     padding-left:20px;
     color:white;
     cursor:pointer;
     font-size:.9em;
+    z-index:10;
   }
-  .title-box{
-    margin-top:15px;
-    padding-bottom:15px;
-    border-bottom: 3px solid $gray;
-    #title{
-      font-family: 'Lato', sans-serif;
-      color: $black;
-      font-size:2.5em;
-      //letter-spacing:.1em;
-      padding-bottom:10px;
-      border-bottom: solid 3px $technogi-orange;
-      display:inline;
-    }
-  }
-
-  #subtitle{
-    margin-top:10px;
-    font-size:1.5em;
-    color:$gray;
-  }
-
-  h3{
-    font-size:2em;
-    margin-top:15px;
-    color:$technogi-orange;
-    padding-left:0;
-  }
-
-
-  #description{
-    //background-color:#fbfbfb;
-    //border:solid thin #efefef;
-    text-align: justify;
-    line-height:1.5em;
-    padding:20px;
-    margin-top:10px;
-    p{
-      margin-top:15px;
-      margin-bottom:20px;
-      padding:20px;
-    }
-    //p
-    p:first-of-type:first-letter {
-      font-size: 2em;
-      color: $technogi-orange;
-    }
-
-    h4{
-      color:$gray;
-      font-size: 1.5em;
-      margin-top:20px;
-
-    }
-  }
-
-  ul.numbered{
-    counter-reset: li;
-    li:before{
-      content: counter(li);
-      counter-increment: li;
-    }
-  }
-  ul.list{
-    list-style: none;
-    *list-style: decimal;
-    padding-left: 10px;
-    margin-bottom: 4em;
-    margin-top:15px;
-    li{
-      position: relative;
-      display: block;
-      padding: .2em .2em .2em .4em;
-      margin: .5em 0 .5em 2.5em;
-      color: #444;
-      text-decoration: none;
-      background-color: #efefef;
-      transition: all .3s ease-out;   
-    } 
-    li:hover{
-      background-color:#f1f1f1;
-      margin-left:2em;
-    }
-    li:before{
-      content:' ';
-      position: absolute; 
-      left: -2em;
-      top: 50%;
-      margin-top: -.8em;
-      background: #f25d49;
-      height: 1em;
-      width: 1em;
-      line-height: 1em;
-      border-radius:3px;
-    }
-    li:after{
-      position: absolute; 
-      content: '';
-      border: .3em solid transparent;
-      left: -1em;
-      top: 50%;
-      margin-top: -.5em;
-      transition: all .3s ease-out;  
-    }
-    li:hover:after{
-      left: -1em;
-      border-left-color: #f25d49;
-    }
-  
-  }  
-
-
-   ul.table{
-    list-style: none;
-    *list-style: decimal;
-    padding-left: 10px;
-    margin-bottom: 4em;
-    display:table;
-    width:100%;
-    li{
-      position: relative;
-      display: inline-table;  
-      padding:10px;
-      border:solid thin #fafafa;
-      color:white;
-      border-radius:5px;
-      margin:10px;
-      width:30%;
-      height:1.5em;
-      line-height:1em;
-      //margin: .5em 0 .5em 2.5em;
-      //color: #444;
-      text-decoration: none;
-      transition: all .3s ease-out; 
-      background-color:transparentize($technogi-orange,.2);  
-    } 
-    li:hover{
-      background-color:#f1f1f1;
-      margin-left:2em;
-    }
-    
-  
-  } 
-
-  
 }
 
 
@@ -179,4 +36,185 @@
   transform: translate(-100vw, 0px);
   
 
+}
+
+
+
+
+.subpage_info{
+  width:100%;
+  display:none;
+  .row{
+    min-height:400px;
+    margin:0;
+    padding:0;
+    width:100%;
+    max-width:10000px;
+    padding-bottom:70px;
+    h1{
+      text-align: center;
+      font-size: 2.5em;
+      font-weight:700;
+      padding-top:70px;
+      margin-bottom:40px;
+    }
+    p{
+      font-size:1.3em;
+      padding: 10px 100px 10px 100px;
+      line-height:1.5em;
+      font-weight: 500;
+      text-align: center;
+    }
+    .list-item{
+      margin-top:50px;
+      margin-bottom:20px;
+      .icon{
+        font-size:3em;
+        padding:20px;
+        height:100px;
+        width:100px;
+        display:block;
+        text-align: center;
+        border:solid 3px white;
+        border-radius:50px;
+        line-height: 58px;     
+      }
+      .text{
+        padding-top:50px;
+        text-align: center;
+        font-size:1.3em;
+        min-height:200px;
+        padding:20px;
+      }   
+    }
+    .explicative-item{
+      border-radius:3px;
+      min-height:250px;
+      height:250px;
+      h1{
+        padding:5px;
+        padding-top:40px;
+        margin-bottom:10px;
+        font-size:1.2em;
+      }
+      p{
+        font-size:1.1em;
+        padding:10px;
+      }
+    }
+    li{
+      //padding-left:50px;
+      font-size:1.5em;
+      text-align: center;
+      line-height: 2.5em;
+    }
+  }
+  .row.image{
+    min-height:400px;
+    .columns{
+      padding:0;
+    }
+    max-height:400px;
+    overflow:hidden;
+    img{
+      position:absolute;
+      top:0;left:0;
+      filter:blur(4px);
+      width:100%;
+      z-index:0;
+    }
+    h1{
+      span{
+        padding-bottom:10px;
+      }
+      position:relative;
+      padding-top:60px;
+      font-size:4em;
+      font-weight:700;
+      color:rgba(240,240,240,.8);
+      z-index:1;
+    }
+    h2{
+      position:relative;
+      margin:100px;
+      padding:20px;
+      color:transparentize(#f1f1f1,.1);
+      text-align: center;
+      font-size:1.5em;
+      font-weight:400;
+      background-color:transparentize(white,.7);
+      border-radius:5px;
+      //color:rgba(240,240,240,.5);
+    }
+  }
+
+
+  .row.orange{
+    background-color:$technogi-orange;
+  }
+
+  .row.yellow{
+    background-color:$technogi-yellow;
+  }
+
+  .row.red{
+    background-color:$technogi-red;
+    h1{
+      color:white;
+    }
+    p{
+      color:white;
+    }
+    .list-item{
+      .icon{
+        color:white;
+      }
+      .text{
+        color:white;
+      }
+    }
+  }
+  .row.blue{
+    background-color:$technogi-blue;
+  }
+  .row.white{
+    h1{
+      color:$technogi-orange;
+    }
+    p{
+      color:$gray;
+    }
+    li{
+      color:$gray;
+    }
+    .list-item{
+      .icon{
+        border-color:$technogi-orange;
+        color:$technogi-orange;
+      }
+      .text{
+        color:$gray;
+      }
+    }
+  }
+
+  .row.gray{
+    background-color:#eee;
+    h1{
+      color:$technogi-orange;
+    }
+    p{
+      color:$gray;
+    }
+    .explicative-item{
+      border:solid thin white;
+      background-color:$technogi-orange;
+      h1{
+        color:white;
+      }
+      p{
+        color:white;
+      }
+    }
+  }
 }
