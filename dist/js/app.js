@@ -154,6 +154,13 @@ function binds() {
     lang.set_lang($(".language_selector").val(), messages);
   });
 
+  $("#es_lang_btn").click(function(){
+    lang.set_lang('es',messages);
+  });
+
+  $("#en_lang_btn").click(function(){
+    lang.set_lang('en',messages);
+  });
 
 }
 

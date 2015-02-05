@@ -3839,8 +3839,8 @@ table {
   border-spacing: 0; }
 
 .menu_item {
-  margin-right: 30px;
-  margin-left: 30px; }
+  margin-right: 20px;
+  margin-left: 20px; }
 
 .menu_item_scrolled {
   margin-right: 16px;
@@ -3856,7 +3856,7 @@ header {
   padding-left: 30px;
   background: #2c2c2c;
   color: rgba(222, 222, 222, 0.41);
-  font-size: 1.1em;
+  font-size: 1em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   header .language_selector {
@@ -3907,6 +3907,16 @@ header {
     transition: all 0.5s ease; }
   header .logo {
     cursor: pointer; }
+  header .lang_select_div {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 95px;
+    right: 2px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 80px;
+    overflow: hidden; }
 
 header.sticky {
   margin-left: 0px;
@@ -3921,6 +3931,8 @@ header.sticky {
   header.sticky img {
     height: 35px;
     padding-bottom: 5px; }
+  header.sticky .lang_select_div {
+    width: 0px; }
 
 #main {
   width: 100vw; }
