@@ -4001,8 +4001,8 @@ header.sticky {
     font-weight: 500; }
 
 .show_up {
-  -ms-transform: translate(0px, 140px);
-  -webkit-transform: translate(0px, 140px);
+  -ms-transform: translate(0px, 210px);
+  -webkit-transform: translate(0px, 210px);
   transform: translate(0px, 210px); }
 
 .service_btn {
