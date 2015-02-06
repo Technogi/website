@@ -44,7 +44,7 @@ var messages = {
             "necesidades y garantiza el éxito de la implementación."
         },
         "project_landing": {
-          "title": "Project Landing",
+          "title": "Project Shaping",
           "description": "Specialized service that brings innovative ideas and high complexity proects to life." +
             " We use a step by step process that adapts to your current business state and guarantees implementation" +
             " success."
@@ -60,39 +60,28 @@ var messages = {
         "h1":"This is Why Our Clients Love Us",
         1:{
           "title":"Client Satisfaction",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "desc":"All of our clients have developed more than once with us."
         },
         2:{
           "title":"Commitment",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "desc":"All of our clients consider us part of their team."
         },
         3:{
           "title":"Trust",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "desc":"All of our clients consider us part of their team"
         },
         4:{
-          "title":"Less Risk",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "title":"Lower Risk",
+          "desc":"We anticipate the risk, acting fast in order to solve any given problem concerning the project" +
+            "durante la ejecución del proyecto."
         },
         5:{
-          "title":"Visibility in Real Time",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "title":"Real Time Visibility",
+          "desc":"Clients know exactly what we are working on, always being able to track changes, this way they know what their money is being used on."
         },
         6:{
           "title":"Top Talent",
-          "desc":"Bacon ipsum dolor amet ribeye rump corned beef porchetta jowl pork chop landjaeger. Chuck pastrami" +
-            " turkey, picanha short ribs meatloaf ribeye. Brisket ground round beef alcatra, filet mignon rump " +
-            "frankfurter sausage ham hock."
+          "desc":"We manage to atract talented resources from the best universities in the country with our philosophy and the tools we use."
         }
       },
       "our_way":{
@@ -165,7 +154,7 @@ var messages = {
             "definir los pasos a seguir para comenzarla a utilizar."
         },
         "project_landing": {
-          "title": "Project Landing",
+          "title": "Project Shaping",
           "description": "Servicio especializado en convertir ideas innovadoras " +
             "y proyectos de alta complejidad en realidad. Utilizamos " +
             "un proceso guiado que se adapta al estado actual de sus " +
