@@ -134,6 +134,7 @@ function binds() {
   $("[show]").each(function (i, e) {
     $(e).click(function () {
       $('html, body').animate({ scrollTop: "10px"}, 'slow');
+      $('#page').animate({ scrollTop: "0px"}, 'slow');
       var show_template = $(e).attr("show");
       var template = findFirstByAttr(templates,"name",show_template);
       $("#page").addClass("show");
