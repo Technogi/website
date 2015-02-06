@@ -32,7 +32,7 @@ var paths = {
     scripts: './src/scripts/*.js',
     styles: './src/styles/*.scss',
     images: './src/images/**',
-    views: ['./src/index.html', './src/views/*.html'],
+    views: ['./src/index.html', './src/views/**/*.html'],
     main_views: ['./src/index.html', './src/aviso_privacidad.html']
   }
 };

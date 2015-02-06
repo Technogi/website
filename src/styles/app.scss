@@ -58,8 +58,8 @@ table {
 }
 
 .menu_item {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .menu_item_scrolled {
@@ -77,7 +77,7 @@ header {
   padding-left: 30px;
   background: $black;
   color: rgba(222, 222, 222, 0.41);
-  font-size: 1.1em;
+  font-size: 1em;
   .language_selector {
     text-align: right;
     -moz-appearance: none;
@@ -140,6 +140,19 @@ header {
     cursor: pointer;
   }
 
+  .lang_select_div{
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 95px;
+    right:2px;
+    -webkit-transition: all $transition-time ease;
+    transition: all $transition-time ease;
+    height: 80px;
+    overflow: hidden;
+
+  }
+
   // set animation
   -webkit-transition: all $transition-time ease;
   transition: all $transition-time ease;
@@ -158,6 +171,12 @@ header.sticky {
   img {
     height: 35px;
     padding-bottom: 5px;
+  }
+  .lang_select_div{
+    width: 0px;
+    button{
+
+    }
   }
 
 }

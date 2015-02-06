@@ -132,9 +132,14 @@ function binds() {
 
   $("[show]").each(function (i, e) {
     $(e).click(function () {
+      $('html, body').animate({ scrollTop: "10px"}, 'slow');
       var show_template = $(e).attr("show");
       var template = findFirstByAttr(templates,"name",show_template);
       $("#page").addClass("show");
+      $(".subpage_info").hide();
+      $("#"+show_template+"-subpage").show();
+      $("body").css("overflow","hidden");
+      $("#page").focus();
       /*buildTemplate(template,function(){
         scroll();
         $("#page").addClass("show");
@@ -153,6 +158,13 @@ function binds() {
     lang.set_lang($(".language_selector").val(), messages);
   });
 
+  $("#es_lang_btn").click(function(){
+    lang.set_lang('es',messages);
+  });
+
+  $("#en_lang_btn").click(function(){
+    lang.set_lang('en',messages);
+  });
 
 }
 

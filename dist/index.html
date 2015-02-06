@@ -48,12 +48,17 @@
     <a scroll_to="contact_us" class="menu_item" href="#" msg="views.header.contact"></a> |
     <a scroll_to="more" class="menu_item" href="#" ><i class="fa fa-plus"></i></a>
   </span>
-  <select class="language_selector">
+  <!--select class="language_selector">
   	<option msg="lang.select">language</option>
   	<option msg="lang.spanish" value="es">Español</option>
   	<option msg="lang.english" value="en">English</option>
-  </select>
+  </select-->
+  <div class="lang_select_div">
+    <button id="es_lang_btn" class="btn tiny  warning">ES</button>
+    <button id="en_lang_btn" class="btn tiny  warning">EN</button>
+  </div>
 </header>
+
 
 <div class="hide-for-small-down" id="main_container">
 
@@ -62,6 +67,7 @@
     <h1 msg="views.main.h1"></h1>
 
     <h2 msg="views.main.h2"></h2>
+
 
     <div class="super_icon">
     </div>
@@ -363,47 +369,6 @@
 <div id="page">
   <div id="back_btn" class="back"><i class="fa fa-arrow-left"></i>&nbsp;Regresar</div>
 
-<!--<div style="display:none;" id="layout_text" class="row layout">
-	<div class="medium-12 columns">
-		<div class="row">
-			<div class="medium-12 columns">
-				<div class="title-box">
-					<h1 id="title"></h1>
-				</div>
-				<h2 id="subtitle"></h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="medium-12 columns">
-				<div id="description"></div>
-			</div>
-		</div>
-		
-	</div>
-</div>
-
-<div style="display:none;" id="layout_text-image" class="row layout">
-	<div class="medium-12 columns">
-		
-		<div class="row">
-			<div class="medium-12 columns">
-				<div class="title-box">
-					<h1 id="title"></h1>
-				</div>
-				<h2 id="subtitle"></h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="medium-9 columns">
-				<div id="description"></div>
-			</div>
-			<div class="medium-3 columns">
-				<img id="image"/>
-			</div>
-		</div>
-	</div>
-</div>-->
-
 <div class="subpage_info" id="software_development-subpage">
 	<div class="row image">
 		<div class="medium-12 columns">
@@ -417,7 +382,7 @@
 	</div>
 	<div class="row white">
 		<div class="medium-12 columns">
-				<h1>Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a sus necesidades.</h1>
+				<h2>Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a sus necesidades.</h2>
 			<p>
 				 Desarrollamos aplicaciones web y móviles, realizamos integración de sistemas y creamos componentes de negocio. Nuestro proceso abierto de desarrollo, da visibilidad del avance real, costos, riesgos mitigados y calidad de cada pieza de software producida. 
 			</p>
@@ -476,20 +441,97 @@
 			Toda pieza de software que elaboramos, es diseñada y supervisada por especialistas en desarrollo de software. </p>
 		</div>
 	</div>
+	<div class="row white">
+		<div class="medium-12 columns">
+			<h1>Las tecnologías que usamos</h1>
+			<h2>Lenguajes</h2>
+			<div class="row">
+				<div class=" medium-offset-1 medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-1 columns "></div>
+				<div class=" medium-offset-1 medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-1 columns "></div>
+			</div>
+			<h2>Bases de datos</h2>
+			<div class="row">
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play </h1>
+				</div>
+				<div class="medium-2 columns explicative-item">
+					<h1>Play</h1>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div class="row black">
+		<div class="medium-12 columns">
+			<h1>Proyectos Destacados</h1>
+			<ul>
+				<li>Plataforma de telecomunicaciones en NodeJS, PHP y Javascript.</li>
+				<li>Plataforma de Administración de Eventos en Grails y AngularJS.</li>
+				<li>Infraestructura de Evaluación con servidores distribuidos y mecanismos de sincronización JAVA.</li>
+				<li>Aplicación Móvil para evaluación con estándar QTI.</li>
+				<li>Integración de servicios para plataforma de manejo de programas de lealtad.</li>
+			</ul>
+
+		</div>
+	</div>
 </div>
-
-
 
 <div class="subpage_info" id="project_landing-subpage">
 	<div class="row image">
 		<div class="medium-12 columns">
 			
 			<img src="img/test-images/project-forge.jpg">
+
+			<h1><span class="icon fa fa-paper-plane fa-2x"></span><br/>
+				Project Landing</h1>
+			
 		</div>
 	</div>
 	<div class="row white">
 		<div class="medium-12 columns">
-			<h1>Project landing</h1>
+			<h2>Transformamos tus ideas innovadoras y proyectos de alta complejidad en realidad.</h2>
 			<p>
 				El Project Landing, es un servicio especializado en convertir ideas innovadoras y proyectos de alta complejidad en realidad. Utilizamos un proceso guiado que se adapta al estado actual de tus necesidades y garantiza el éxito de la implementación.
 			</p>
@@ -578,7 +620,180 @@
 		
 </div>
 
-<footer id="more">
+<div class="subpage_info" id="consulting-subpage">
+	<div class="row image">
+		<div class="medium-12 columns">
+			
+			<img src="img/test-images/project-forge.jpg">
+
+			<h1><span class="icon fa fa-group fa-2x"></span><br/>
+				Consultoría en TI</h1>
+			
+		</div>
+	</div>
+	<div class="row white">
+		<div class="medium-12 columns">
+			<h2>Asesoría en el ciclo de implementación de soluciones de TI basadas en software.</h2>
+			<p>
+				Brindamos asesoría en el ciclo de implementación de soluciones de T.I. basadas en software, participando en los aspectos vitales de tu proyecto: planificación, levantamiento de requerimientos, diseño, desarrollo, pruebas, instalación y soporte post productivo.
+			</p>
+		</div>
+	</div>
+	<div class="row black">
+		<div class="medium-12 columns">
+				<h1>¿Qué ofrecemos?</h1>
+			<div style="margin-bottom:0;padding-bottom:0;" class="row">
+
+				<div class="medium-6 columns list-item">
+					<ul class="list">
+						<li>Talleres para toma de requerimientos.</li>
+						<li>Análisis y Mejora de Procesos.</li>
+						<li>Administración de Proyectos.</li>
+						<li>Documentación.</li>
+						<li>Capacitación.</li>
+						
+					</ul>
+				</div>
+				<div class="medium-6 columns list-item">
+					<ul class="list">
+						<li>Selección de Equipo de Desarrollo.</li>
+						<li>Selección de Infraestructura</li>
+						<li>Soporte Técnico</li>
+						<li>Aprovechamiento Tecnológico.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row white">
+		<div class="medium-12 columns">
+			<h1>Beneficios</h1>
+			<ul>
+				<li>Nos encargamos de los procesos de T.I. por TI&nbsp;&nbsp;<i class=" fa fa-check technogi-orange"></i></li>
+				<li>Te enfocas en tu negocio y nosotros en la solución que necesitas &nbsp;&nbsp;<i class=" fa fa-check technogi-orange"></i></li>
+				<li>No incurres en costos de contratación de R.H. &nbsp;&nbsp;<i class=" fa fa-check technogi-orange"></i></li>
+				<li>Tienes a especialistas trabajando en las áreas donde necesitas soluciones &nbsp;&nbsp;<i class=" fa fa-check technogi-orange"></i></li>
+			</ul>
+
+		</div>
+	</div>
+
+		
+</div>
+
+<div class="subpage_info" id="cloud-subpage">
+	<div class="row image">
+		<div class="medium-12 columns">
+			
+			<img src="img/test-images/project-forge.jpg">
+
+			<h1><span class="icon fa fa-cloud fa-2x"></span><br/>
+				Consultoría para la nube</h1>
+			
+		</div>
+	</div>
+	<div class="row white">
+		<div class="medium-12 columns">
+			<h2>Asesoría especializada para aprovechamiento de las capacidades que ofrece la nube. </h2>
+			<p>
+				Asesoría especializada para aprovechamiento de las capacidades que ofrece la nube. Diagnosticamos el nivel de madurez de tus aplicaciones para incorporarlas a la nube y te ayudamos a definir los pasos a seguir para comenzarla a utilizar.
+			</p>
+		</div>
+	</div>
+	<div class="row red">
+		<div class="medium-12 columns">
+				<h1>Nuestra especialidad es tu ventaja competitiva</h1>
+				<h2>
+					Nuestro equipo de expertos se enfoca en lo siguiente para lograr darte el mayor beneficio:
+				</h2>
+				<ul>
+					<li>Reducción de costos de infraestructura.</li>
+					<li>Elección de la mejor nube, basada en precio, requerimientos y soporte.</li>
+					<li>Diagnóstico de aplicaciones (Validamos si las aplicaciones están preparadas para utilizar todo el potencial que ofrece la nube).</li>
+					<li>Adaptación y modificación de aplicaciones para hacerlas compatibles con la nube.</li>
+					<li>Acompañamiento en el proceso de migración.</li>
+					<li>Soporte Post Instalación.</li>
+				</ul>
+		</div>
+	</div>
+	<div class="row gray">
+		<div class="medium-12 columns">
+			<h1>El Proceso</h1>
+			<div class="row">
+				<div class="medium-offset-2 medium-4 columns explicative-item">
+					<h1>Diagnóstico inicial. </h1>
+					<br/>
+					<ul class="list">
+						<li>¿Tienes aplicaciones actualmente que quisieras subir a la nube?</li>
+						<li>¿Quieres virtualizar aplicaciones existentes?</li>
+						<li>¿Quieres centralizar tu operación?</li>
+						<li>¿Necesitas Monitoreo de aplicaciones e infraestructura?</li>
+
+					</ul>
+				</div>
+				<div class="medium-4 columns explicative-item">
+					<h1>Análisis de Madurez de aplicaciones existentes. </h1>
+					<ul class="list">
+						<li>¿Qué elementos tienes hoy en día?</li>
+						<li>¿Tus aplicaciones tienen la arquitectura idónea para ser desplegadas en la nube?</li>
+					</ul>
+				</div>
+				<div class="medium-2 columns"></div>
+				<div class="medium-offset-2 medium-4 columns explicative-item">
+					<h1>Elección de proveedor ideal.</h1>
+					<ul class="list">
+						<li>¿Cuál es tu presupuesto?</li>
+						<li>¿Qué tipo de servicio necesitas?</li>
+						<li>¿Quieres hacer outsourcing del área de soporte?</li>
+					</ul>
+				</div>
+				<div class="medium-4 columns explicative-item">
+					<h1>Migración de Aplicaciones.</h1>
+					<ul class="list">
+						<li>Preparamos tus aplicaciones para usar el potencial de la nube.</li>
+						<li>Creamos un plan de migración para que tu operación no se interrumpa.</li>
+					</ul>
+				</div>
+				<div class="medium-2 columns"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row white">
+		<div class="medium-12 columns">
+			<h1>Trabajamos con los mejores proveedores de servicio</h1>
+			<div class="row">
+				<div class="medium-3 columns explicative-item">
+					<h1>Rackspace </h1>
+				</div>
+				<div class="medium-3 columns explicative-item">
+					<h1>AWS </h1>
+				</div>
+				<div class="medium-3 columns explicative-item">
+					<h1>Heroku </h1>
+				</div>
+				<div class="medium-3 columns explicative-item">
+					<h1>Azure</h1>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+		
+</div>
+
+<div class="contact-container">
+	<div class="row gray">
+		<div class="medium-12 columns">
+			<h1>¿Necesitas más información?</h1>
+			<center>
+				<button scroll_to="contact_us" class="button large alert">Contáctanos</button>
+			</center>
+			</div>
+	</div>
+</div>
+
+<footer style="height:60px;padding-top:10px" id="more">
 		  <div class="row">
 		    <div class="medium-8 columns">
 		      <p><img src="img/logo_footer.png" width="100"> &nbsp;&nbsp;© 2014 by Technogi Desarrollo y Consultoría de Software S.

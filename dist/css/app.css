@@ -3842,8 +3842,8 @@ table {
   border-spacing: 0; }
 
 .menu_item {
-  margin-right: 30px;
-  margin-left: 30px; }
+  margin-right: 20px;
+  margin-left: 20px; }
 
 .menu_item_scrolled {
   margin-right: 16px;
@@ -3859,7 +3859,7 @@ header {
   padding-left: 30px;
   background: #2c2c2c;
   color: rgba(222, 222, 222, 0.41);
-  font-size: 1.1em;
+  font-size: 1em;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease; }
   header .language_selector {
@@ -3910,6 +3910,16 @@ header {
     transition: all 0.5s ease; }
   header .logo {
     cursor: pointer; }
+  header .lang_select_div {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    top: 95px;
+    right: 2px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 80px;
+    overflow: hidden; }
 
 header.sticky {
   margin-left: 0px;
@@ -3924,6 +3934,8 @@ header.sticky {
   header.sticky img {
     height: 35px;
     padding-bottom: 5px; }
+  header.sticky .lang_select_div {
+    width: 0px; }
 
 #main {
   width: 100vw; }
@@ -4357,32 +4369,38 @@ footer {
   -webkit-transform: translate(-100vw, 0px);
   transform: translate(-100vw, 0px); }
 
-.subpage_info {
+.subpage_info, .contact-container {
   width: 100%;
   display: none; }
-  .subpage_info .row {
+  .subpage_info .row, .contact-container .row {
     min-height: 400px;
     margin: 0;
     padding: 0;
     width: 100%;
     max-width: 10000px;
     padding-bottom: 70px; }
-    .subpage_info .row h1 {
+    .subpage_info .row h1, .contact-container .row h1 {
       text-align: center;
       font-size: 2.5em;
       font-weight: 700;
       padding-top: 70px;
       margin-bottom: 40px; }
-    .subpage_info .row p {
+    .subpage_info .row h2, .contact-container .row h2 {
+      text-align: center;
+      font-size: 1.8em;
+      font-weight: 700;
+      padding-top: 40px;
+      margin-bottom: 40px; }
+    .subpage_info .row p, .contact-container .row p {
       font-size: 1.3em;
       padding: 10px 100px 10px 100px;
       line-height: 1.5em;
       font-weight: 500;
       text-align: center; }
-    .subpage_info .row .list-item {
+    .subpage_info .row .list-item, .contact-container .row .list-item {
       margin-top: 50px;
       margin-bottom: 20px; }
-      .subpage_info .row .list-item .icon {
+      .subpage_info .row .list-item .icon, .contact-container .row .list-item .icon {
         font-size: 3em;
         padding: 20px;
         height: 100px;
@@ -4392,51 +4410,62 @@ footer {
         border: solid 3px white;
         border-radius: 50px;
         line-height: 58px; }
-      .subpage_info .row .list-item .text {
+      .subpage_info .row .list-item .text, .contact-container .row .list-item .text {
         padding-top: 50px;
         text-align: center;
         font-size: 1.3em;
         min-height: 200px;
         padding: 20px; }
-    .subpage_info .row .explicative-item {
+    .subpage_info .row .explicative-item, .contact-container .row .explicative-item {
       border-radius: 3px;
       min-height: 250px;
       height: 250px; }
-      .subpage_info .row .explicative-item h1 {
+      .subpage_info .row .explicative-item h1, .contact-container .row .explicative-item h1 {
         padding: 5px;
         padding-top: 40px;
         margin-bottom: 10px;
         font-size: 1.2em; }
-      .subpage_info .row .explicative-item p {
+      .subpage_info .row .explicative-item p, .contact-container .row .explicative-item p {
         font-size: 1.1em;
         padding: 10px; }
-    .subpage_info .row li {
-      font-size: 1.5em;
+      .subpage_info .row .explicative-item ul.list li, .contact-container .row .explicative-item ul.list li {
+        font-size: 1em;
+        line-height: 1.2em; }
+    .subpage_info .row li, .contact-container .row li {
+      font-size: 1.2em;
       text-align: center;
       line-height: 2.5em; }
-  .subpage_info .row.image {
+    .subpage_info .row ul.list li, .contact-container .row ul.list li {
+      font-size: 1.8em;
+      line-height: 2.2em;
+      text-align: left;
+      padding-left: 50px; }
+    .subpage_info .row ul.list li::before, .contact-container .row ul.list li::before {
+      font: normal normal normal 14px/1 FontAwesome;
+      padding-right: 10px; }
+  .subpage_info .row.image, .contact-container .row.image {
     min-height: 400px;
     max-height: 400px;
     overflow: hidden; }
-    .subpage_info .row.image .columns {
+    .subpage_info .row.image .columns, .contact-container .row.image .columns {
       padding: 0; }
-    .subpage_info .row.image img {
+    .subpage_info .row.image img, .contact-container .row.image img {
       position: absolute;
       top: 0;
       left: 0;
       filter: blur(4px);
       width: 100%;
       z-index: 0; }
-    .subpage_info .row.image h1 {
+    .subpage_info .row.image h1, .contact-container .row.image h1 {
       position: relative;
       padding-top: 60px;
       font-size: 4em;
       font-weight: 700;
       color: rgba(240, 240, 240, 0.8);
       z-index: 1; }
-      .subpage_info .row.image h1 span {
+      .subpage_info .row.image h1 span, .contact-container .row.image h1 span {
         padding-bottom: 10px; }
-    .subpage_info .row.image h2 {
+    .subpage_info .row.image h2, .contact-container .row.image h2 {
       position: relative;
       margin: 100px;
       padding: 20px;
@@ -4446,46 +4475,85 @@ footer {
       font-weight: 400;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 5px; }
-  .subpage_info .row.orange {
+  .subpage_info .row.orange, .contact-container .row.orange {
     background-color: #eb6c1e; }
-  .subpage_info .row.yellow {
+    .subpage_info .row.orange h1, .subpage_info .row.orange h2, .contact-container .row.orange h1, .contact-container .row.orange h2 {
+      color: white; }
+    .subpage_info .row.orange p, .contact-container .row.orange p {
+      color: white; }
+    .subpage_info .row.orange li, .contact-container .row.orange li {
+      color: white; }
+    .subpage_info .row.orange .list-item .icon, .contact-container .row.orange .list-item .icon {
+      border-color: #eb6c1e;
+      color: #eb6c1e; }
+    .subpage_info .row.orange .list-item .text, .contact-container .row.orange .list-item .text {
+      color: #5f5f5f; }
+  .subpage_info .row.yellow, .contact-container .row.yellow {
     background-color: #F8BB4B; }
-  .subpage_info .row.red {
+  .subpage_info .row.red, .contact-container .row.red {
     background-color: #F14955; }
-    .subpage_info .row.red h1 {
+    .subpage_info .row.red h1, .contact-container .row.red h1 {
       color: white; }
-    .subpage_info .row.red p {
+    .subpage_info .row.red h2, .contact-container .row.red h2 {
+      color: #2c2c2c; }
+    .subpage_info .row.red p, .contact-container .row.red p {
       color: white; }
-    .subpage_info .row.red .list-item .icon {
+    .subpage_info .row.red li, .contact-container .row.red li {
       color: white; }
-    .subpage_info .row.red .list-item .text {
+    .subpage_info .row.red .list-item .icon, .contact-container .row.red .list-item .icon {
       color: white; }
-  .subpage_info .row.blue {
+    .subpage_info .row.red .list-item .text, .contact-container .row.red .list-item .text {
+      color: white; }
+  .subpage_info .row.blue, .contact-container .row.blue {
     background-color: #3D62A5; }
-  .subpage_info .row.white h1 {
+  .subpage_info .row.white h1, .subpage_info .row.white h2, .contact-container .row.white h1, .contact-container .row.white h2 {
     color: #eb6c1e; }
-  .subpage_info .row.white p {
+  .subpage_info .row.white p, .contact-container .row.white p {
     color: #5f5f5f; }
-  .subpage_info .row.white li {
+  .subpage_info .row.white li, .contact-container .row.white li {
     color: #5f5f5f; }
-  .subpage_info .row.white .list-item .icon {
+  .subpage_info .row.white .list-item .icon, .contact-container .row.white .list-item .icon {
     border-color: #eb6c1e;
     color: #eb6c1e; }
-  .subpage_info .row.white .list-item .text {
+  .subpage_info .row.white .list-item .text, .contact-container .row.white .list-item .text {
     color: #5f5f5f; }
-  .subpage_info .row.gray {
-    background-color: #eee; }
-    .subpage_info .row.gray h1 {
-      color: #eb6c1e; }
-    .subpage_info .row.gray p {
+  .subpage_info .row.white .explicative-item, .contact-container .row.white .explicative-item {
+    border: solid thin #e3dfdc;
+    background-color: white;
+    min-height: 150px;
+    height: 150px; }
+    .subpage_info .row.white .explicative-item h1, .contact-container .row.white .explicative-item h1 {
       color: #5f5f5f; }
-    .subpage_info .row.gray .explicative-item {
+    .subpage_info .row.white .explicative-item p, .contact-container .row.white .explicative-item p {
+      color: #5f5f5f; }
+    .subpage_info .row.white .explicative-item ul.list li, .contact-container .row.white .explicative-item ul.list li {
+      color: white; }
+  .subpage_info .row.gray, .contact-container .row.gray {
+    background-color: #eee; }
+    .subpage_info .row.gray h1, .contact-container .row.gray h1 {
+      color: #eb6c1e; }
+    .subpage_info .row.gray p, .contact-container .row.gray p {
+      color: #5f5f5f; }
+    .subpage_info .row.gray .explicative-item, .contact-container .row.gray .explicative-item {
       border: solid thin white;
       background-color: #eb6c1e; }
-      .subpage_info .row.gray .explicative-item h1 {
+      .subpage_info .row.gray .explicative-item h1, .contact-container .row.gray .explicative-item h1 {
         color: white; }
-      .subpage_info .row.gray .explicative-item p {
+      .subpage_info .row.gray .explicative-item p, .contact-container .row.gray .explicative-item p {
         color: white; }
+      .subpage_info .row.gray .explicative-item ul.list li, .contact-container .row.gray .explicative-item ul.list li {
+        color: white; }
+  .subpage_info .row.black, .contact-container .row.black {
+    background-color: #2c2c2c; }
+    .subpage_info .row.black h1, .contact-container .row.black h1 {
+      color: #eb6c1e; }
+    .subpage_info .row.black p, .contact-container .row.black p {
+      color: #e3dfdc; }
+    .subpage_info .row.black li, .contact-container .row.black li {
+      color: #e3dfdc; }
+
+.contact-container {
+  display: block; }
 
 
 /*# sourceMappingURL=app.css.map */

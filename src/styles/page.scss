@@ -41,7 +41,7 @@
 
 
 
-.subpage_info{
+.subpage_info,.contact-container{
   width:100%;
   display:none;
   .row{
@@ -56,6 +56,13 @@
       font-size: 2.5em;
       font-weight:700;
       padding-top:70px;
+      margin-bottom:40px;
+    }
+    h2{
+      text-align: center;
+      font-size: 1.8em;
+      font-weight:700;
+      padding-top:40px;
       margin-bottom:40px;
     }
     p{
@@ -101,12 +108,28 @@
         font-size:1.1em;
         padding:10px;
       }
+      ul.list li{
+        font-size:1em;
+        line-height:1.2em;
+      }
     }
     li{
       //padding-left:50px;
-      font-size:1.5em;
+      font-size:1.2em;
       text-align: center;
       line-height: 2.5em;
+    }
+    ul.list li{
+      //padding-left:50px;
+      font-size:1.8em;
+      line-height: 2.2em;
+      text-align: left;
+      padding-left:50px;
+    }
+    ul.list li::before{
+      font: normal normal normal 14px/1 FontAwesome;
+      //content:"\f111  ";
+      padding-right:10px;
     }
   }
   .row.image{
@@ -151,6 +174,24 @@
 
   .row.orange{
     background-color:$technogi-orange;
+    h1,h2{
+      color:white;
+    }
+    p{
+      color:white;
+    }
+    li{
+      color:white;
+    }
+    .list-item{
+      .icon{
+        border-color:$technogi-orange;
+        color:$technogi-orange;
+      }
+      .text{
+        color:$gray;
+      }
+    }
   }
 
   .row.yellow{
@@ -162,7 +203,13 @@
     h1{
       color:white;
     }
+    h2{
+      color:$black;
+    }
     p{
+      color:white;
+    }
+    li{
       color:white;
     }
     .list-item{
@@ -178,7 +225,7 @@
     background-color:$technogi-blue;
   }
   .row.white{
-    h1{
+    h1,h2{
       color:$technogi-orange;
     }
     p{
@@ -194,6 +241,23 @@
       }
       .text{
         color:$gray;
+      }
+    }
+
+    .explicative-item{
+      border:solid thin $gray-light;
+      background-color:white;
+      min-height:150px;
+      height:150px;
+
+      h1{
+        color:$gray;
+      }
+      p{
+        color:$gray;
+      }
+      ul.list li{
+        color:white;
       }
     }
   }
@@ -215,6 +279,27 @@
       p{
         color:white;
       }
+      ul.list li{
+        color:white;
+      }
     }
   }
+
+  .row.black{
+    background-color:$black;
+    h1{
+      color:$technogi-orange;
+    }
+    p{
+      color:$gray-light;
+    }
+    li{
+      color:$gray-light;
+    }
+    
+  }
+}
+
+.contact-container{
+  display:block;
 }
