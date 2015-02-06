@@ -37,6 +37,7 @@ var paths = {
   }
 };
 
+
 gulp.task('fonts', function () {
   return gulp.src([
     './vendor/font-awsome/fonts/*'

@@ -113,6 +113,7 @@ function display_carousel_element(index, elements) {
 }
 
 function backToMain(){
+  $("#back_btn").removeClass("show");
   $("#page").removeClass("show");
   $("body").css("overflow","auto");
 }
@@ -135,6 +136,7 @@ function binds() {
       $('html, body').animate({ scrollTop: "10px"}, 'slow');
       var show_template = $(e).attr("show");
       var template = findFirstByAttr(templates,"name",show_template);
+      $("#back_btn").addClass("show");
       $("#page").addClass("show");
       $(".subpage_info").hide();
       $("#"+show_template+"-subpage").show();
