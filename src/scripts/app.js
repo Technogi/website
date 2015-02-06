@@ -117,6 +117,9 @@ function backToMain(){
   $("#mobile_back_btn").removeClass("show");
   $("#page").removeClass("show");
   $("body").css("overflow","auto");
+  setTimeout(function(){
+    $("#page").scrollTop(0);
+  },1000);
 }
 
 function start_carousel() {
