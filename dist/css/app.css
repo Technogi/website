@@ -84,6 +84,27 @@
     padding: 0px;
     margin: 7px; }
 
+#mobile_back_btn {
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 90px;
+  line-height: 58px;
+  padding: 8px;
+  color: #eb6c1e;
+  cursor: pointer;
+  font-size: .8em;
+  z-index: 9000;
+  left: 100vw;
+  line-height: 0px;
+  border-bottom: 1px solid #eb6c1e;
+  -webkit-transition: left 0.5s ease;
+  transition: left 0.5s ease; }
+
+#mobile_back_btn.show {
+  left: 0vw; }
+
 #mobile_main_content {
   position: table;
   width: 100%;
@@ -3903,6 +3924,24 @@ header {
       text-decoration: underline; }
     header a:active, header a :active {
       color: #eb6c1e; }
+  header #back_btn {
+    background-color: #eb6c1e;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 48px;
+    line-height: 58px;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: .9em;
+    z-index: 9000;
+    left: 100vw;
+    line-height: 10px;
+    -webkit-transition: left 0.5s ease;
+    transition: left 0.5s ease; }
+  header #back_btn.show {
+    left: 0vw; }
   header img {
     margin-top: 10px;
     height: 60px;
@@ -4351,18 +4390,6 @@ footer {
   background-color: #ffffff;
   -webkit-transition: all 1s ease;
   transition: all 1s ease; }
-  #page .back {
-    background-color: #eb6c1e;
-    width: 100%;
-    height: 53px;
-    position: fixed;
-    top: 10px;
-    line-height: 58px;
-    padding-left: 20px;
-    color: white;
-    cursor: pointer;
-    font-size: .9em;
-    z-index: 10; }
 
 #page.show {
   -ms-transform: translate(-100vw, 0px);
