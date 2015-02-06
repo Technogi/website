@@ -9,8 +9,8 @@
   overflow: scroll;
   position: fixed;
   background-color: #ffffff;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all $page_transition_time ease;
+  transition: all $page_transition_time ease;
 
 }
 
