@@ -93,7 +93,8 @@
         font-size: 1.2em; }
       .subpage_info .row .explicative-item p, .contact-container .row .explicative-item p {
         font-size: 1.1em;
-        padding: 10px; }
+        padding: 10px;
+        text-align: justify; }
       .subpage_info .row .explicative-item ul.list li, .contact-container .row .explicative-item ul.list li {
         font-size: 1em;
         line-height: 1.2em;
@@ -146,9 +147,30 @@
       position: absolute;
       top: 0;
       left: 0;
-      filter: blur(4px);
       width: 100%;
-      z-index: 0; }
+      z-index: 0;
+      min-height: 400px;
+      min-width: 800px; }
+    .subpage_info .row.image img.blured, .contact-container .row.image img.blured {
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px); }
+    .subpage_info .row.image img.extrablured, .contact-container .row.image img.extrablured {
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px); }
+    .subpage_info .row.image img.invert, .contact-container .row.image img.invert {
+      filter: contrast(.35);
+      -webkit-filter: contrast(.35);
+      -moz-filter: contrast(.35); }
+    .subpage_info .row.image img.semiinvert, .contact-container .row.image img.semiinvert {
+      filter: contrast(.75);
+      -webkit-filter: contrast(.75);
+      -moz-filter: contrast(.75); }
+    .subpage_info .row.image img.invertblur, .contact-container .row.image img.invertblur {
+      filter: blur(5px) contrast(.35);
+      -webkit-filter: blur(5px) contrast(.35);
+      -moz-filter: blur(5px) contrast(.35); }
     .subpage_info .row.image h1, .contact-container .row.image h1 {
       position: relative;
       padding-top: 60px;
@@ -168,37 +190,8 @@
       font-weight: 400;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 5px; }
-  .subpage_info .row.orange, .contact-container .row.orange {
-    background-color: #eb6c1e; }
-    .subpage_info .row.orange h1, .subpage_info .row.orange h2, .contact-container .row.orange h1, .contact-container .row.orange h2 {
-      color: white; }
-    .subpage_info .row.orange p, .contact-container .row.orange p {
-      color: white; }
-    .subpage_info .row.orange li, .contact-container .row.orange li {
-      color: white; }
-    .subpage_info .row.orange .list-item .icon, .contact-container .row.orange .list-item .icon {
-      border-color: #eb6c1e;
-      color: #eb6c1e; }
-    .subpage_info .row.orange .list-item .text, .contact-container .row.orange .list-item .text {
-      color: #5f5f5f; }
-  .subpage_info .row.yellow, .contact-container .row.yellow {
-    background-color: #F8BB4B; }
-  .subpage_info .row.red, .contact-container .row.red {
-    background-color: #F14955; }
-    .subpage_info .row.red h1, .contact-container .row.red h1 {
-      color: white; }
-    .subpage_info .row.red h2, .contact-container .row.red h2 {
-      color: #e3dfdc; }
-    .subpage_info .row.red p, .contact-container .row.red p {
-      color: white; }
-    .subpage_info .row.red li, .contact-container .row.red li {
-      color: white; }
-    .subpage_info .row.red .list-item .icon, .contact-container .row.red .list-item .icon {
-      color: white; }
-    .subpage_info .row.red .list-item .text, .contact-container .row.red .list-item .text {
-      color: white; }
-  .subpage_info .row.blue, .contact-container .row.blue {
-    background-color: #3D62A5; }
+  .subpage_info .row.image.orange h1, .subpage_info .row.image.orange i, .contact-container .row.image.orange h1, .contact-container .row.image.orange i {
+    color: #eb6c1e; }
   .subpage_info .row.white h1, .subpage_info .row.white h2, .contact-container .row.white h1, .contact-container .row.white h2 {
     color: #eb6c1e; }
   .subpage_info .row.white p, .contact-container .row.white p {
@@ -248,11 +241,42 @@
       border: solid thin #e3dfdc;
       background-color: white; }
       .subpage_info .row.black .explicative-item h1, .contact-container .row.black .explicative-item h1 {
-        color: #eb6c1e; }
+        color: #5f5f5f; }
       .subpage_info .row.black .explicative-item p, .contact-container .row.black .explicative-item p {
-        color: #eb6c1e; }
+        color: #2c2c2c; }
       .subpage_info .row.black .explicative-item ul.list li, .contact-container .row.black .explicative-item ul.list li {
-        color: #eb6c1e; }
+        color: #5f5f5f; }
+  .subpage_info .row.orange, .contact-container .row.orange {
+    background-color: #eb6c1e; }
+    .subpage_info .row.orange h1, .subpage_info .row.orange h2, .contact-container .row.orange h1, .contact-container .row.orange h2 {
+      color: white; }
+    .subpage_info .row.orange p, .contact-container .row.orange p {
+      color: white; }
+    .subpage_info .row.orange li, .contact-container .row.orange li {
+      color: white; }
+    .subpage_info .row.orange .list-item .icon, .contact-container .row.orange .list-item .icon {
+      border-color: #eb6c1e;
+      color: #eb6c1e; }
+    .subpage_info .row.orange .list-item .text, .contact-container .row.orange .list-item .text {
+      color: #5f5f5f; }
+  .subpage_info .row.red, .contact-container .row.red {
+    background-color: #F14955; }
+    .subpage_info .row.red h1, .contact-container .row.red h1 {
+      color: white; }
+    .subpage_info .row.red h2, .contact-container .row.red h2 {
+      color: #e3dfdc; }
+    .subpage_info .row.red p, .contact-container .row.red p {
+      color: white; }
+    .subpage_info .row.red li, .contact-container .row.red li {
+      color: white; }
+    .subpage_info .row.red .list-item .icon, .contact-container .row.red .list-item .icon {
+      color: white; }
+    .subpage_info .row.red .list-item .text, .contact-container .row.red .list-item .text {
+      color: white; }
+  .subpage_info .row.blue, .contact-container .row.blue {
+    background-color: #3D62A5; }
+  .subpage_info .row.yellow, .contact-container .row.yellow {
+    background-color: #F8BB4B; }
 
 .contact-container {
   display: block; }
