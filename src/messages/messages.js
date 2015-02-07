@@ -26,28 +26,19 @@ var messages = {
         "h1": "Our Services",
         "consulting": {
           "title": "IT Consulting",
-          "description": "Lorem ipsum dolor sit amet, id regione impedit " +
-            "definitiones usu, velit persius percipit no duo."
+          "description": "Advice at every stage of implementation of IT solutions based on software"
         },
         "software_development": {
           "title": "Software Development",
-          "description": "Servicio especializado en convertir ideas innovadoras " +
-            "y proyectos de alta complejidad en realidad. Utilizamos " +
-            "un proceso guiado que se adapta al estado actual de sus " +
-            "necesidades y garantiza el éxito de la implementación."
+          "description": "We create the ideal architecture and use technology that best suits your needs"
         },
         "cloud": {
           "title": "Cloud",
-          "description": "Servicio especializado en convertir ideas innovadoras " +
-            "y proyectos de alta complejidad en realidad. Utilizamos " +
-            "un proceso guiado que se adapta al estado actual de sus " +
-            "necesidades y garantiza el éxito de la implementación."
+          "description": "Take advantage of cloud optimally"
         },
         "project_landing": {
           "title": "Project Shaping",
-          "description": "Specialized service that brings innovative ideas and high complexity proects to life." +
-            " We use a step by step process that adapts to your current business state and guarantees implementation" +
-            " success."
+          "description": "Transform your innovative ideas and highly complex projects into a profitable reality"
         }
       },
       "about_us": {
@@ -137,28 +128,19 @@ var messages = {
         "h1": "Nuestros servicios",
         "consulting": {
           "title": "Consultoría IT",
-          "description": "Asesoría en el ciclo de implementación de soluciones de TI basadas en software. Participamos " +
-            "en los aspectos vitales de su proyecto: planificación, levantamiento de requerimientos, diseño, desarrollo," +
-            " pruebas, instalación y soporte post productivo."
+          "description": "Asesoría en el ciclo de implementación de soluciones de TI basadas en software."
         },
         "software_development": {
           "title": "Desarrollo Software",
-          "description": "Desarrollo de aplicaciones web y móviles, integración de sistemas y componentes de negocio. " +
-            "Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a sus necesidades y que " +
-            "incremente la vida útil de la solución."
+          "description": "Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a sus necesidades."
         },
         "cloud": {
           "title": "Nube",
-          "description": "Asesoría especializada para aprovechamiento de las capacidades que ofrece la nube. " +
-            "Diagnosticamos el nivel de madurez de sus aplicaciones para incorporarlas a la nube y lo ayudamos a " +
-            "definir los pasos a seguir para comenzarla a utilizar."
+          "description": "Asesoría especializada para aprovechamiento de las capacidades que ofrece la nube. "
         },
         "project_landing": {
           "title": "Project Shaping",
-          "description": "Servicio especializado en convertir ideas innovadoras " +
-            "y proyectos de alta complejidad en realidad. Utilizamos " +
-            "un proceso guiado que se adapta al estado actual de sus " +
-            "necesidades y garantiza el éxito de la implementación."
+          "description": "Transformamos tus ideas innovadoras y proyectos de alta complejidad en realidad."
         }
 
       },

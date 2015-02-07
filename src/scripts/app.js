@@ -60,7 +60,6 @@ function show_service_description() {
   $(".technogi_panel").mouseleave(function (a) {
     if ($("#main_content_footer").hasClass('scrolled')) {
       $(a.target).find("p.show_up").removeClass('show_up');
-
     }
   });
 }
@@ -117,6 +116,7 @@ function backToMain(){
   $("#mobile_back_btn").removeClass("show");
   $("#page").removeClass("show");
   $("body").css("overflow","auto");
+  $(".technogi_panel").removeClass('show_up');
   setTimeout(function(){
     $("#page").scrollTop(0);
   },1000);
