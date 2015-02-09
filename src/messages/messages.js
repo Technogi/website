@@ -159,7 +159,7 @@ var messages = {
         }
       },
       "core":{
-        "title":"The core",
+        "title":"Our foundation",
         "subtitle":"The latest technology with zero risk. We help you to evolve.",
         "description":"As part of every day’s work, we do research on new technologies and innovative ways of solving problems.We carry research findings into practice, creating our own products and prototypes that allow us to understand the ever evolving technology.Once we are specialists in the new technology, we apply it in real projects for our customers. This allows us to provide an extensive and reliable range of possibilities to turn your ideas into solutions.",
         "section_1":{
@@ -311,7 +311,7 @@ var messages = {
       "our_way":{
         "h1":"How We Do IT",
         "philosophy":{
-          "title":"Our Core",
+          "title":"Our Foundation",
           "desc":"The latest technology with zero risk. We help you to evolve"
         },
         "team":{
