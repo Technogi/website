@@ -1,0 +1,166 @@
+<!doctype html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html class="no-js" lang="en" data-useragent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technogi</title>
+  <meta name="description"
+        content="Technogi's Website"/>
+  <meta name="author" content="Technogi"/>
+  <meta name="copyright" content="TECHNOGI, inc. Copyright (c) 2015"/>
+  <link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <script src="js/modernizr.js"></script>
+  <script src="msg/messages.js"></script>
+
+  <link rel="script" href="msg/messages.js">
+  <!-- build:css -->
+  <link rel="stylesheet" href="../dist/css/app.css">
+  <!-- endbuild -->
+  <!-- import Google font -->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+  <style>
+    .ioi {
+      background-color: white;
+      height: 400px;
+      width: 800px;
+      color: white;
+      font-size: 2em;
+    }
+
+    .fa {
+      position: absolute;
+      -webkit-transition: all 1s ease;
+      transition: all 1s linear;
+    }
+
+    .fa-user {
+      top: 100px;
+      left: 340px;
+      color: orange;
+      text-shadow: 4px 4px 5px #333;
+    }
+
+    .fa-lightbulb-o {
+      left: 386px;
+      top: 30px;
+      color: #ffd85f;
+    }
+
+    .fa-money {
+      left: 240px;
+      top: 170px;
+      color: #368a55;
+    }
+
+    .fa-cloud {
+      left: 270px;
+      top: 90px;
+      color: #1cc7ff;
+    }
+
+    .fa-cogs {
+      left: 470px;
+      top: 90px;
+      color: cornflowerblue;
+    }
+
+    .fa-clock-o {
+      left: 500px;
+      top: 170px;
+      color: #1a1a1a;
+    }
+
+    .fa-keyboard-o {
+      top: 290px;
+      left: 350px;
+      color: #7a7a7a;
+    }
+
+    .iconits {
+      position: relative;
+      font-size: .7em;
+      color: #aaaaaa;
+    }
+
+    .highlited {
+      color: #ffff00;
+    }
+
+    .iconits_holder {
+      position: absolute;
+      top: 255px;
+      left: 316px;
+    }
+  </style>
+</head>
+<body>
+<div class="ioi">
+  <i class="fa fa-lightbulb-o fa-2x"></i>
+  <i class="fa fa-cloud fa-2x"></i>
+  <i class="fa fa-money fa-2x"></i>
+  <i class="fa fa-cogs fa-2x"></i>
+  <i class="fa fa-clock-o fa-2x"></i>
+  <i class="fa fa-user fa-5x"></i>
+  <i class="fa fa-keyboard-o-hide fa-3x"></i>
+  <span class="iconits_holder">
+    <i class="iconits fa fa-line-chart highlited"></i>
+     <i class="iconits fa fa-gears"></i>
+    <i class="iconits fa fa-pie-chart"></i>
+    <i class="iconits fa fa-briefcase"></i>
+    <i class="iconits fa fa-calendar"></i>
+    <i class="iconits fa fa-laptop"></i>
+  </span>
+</div>
+
+<!-- build:js -->
+<script src="../dist/js/vendor.bundle.js"></script>
+<script src="../dist/js/app.js"></script>
+<!-- endbuild -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  var interval = 1000;
+  $(".fa").each(function (index, icon) {
+    console.log($(icon).hasClass("fa-user"));
+    if (!$(icon).hasClass("fa-user") && !$(icon).hasClass("fa-keyboard-o") && !$(icon).hasClass("iconits")) {
+      var originalX = $(icon).css("left");
+      var originalY = $(icon).css("top");
+
+      setInterval(function () {
+        var nextY = Math.floor((Math.random() * 10) % 2)
+            ? Math.floor((Math.random() * 10))
+            : Math.floor((Math.random() * -10));
+        var nextX = Math.floor((Math.random() * 10) % 2)
+            ? Math.floor((Math.random() * 10))
+            : Math.floor((Math.random() * -10));
+        $(icon).css("left", (Number.parseInt($(icon).css("left")) + nextY) + "px");
+        $(icon).css("top", (Number.parseInt($(icon).css("top")) + nextX) + "px");
+      }, interval);
+      interval = interval+150;
+
+      setInterval(function () {
+        $(icon).css("left", originalX);
+        $(icon).css("top", originalY);
+      }, 10500);
+    }
+  });
+
+  var iconits = $(".iconits");
+  var counter = 0;
+  setInterval(function () {
+    $(iconits[counter]).removeClass('highlited');
+    if (counter - 1 === iconits.length) {
+      counter = 0;
+    } else {
+      counter++;
+    }
+    $(iconits[counter]).addClass('highlited');
+
+  }, 1000);
+
+</script>
+</body>
+</html>
