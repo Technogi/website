@@ -78,7 +78,7 @@ var messages = {
       "our_way":{
         "h1":"How We Do IT",
         "philosophy":{
-          "title":"Our Philosophy",
+          "title":"Our Core",
           "desc":"The latest technology with zero risk. We help you to evolve"
         },
         "team":{
@@ -106,7 +106,8 @@ var messages = {
     "commons": {
       "learn_more": "ver más",
       "sending":"enviando ...",
-      "thankyou":"Gracias"
+      "thankyou":"Gracias",
+      "send":"Enviar"
     },
     "lang":{
       "select":"lang",
@@ -117,7 +118,7 @@ var messages = {
       "header": {
         "services": "¿QUÉ HACEMOS?",
         "methodology": "¿CÓMO LO HACEMOS?",
-        "contact": "CONTACTANOS"
+        "contact": "CONTÁCTANOS"
       },
       "main": {
         "h1": "Servicios de Consultoría IT Modernos",
@@ -132,7 +133,7 @@ var messages = {
         },
         "software_development": {
           "title": "Desarrollo Software",
-          "description": "Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a sus necesidades."
+          "description": "Creamos la arquitectura ideal y utilizamos la tecnología que más se adapte a tus necesidades."
         },
         "cloud": {
           "title": "Nube",
@@ -175,9 +176,9 @@ var messages = {
         }
       },
       "our_way":{
-        "h1":"¿Cómo lo Hacemos?",
+        "h1":"¿Cómo lo hacemos?",
         "philosophy":{
-          "title":"Filosofía",
+          "title":"La escencia",
           "desc":"Nos mantenemos en constante evolución. Convertimos tus ideas en soluciones"
         },
         "team":{
@@ -185,7 +186,7 @@ var messages = {
           "desc":"Comprometidos contigo, apasionados por la tecnología."
         },
         "methodology":{
-          "title":"La Metodología",
+          "title":"La metodología",
           "desc":"Comunicación, flexibilidad y desempeño.   Las claves de nuestro exito"
         }
       },
@@ -193,8 +194,8 @@ var messages = {
         "getintouch":"Ponte en contacto",
         "post_sent":"Nos pondremos en contacto en un lapso menor a 24 horas.",
         "instructions":"Ingresa tu información, y nos pondremos en contacto contigo en menos de 24 horas.",
-        "our_office":"Nuestras Oficinas",
-        "visit_us":"visitanos en:"
+        "our_office":"Nuestras oficinas",
+        "visit_us":"visítanos en:"
       },
       "about_us": {
         "summary": "Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de " +

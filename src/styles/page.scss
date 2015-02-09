@@ -96,6 +96,9 @@
         line-height: 1.2em;
         padding-right:30px;
       }
+      ul.list li::before{
+        content:"º";
+      }
       .helper {
           display: inline-block;
           height: 100%;
