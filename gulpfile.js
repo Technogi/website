@@ -14,6 +14,7 @@ var concat = require('gulp-concat');
 var fileinclude = require('gulp-file-include');
 var fs = require('fs');
 var cloudfiles = require("gulp-cloudfiles");
+var jpegtran = require('imagemin-jpegtran');
 
 var paths = {
   dist: {
@@ -74,7 +75,9 @@ gulp.task('scripts', ['lint'], function () {
 
 gulp.task('images', function () {
   return gulp.src('./src/images/**')
-    .pipe(imagemin())
+    .pipe(imagemin({
+      progresive:true
+  }))
     .pipe(gulp.dest(paths.dist.images));
 });
 
