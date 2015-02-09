@@ -146,8 +146,8 @@ header {
     z-index: 9000;
     left: 100vw;
     line-height: 10px;
-    -webkit-transition: left $transition-time ease;
-    transition: left $transition-time ease;
+    -webkit-transition: left $page_transition_time ease;
+    transition: left $page_transition_time ease;
     
 
   }
