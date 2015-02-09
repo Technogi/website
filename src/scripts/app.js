@@ -15,19 +15,16 @@ var log = logger.create('app:log', 'log');
 var err = logger.create('app:err', 'error');
 
 var userLang = navigator.language || navigator.userLanguage;
-userLang = userLang.substr(0,userLang.indexOf('-'));
+userLang = userLang.substr(0, userLang.indexOf('-'));
 lang.set_lang(userLang, messages);
 
 
 function findFirstByAttr(array, attr, value) {
   var result = [];
-  console.log(array);
-  for(var i = 0; i < array.length; i += 1) {
-      if(array[i][attr] == value) {
-        console.log(i);
-        console.log(array);
-          return array[i];
-      }
+  for (var i = 0; i < array.length; i += 1) {
+    if (array[i][attr] == value) {
+      return array[i];
+    }
   }
   return undefined;
 }
@@ -85,16 +82,16 @@ function adjust() {
   }
 }
 
-function buildTemplate(template,callback){
+function buildTemplate(template, callback) {
   $("#page .layout").hide();
-  $("#page #layout_"+template.layout).show();
-  $("#page #layout_"+template.layout+" #title").html(template.title);
-  $("#page #layout_"+template.layout+" #subtitle").html(template.subtitle);
-  $("#page #layout_"+template.layout+" #description").html(template.description);
-  if(template.layout=="text-image"){
-    $("#page #layout_"+template.layout+" #image").attr("src",template.image.src);
+  $("#page #layout_" + template.layout).show();
+  $("#page #layout_" + template.layout + " #title").html(template.title);
+  $("#page #layout_" + template.layout + " #subtitle").html(template.subtitle);
+  $("#page #layout_" + template.layout + " #description").html(template.description);
+  if (template.layout == "text-image") {
+    $("#page #layout_" + template.layout + " #image").attr("src", template.image.src);
   }
-  if(callback){
+  if (callback) {
     callback();
   }
 }
@@ -111,15 +108,15 @@ function display_carousel_element(index, elements) {
   });
 }
 
-function backToMain(){
+function backToMain() {
   $("#back_btn").removeClass("show");
   $("#mobile_back_btn").removeClass("show");
   $("#page").removeClass("show");
-  $("body").css("overflow","auto");
+  $("body").css("overflow", "auto");
   $(".technogi_panel").removeClass('show_up');
-  setTimeout(function(){
+  setTimeout(function () {
     $("#page").scrollTop(0);
-  },1000);
+  }, 1000);
 }
 
 function start_carousel() {
@@ -130,7 +127,7 @@ function binds() {
   $("[scroll_to]").each(function (i, e) {
     $(e).click(function () {
       backToMain();
-      $('html, body').animate({ scrollTop: $('#' + $(e).attr('scroll_to')).offset().top-30 }, 'slow');
+      $('html, body').animate({ scrollTop: $('#' + $(e).attr('scroll_to')).offset().top - 30 }, 'slow');
       return false;
     });
   });
@@ -139,78 +136,79 @@ function binds() {
     $(e).click(function () {
       $('html, body').animate({ scrollTop: "10px"}, 'slow');
       var show_template = $(e).attr("show");
-      var template = findFirstByAttr(templates,"name",show_template);
+      var template = findFirstByAttr(templates, "name", show_template);
       $("#back_btn").addClass("show");
       $("#mobile_back_btn").addClass("show");
       $("#page").addClass("show");
       $(".subpage_info").hide();
-      $("#"+show_template+"-subpage").show();
-      $("body").css("overflow","hidden");
+      $("#" + show_template + "-subpage").show();
+      $("body").css("overflow", "hidden");
       $("#page").focus();
       /*buildTemplate(template,function(){
-        scroll();
-        $("#page").addClass("show");
-        $("body").css("overflow","hidden");
-        $("#page").focus();
-      });*/
+       scroll();
+       $("#page").addClass("show");
+       $("body").css("overflow","hidden");
+       $("#page").focus();
+       });*/
       return false;
     });
   });
 
-  $("#back_btn").click(function(){
+  $("#back_btn").click(function () {
     backToMain();
   });
-  $("#mobile_back_btn").click(function(){
+  $("#mobile_back_btn").click(function () {
     backToMain();
   });
 
-  $(".language_selector").change(function(){
+  $(".language_selector").change(function () {
     lang.set_lang($(".language_selector").val(), messages);
   });
 
-  $("#es_lang_btn").click(function(){
-    lang.set_lang('es',messages);
+  $("#es_lang_btn").click(function () {
+    lang.set_lang('es', messages);
   });
 
-  $("#en_lang_btn").click(function(){
-    lang.set_lang('en',messages);
+  $("#en_lang_btn").click(function () {
+    lang.set_lang('en', messages);
   });
 
 }
 
 function startup_slider() {
   var el = document.getElementById("submit_btn_i");
-  el.onmousedown=function(e){
+  el.onmousedown = function (e) {
     var original_position = e.x;
-    document.onmousemove=function(e){
-      console.log(e.x-original_position);
-      el.style['margin-left'] = (e.x-original_position)+"px";
-      console.log( el.style.left );
+    document.onmousemove = function (e) {
+      console.log(e.x - original_position);
+      el.style['margin-left'] = (e.x - original_position) + "px";
+      console.log(el.style.left);
     };
-    document.onmouseup =function(e){
+    document.onmouseup = function (e) {
       console.log("mouseup");
-      el.parentNode.onmousemove=function(){};
-      document.onmousemove=function(){};
+      el.parentNode.onmousemove = function () {
+      };
+      document.onmousemove = function () {
+      };
     };
   };
-  el.addEventListener("touchstart",function(e){
+  el.addEventListener("touchstart", function (e) {
     var original_position = e.x;
-    document.addEventListener("touchmove",function(e){
-      el.style['margin-left'] = (e.x-original_position)+"px";
+    document.addEventListener("touchmove", function (e) {
+      el.style['margin-left'] = (e.x - original_position) + "px";
     });
-    document.addEventListener("touchleave",function(){
+    document.addEventListener("touchleave", function () {
     });
   });
   /*
-  var el = document.getElementsByTagName("canvas")[0];
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchleave", handleEnd, false);
-  el.addEventListener("touchmove", handleMove, false);
-  log("initialized.");*/
+   var el = document.getElementsByTagName("canvas")[0];
+   el.addEventListener("touchstart", handleStart, false);
+   el.addEventListener("touchend", handleEnd, false);
+   el.addEventListener("touchcancel", handleCancel, false);
+   el.addEventListener("touchleave", handleEnd, false);
+   el.addEventListener("touchmove", handleMove, false);
+   log("initialized.");*/
 }
-
 
 
 $(window).load(function () {
