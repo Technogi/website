@@ -14,7 +14,6 @@ var concat = require('gulp-concat');
 var fileinclude = require('gulp-file-include');
 var fs = require('fs');
 var cloudfiles = require("gulp-cloudfiles");
-var jpegtran = require('imagemin-jpegtran');
 
 var paths = {
   dist: {
