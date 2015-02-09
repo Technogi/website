@@ -12,6 +12,11 @@ exports.set_lang=function(lang,msgs){
     var node = nodes.item(i);
     node.innerText = property(msgs,lang+"."+node.getAttribute("msg"));
     node.textContent = node.innerText;
+    if(node.getAttribute("placeholder")){
+      node.setAttribute("placeholder",property(msgs,lang+"."+node.getAttribute("msg")));
+      node.innerText = "";
+       node.textContent = "";
+    }
   }
 };
 

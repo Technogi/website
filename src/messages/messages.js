@@ -328,7 +328,10 @@ var messages = {
         "post_sent":"We'll get back to you within 24 hours. Hold on tight!",
         "instructions":"Fill in the form below, and we'll get back to you within 24 hours.",
         "our_office":"Our office",
-        "visit_us":"visit us at our office"
+        "visit_us":"visit us at our office",
+        "name":"Full name",
+        "email":"Email",
+        "message":"Enter message here"
       },
       "footer":{
         "privacy_policy":"PRIVACY POLICY"
@@ -548,7 +551,7 @@ var messages = {
       },
       "methodology":{
         "title":"Nuestra metodología",
-        "subtitle":"Comunicación, flexibilidad y desempeño. Las claves de nuestro exito",
+        "subtitle":"Comunicación, flexibilidad y desempeño. Las claves de nuestro éxito",
         "description":"Con las mejores prácticas del PMI y de las metodologías ágiles, hemos creado una forma de trabajo que estimula la productividad de nuestro equipo e incrementa la comunicación con el cliente, dándonos la combinación ideal de control, visibilidad y flexibilidad que todo proceso de desarrollo requiere.",
         "description_2":"El resultado, 100% de clientes satisfechos y 100% de proyectos entregados en tiempo.",
         "section_1":{
@@ -653,7 +656,7 @@ var messages = {
         },
         "methodology":{
           "title":"La metodología",
-          "desc":"Comunicación, flexibilidad y desempeño.   Las claves de nuestro exito"
+          "desc":"Comunicación, flexibilidad y desempeño.   Las claves de nuestro éxito"
         }
       },
       "contact_us":{
@@ -661,7 +664,10 @@ var messages = {
         "post_sent":"Nos pondremos en contacto en un lapso menor a 24 horas.",
         "instructions":"Ingresa tu información, y nos pondremos en contacto contigo en menos de 24 horas.",
         "our_office":"Nuestras oficinas",
-        "visit_us":"visítanos en:"
+        "visit_us":"visítanos en:",
+        "name":"Nombre completo",
+        "email":"Email",
+        "message":"Escribe tu mensaje aquí"
       },
       "about_us": {
         "summary": "Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de " +
