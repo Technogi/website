@@ -10,12 +10,11 @@ exports.set_lang=function(lang,msgs){
   var nodes = document.querySelectorAll('[msg]');
   for(var i = 0; i < nodes.length; i++){
     var node = nodes.item(i);
-    node.innerText = property(msgs,lang+"."+node.getAttribute("msg"));
-    node.textContent = node.innerText;
     if(node.getAttribute("placeholder")){
       node.setAttribute("placeholder",property(msgs,lang+"."+node.getAttribute("msg")));
-      node.innerText = "";
-       node.textContent = "";
+    }else{
+      node.innerText = property(msgs,lang+"."+node.getAttribute("msg"));
+      node.textContent = node.innerText;
     }
   }
 };
