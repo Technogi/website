@@ -5,19 +5,42 @@
  * on 1/27/15
  */
 
-function sendmail(cb){
-  setTimeout(function(){
-    cb();
-  },2000);
-}
 
-exports.bind=function(){
-  $("#send_btn").on('click',function(e){
+var logger = require('./logger');
+
+exports.bind = function () {
+  $("#send_btn").on('click', function (e) {
     $("#contact_form").fadeOut(300);
     $(".sending_email").fadeIn(500);
-    sendmail(function(){
-      $(".sending_email").fadeOut(300);
-      $(".email_sent").fadeIn(500);
+
+
+    var data = {
+      email: $("#contact_form_email").val(),
+      name: $("#contact_form_name").val(),
+      message: $("#contact_form_msg").val()
+    };
+
+
+    $.ajax({
+      url: "http://postmail.io:3080/contact/technogi",
+      type: "POST",
+      crossDomain: true,
+      data: data,
+      dataType: "json",
+      success: function (response) {
+        if (console && console.log) {
+          console.log("done");
+        }
+        $(".sending_email").fadeOut(300);
+        $(".email_sent").fadeIn(500);
+      },
+      error: function (xhr, status) {
+        if (console && console.log) {
+          console.log(xhr);
+        }
+        $(".sending_email").fadeOut(300);
+        $(".email_sent").fadeIn(500);
+      }
     });
     e.preventDefault();
   });
