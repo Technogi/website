@@ -210,12 +210,22 @@ function startup_slider() {
    log("initialized.");*/
 }
 
-
-$(window).load(function () {
+$(function(){
   adjust();
   binds();
   start_carousel();
   show_service_description();
   sendmail.bind();
+
+/**
+  $("#first_load").animate({
+    width: [ "toggle", "swing" ],
+    height: [ "toggle", "swing" ],
+    opacity: "toggle"
+  }, 2000, "ease", function() {
+    $( this ).after( "<div>Animation complete.</div>" );
+  });**/
 });
+
+
 $(window).scroll(adjust);

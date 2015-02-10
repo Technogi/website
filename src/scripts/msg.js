@@ -1,5 +1,7 @@
-exports.set_lang=function(lang,msgs){
-  lang = lang || navigator.language;
+var lang = navigator.language;
+
+exports.set_lang=function(_lang,msgs){
+  lang = _lang || navigator.language;
   if(lang.indexOf('en')===0){
     lang = 'en';
   }else if(lang.indexOf('es')===0){
@@ -17,6 +19,10 @@ exports.set_lang=function(lang,msgs){
       node.textContent = node.innerText;
     }
   }
+};
+
+exports.get=function(msg,msgs){
+  return property(msgs,lang+"."+msg);
 };
 
 function property(o,s){

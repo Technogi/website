@@ -331,7 +331,11 @@ var messages = {
         "visit_us":"visit us at our office",
         "name":"Full name",
         "email":"Email",
-        "message":"Enter message here"
+        "message":"Enter message here",
+        "errors":{
+          "invalid_email":"Please type a valid email address",
+          "missing_name":"Your name is missing"
+        }
       },
       "footer":{
         "privacy_policy":"PRIVACY POLICY"
@@ -667,7 +671,11 @@ var messages = {
         "visit_us":"visítanos en:",
         "name":"Nombre completo",
         "email":"Email",
-        "message":"Escribe tu mensaje aquí"
+        "message":"Escribe tu mensaje aquí",
+        "errors":{
+          "invalid_email":"Ingrese un correo válido",
+          "missing_name":"Ingrese su nombre"
+        }
       },
       "about_us": {
         "summary": "Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de " +
