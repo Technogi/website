@@ -24,6 +24,9 @@
 .contact-container {
   width: 100%;
   display: none;
+  .row.description{
+    padding-top:70px;
+  }
   .row {
     min-height: 400px;
     margin: 0;
@@ -78,6 +81,13 @@
         min-height: 200px;
         padding-top: 20px;
       }
+    }
+    .explicative-2{
+      margin-bottom:0;
+      padding-bottom:0;
+      padding-right:100px;
+      padding-left:100px;
+      min-height:0;
     }
     .explicative-item {
       border-radius: 3px;
@@ -385,3 +395,103 @@
 .contact-container {
   display: block;
 }
+
+
+@media only screen and (max-width: 40em) { 
+  .subpage_info,
+  .contact-container {
+    .row.description{
+      padding-top:20px;
+    }
+    .row {
+      min-height: 200px;
+      max-width: 40em;
+      padding-bottom: 50px;
+      padding-top:20px;
+      h1 {
+        font-size: 1.5em;
+        padding-top: 30px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 1.3em;
+        font-weight: 700;
+        padding-top: 30px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 1em;
+        padding: 0px;
+        line-height: 1.4em;
+      }
+      .list-item {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        .icon {
+          font-size: 2.5em;
+          padding: 12px;
+          height: 80px;
+          width: 80px;
+          border-radius: 40px;
+          line-height: 50px;
+        }
+        .text {
+          font-size: 1em;
+        }
+      }
+      .explicative-2{
+        padding-right:10px;
+        padding-left:10px;
+      }
+      .explicative-item {
+        min-height: 250px;
+        height: 250px;
+        h1 {
+          padding-top: 10px;
+          margin-bottom: 10px;
+          font-size: 1.1em;
+        }
+        p {
+          font-size: 1em;
+          padding: 5px;
+        }
+        ul.list li {
+          font-size: .9em;
+          line-height: 1.1em;
+          padding-top:10px;
+          padding-right:0;
+        }    
+      }
+      .explicative-item.toolset{
+        min-height: 150px;
+        height: 150px;
+      }
+      li {
+        font-size: 1em;
+        line-height: 1.5em;
+      }
+      ul.list li {
+        line-height: 1.1em;
+        padding-left: 0px;
+        padding-right:0px;
+        padding-top:10px;
+        text-align:center;
+      }
+    }
+    .row.image {
+   
+      .icon{
+        font-size:6em;
+      }
+      h1 {
+        span {
+          padding-bottom: 10px;
+        }
+        font-size:3em;
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+} 
