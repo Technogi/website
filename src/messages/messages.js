@@ -34,7 +34,7 @@ var messages = {
         }
       },
       "software_development":{
-        "title":"Software Devlopment",
+        "title":"Software Development",
         "subtitle":"We create the ideal architecture and use technology that best suits your needs",
         "description":"We develop web and mobile applications, perform systems integration and create business components. Our development process gives visibility of the actual progress, costs, mitigated risks and quality of each piece of software produced.",
         "section_1":{

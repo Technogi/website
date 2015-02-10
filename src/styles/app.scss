@@ -147,7 +147,8 @@ header {
     left: 100vw;
     line-height: 10px;
     -webkit-transition: left $page_transition_time ease;
-    transition: left $page_transition_time ease;
+    -moz-transition: left $page_transition_time ease;
+    //transition: left $page_transition_time ease;
 
   }
 

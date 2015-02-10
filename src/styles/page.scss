@@ -10,13 +10,15 @@
   position: fixed;
   background-color: #ffffff;
   -webkit-transition: all $page_transition_time ease;
-  transition: all $page_transition_time ease;
+  -moz-transition: all $page_transition_time ease;
+  //transition: all $page_transition_time ease;
 
 }
 
 #page.show {
   -ms-transform: translate(-100vw, 0px);
   -webkit-transform: translate(-100vw, 0px);
+  -moz-transform: translate(-100vw, 0px);
   transform: translate(-100vw, 0px);
 }
 
