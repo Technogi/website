@@ -3,9 +3,6 @@
 TECHNOGI's Main Website
 =======================
 
-Introduction
-------------
-
 This is the sour code for Technogi's main web site. It is published at [technogi.com.mx](http://www.technogi.com.mx/).
 
 Requirements
