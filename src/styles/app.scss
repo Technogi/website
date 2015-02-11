@@ -317,6 +317,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
   h1 {
     color: transparentize($technogi-orange, 1);
     font-size: 2em;
+
   }
   h2 {
     margin-top: 30px;
@@ -351,8 +352,7 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     background-color: rgba(30, 30, 30, 0);
     color: white;
   }
-  -webkit-transition: all $transition-time ease-in-out;
-  transition: all $transition-time ease-in-out;
+
 }
 
 #main_content_footer.scrolled {
@@ -693,6 +693,25 @@ footer {
       margin-left: 20px;
       :hover {
         color: $technogi-orange;
+      }
+    }
+
+    .src_greets{
+      line-height: 12px;
+      margin-top: 20px;
+      text-align: left;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #aeaeae;
+      p{
+        margin-top: 10px;
+      }
+      a{
+        margin: 0px;
+        font-size: 0.9em;
+      }
+      li{
+        padding-left:   0px;
       }
     }
   }

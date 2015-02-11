@@ -278,7 +278,9 @@ var messages = {
         "summary": "We are a consulting and development company built by professionals with over 10 years experience " +
           "in implementing information technology solutions. Our commitment to research and innovate, allows us to " +
           "provide our customers with simple solutions with the right technology, allowing them to focus on the " +
-          "productivity of their business."
+          "productivity of their business.",
+        "check_our_code":"Check out the code at: ",
+        "we_use":"This website uses: "
       },
       "love_us":{
         "h1":"This is Why Our Clients Love Us",
@@ -681,7 +683,9 @@ var messages = {
         "summary": "Somos una empresa de desarrollo y consultoría respaldada por profesionales con más de 10 años de " +
           "experiencia en la implementación de tecnologías de la información. Nuestra dedicación a la investigación e " +
           "innovación nos permite entregar a nuestros clientes soluciones simples con la tecnología adecuada, " +
-          "permitiéndoles enfocarse en la productividad de su negocio."
+          "permitiéndoles enfocarse en la productividad de su negocio.",
+        "check_our_code":"Echa un vistazo al código en: ",
+        "we_use":"Este sitio utiliza: "
       },
       "footer":{
         "privacy_policy":"AVISO DE PRIVACIDAD"

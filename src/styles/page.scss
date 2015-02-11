@@ -9,17 +9,19 @@
   overflow: scroll;
   position: fixed;
   background-color: #ffffff;
-  -webkit-transition: all $page_transition_time ease;
-  -moz-transition: all $page_transition_time ease;
+  -webkit-transition: -webkit-transform $page_transition_time ease;
+  -moz-transition: -moz-transform $page_transition_time ease;
   //transition: all $page_transition_time ease;
+  -webkit-overflow-scrolling: touch;
 
 }
 
 #page.show {
-  -ms-transform: translate(-100vw, 0px);
+  //-ms-transform: translate(-100vw, 0px);
   -webkit-transform: translate(-100vw, 0px);
   -moz-transform: translate(-100vw, 0px);
   transform: translate(-100vw, 0px);
+  -webkit-overflow-scrolling: touch;
 }
 
 .subpage_info,

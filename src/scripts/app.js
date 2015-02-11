@@ -109,6 +109,7 @@ function display_carousel_element(index, elements) {
 }
 
 function backToMain() {
+
   $("#back_btn").removeClass("show");
   $("#mobile_back_btn").removeClass("show");
   $("#page").removeClass("show");
