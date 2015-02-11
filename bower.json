@@ -1,6 +1,6 @@
 {
   "name": "Technogi's Website",
-  "version": "0.3.4",
+  "version": "1.0.0-beta.1",
   "homepage": "https://github.com/Technogi/website",
   "authors": [
     "Carlos Hernandez <carlos@technogi.com.mx>"
@@ -8,7 +8,7 @@
   "description": "Technogi's Website",
   "keywords": [
     "Technogi",
-    "www"
+    "Website"
   ],
   "license": "MIT",
   "ignore": [
