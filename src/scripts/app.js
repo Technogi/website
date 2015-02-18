@@ -214,7 +214,7 @@ function startup_slider() {
 }
 
  window.onhashchange = function() {
-    if(location.hash.length<=0 || location.hash!="#"){
+    if(location.hash.length<=0 || location.hash=="#"){
       backToMain();
     }
   };
