@@ -136,23 +136,9 @@ function binds() {
 
   $("[show]").each(function (i, e) {
     $(e).click(function () {
-      $('html, body').animate({ scrollTop: "10px"}, 'slow');
       var show_template = $(e).attr("show");
-      location.hash = "#"+show_template;
-      var template = findFirstByAttr(templates, "name", show_template);
-      $("#back_btn").addClass("show");
-      $("#mobile_back_btn").addClass("show");
-      $("#page").addClass("show");
-      $(".subpage_info").hide();
-      $("#" + show_template + "-subpage").show();
-      $("body").css("overflow", "hidden");
-      $("#page").focus();
-      /*buildTemplate(template,function(){
-       scroll();
-       $("#page").addClass("show");
-       $("body").css("overflow","hidden");
-       $("#page").focus();
-       });*/
+      showView(show_template);
+      
       return false;
     });
   });
@@ -176,6 +162,19 @@ function binds() {
     lang.set_lang('en', messages);
   });
 
+}
+
+function showView(show_template){
+  $('html, body').animate({ scrollTop: "10px"}, 'slow');
+  location.hash = "#"+show_template;
+  var template = findFirstByAttr(templates, "name", show_template);
+  $("#back_btn").addClass("show");
+  $("#mobile_back_btn").addClass("show");
+  $("#page").addClass("show");
+  $(".subpage_info").hide();
+  $("#" + show_template + "-subpage").show();
+  $("body").css("overflow", "hidden");
+  $("#page").focus();
 }
 
 function startup_slider() {
@@ -213,11 +212,25 @@ function startup_slider() {
    log("initialized.");*/
 }
 
- window.onhashchange = function() {
-    if(location.hash.length<=0 || location.hash=="#"){
-      backToMain();
+window.onhashchange = function() {
+  if(location.hash.length<=1 || location.hash=="#"){
+    backToMain();
+  }else{
+    if(location.hash[0]=="#"){
+      showView(location.hash.substring(1));
+    }else{
+      showView(location.hash);
     }
-  };
+  }
+};
+if(location.hash.length>1 && location.hash!="#"){
+  if(location.hash[0]=="#"){
+    showView(location.hash.substring(1));
+  }else{
+    showView(location.hash);
+  }
+}
+
 
 $(function(){
   adjust();
