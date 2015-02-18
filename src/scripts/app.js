@@ -214,7 +214,6 @@ function startup_slider() {
 }
 
  window.onhashchange = function() {
-   console.log(location.hash);
     if(location.hash.length<=0){
       backToMain();
     }
