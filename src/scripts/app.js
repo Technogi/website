@@ -114,6 +114,7 @@ function backToMain() {
   $("#mobile_back_btn").removeClass("show");
   $("#page").removeClass("show");
   $("body").css("overflow", "auto");
+  location.hash="";
   $(".technogi_panel").removeClass('show_up');
   setTimeout(function () {
     $("#page").scrollTop(0);
@@ -137,6 +138,7 @@ function binds() {
     $(e).click(function () {
       $('html, body').animate({ scrollTop: "10px"}, 'slow');
       var show_template = $(e).attr("show");
+      location.hash = "#"+show_template;
       var template = findFirstByAttr(templates, "name", show_template);
       $("#back_btn").addClass("show");
       $("#mobile_back_btn").addClass("show");
@@ -210,6 +212,13 @@ function startup_slider() {
    el.addEventListener("touchmove", handleMove, false);
    log("initialized.");*/
 }
+
+ window.onhashchange = function() {
+   console.log(location.hash);
+    if(location.hash.length<=0){
+      backToMain();
+    }
+  };
 
 $(function(){
   adjust();
