@@ -269,7 +269,7 @@ var messages = {
           "title": "Cloud",
           "description": "Take advantage of cloud optimally"
         },
-        "project_landing": {
+        "project_shaping": {
           "title": "Project Shaping",
           "description": "Transform your innovative ideas and highly complex projects into a profitable reality"
         }
@@ -614,7 +614,7 @@ var messages = {
           "title": "Nube",
           "description": "Asesoría especializada para aprovechamiento de las capacidades que ofrece la nube. "
         },
-        "project_landing": {
+        "project_shaping": {
           "title": "Project Shaping",
           "description": "Transformamos tus ideas innovadoras y proyectos de alta complejidad en realidad."
         }
