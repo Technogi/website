@@ -19,6 +19,8 @@ exports.set_lang=function(_lang,msgs){
       node.textContent = node.innerText;
     }
   }
+  window.userLang = lang;
+
 };
 
 exports.get=function(msg,msgs){
