@@ -16,6 +16,7 @@ var err = logger.create('app:err', 'error');
 
 var userLang = navigator.language || navigator.userLanguage;
 userLang = userLang.substr(0, userLang.indexOf('-'));
+window.userLang = userLang;
 lang.set_lang(userLang, messages);
 
 

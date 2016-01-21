@@ -35,7 +35,10 @@ function validateContactForm(cb){
 exports.bind = function () {
   $("#send_btn").on('click', function (e) {
 
-
+    var msgLang = userLang || 'en';
+    if(msgLang.indexOf('-')>=0){
+      msgLang = msgLang.subString(0,msgLang.indexOf('-'));
+    }
 
     validateContactForm(function(){
       $("#contact_form_error").hide();
@@ -43,14 +46,15 @@ exports.bind = function () {
       $("#contact_form").fadeOut(300);
       $(".sending_email").fadeIn(500);
 
-      var data = {
+      var data = JSON.stringify({
         email: $("#contact_form_email").val(),
         name: $("#contact_form_name").val(),
-        message: $("#contact_form_msg").val()
-      };
+        desc: $("#contact_form_msg").val(),
+        lang: msgLang
+      });
 
       $.ajax({
-        url: "http://postmail.io:3080/contact/technogi",
+        url: "https://3a6fd6wfe0.execute-api.us-east-1.amazonaws.com/prod/info-request",
         type: "POST",
         crossDomain: true,
         data: data,
@@ -71,10 +75,6 @@ exports.bind = function () {
         }
       });
     });
-
-
-
-
     e.preventDefault();
   });
 };

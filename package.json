@@ -1,9 +1,9 @@
 {
-  "name": "Technogi's Website",
+  "name": "TechnogiWebsite",
   "version": "1.0.0-beta.1",
   "description": "Technogi's Website",
   "main": "index.js",
-  "engine": "node 0.10.x",
+  "engine": "node 0.12.x",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Technogi/website",
   "devDependencies": {
     "browserify": "^8.1.0",
-    "gulp": "^3.8.10",
+    "gulp": "^3.9.0",
     "gulp-cloudfiles": "^0.1.2",
     "gulp-concat": "^2.4.3",
     "gulp-file-include": "^0.8.0",
