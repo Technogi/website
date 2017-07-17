@@ -617,7 +617,15 @@ $technogi-orange-bg: rgba(235, 104, 17, 0.90);
     margin-bottom: 40px;
     text-align: center;
     font-weight: 600;
+    a{
+      color: lighten($technogi-orange, 5%);
+      text-decoration: underline;
+    }
 
+  }
+  address{
+    margin-top: 1em;
+    color: white;
   }
 
   #contact_form_captcha_checkbox {
